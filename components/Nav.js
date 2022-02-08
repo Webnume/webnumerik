@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "../styles/Nav.module.css";
 import Image from "next/image";
@@ -7,7 +7,6 @@ import Socialmedia from "./Socialmedia";
 function Nav() {
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
-
     return () => window.removeEventListener("scroll", listenScrollEvent);
   }, []);
 

@@ -1,10 +1,22 @@
+import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { gsap } from "gsap";
 
 export default function Home() {
+  const navRef = useRef();
+  useEffect(() => {
+    gsap.from(navRef.current, {
+      duration: 1,
+      ease: "back.out(1.7)",
+      y: -100,
+      opacity:0,
+      repeat: 0,
+    });
+  }, []);
   return (
     <div className="container">
       <Head>
@@ -13,12 +25,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main>
+      <main  ref={navRef}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">HOME!</a>
         </h1>
 
-        <p className={styles.description}>
+        {/* <p className={styles.description}>
           Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
@@ -51,7 +63,8 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
+        
       </main>
 
       <Footer/>
