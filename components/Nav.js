@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "../styles/Nav.module.css";
 import Image from "next/image";
@@ -16,18 +16,10 @@ function Nav() {
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
-
-  // const [logoDimensions, setLogoDimensions] = useState({
-  //   width: 272,
-  //   height: 160,
-  // });
-
   const listenScrollEvent = (event) => {
     if (window.scrollY < 33) {
-      // return setLogoDimensions({ width: 272, height: 160 });
       return setScroll(false);
     } else if (window.scrollY > 30) {
-      // return setLogoDimensions({ width: 150, height: 100 });
       return setScroll(true);
     }
   };

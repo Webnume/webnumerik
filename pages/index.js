@@ -5,6 +5,9 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { gsap } from "gsap";
+import { TextPlugin } from "gsap/dist/TextPlugin";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHtml5, faCss3 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   const navRef = useRef();
@@ -13,9 +16,11 @@ export default function Home() {
       duration: 1,
       ease: "back.out(1.7)",
       y: -100,
-      opacity:0,
+      opacity: 0,
       repeat: 0,
     });
+    gsap.registerPlugin(TextPlugin);
+    gsap.to("#reactText", { duration: 2, text: "ReactJS!", delay: 1 });
   }, []);
   return (
     <div className="container">
@@ -25,49 +30,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main  ref={navRef}>
+      <main className={styles.main} ref={navRef}>
+        <h2 className={styles.description}>
+          Je suis Yves, freelance Front-end{" "}
+        </h2>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">HOME!</a>
+          Développeur Web{" "}
+          <a href="https://nextjs.org" id="reactText">
+            !RJeSact
+          </a>
         </h1>
-
-        {/* <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div> */}
-        
+        <div className={styles.icons}>
+          {/* <FontAwesomeIcon icon={faHtml5} />
+          <FontAwesomeIcon icon={faCss3} />
+          <FontAwesomeIcon icon={faHtml5} /> */}
+          
+        </div>
       </main>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }
