@@ -7,12 +7,19 @@ import Footer from "../components/Footer";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/dist/TextPlugin";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHtml5, faCss3 } from "@fortawesome/free-brands-svg-icons";
+import {
+  faHtml5,
+  faCss3,
+  faJs,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
+import { faPlus, faEquals } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
-  const navRef = useRef();
+  const mainRef = useRef();
+  const logosRef = useRef();
   useEffect(() => {
-    gsap.from(navRef.current, {
+    gsap.from(mainRef.current, {
       duration: 1,
       ease: "back.out(1.7)",
       y: -100,
@@ -21,6 +28,12 @@ export default function Home() {
     });
     gsap.registerPlugin(TextPlugin);
     gsap.to("#reactText", { duration: 2, text: "ReactJS!", delay: 1 });
+
+    //WITH Timelines (cleaner, more versatile)
+    var tl = gsap.timeline({ repeat: 0, repeatDelay: 1 });
+    tl.from(logosRef.current, { x: -500, duration: 1 });
+    // tl.to("#id", { y: 50, duration: 1 });
+    // tl.to("#id", { opacity: 0, duration: 1 });
   }, []);
   return (
     <div className="container">
@@ -30,7 +43,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className={styles.main} ref={navRef}>
+      <main className={styles.main} ref={mainRef}>
         <h2 className={styles.description}>
           Je suis Yves, freelance Front-end{" "}
         </h2>
@@ -40,11 +53,28 @@ export default function Home() {
             !RJeSact
           </a>
         </h1>
-        <div className={styles.icons}>
-          {/* <FontAwesomeIcon icon={faHtml5} />
-          <FontAwesomeIcon icon={faCss3} />
-          <FontAwesomeIcon icon={faHtml5} /> */}
-          
+        <div className={styles.icons} ref={logosRef}>
+          <span className={styles.logoHtml5}>
+            <FontAwesomeIcon icon={faHtml5} />
+          </span>
+          <span className={styles.operators}>
+            <FontAwesomeIcon icon={faPlus} />
+          </span>
+          <span className={styles.logoCss3}>
+            <FontAwesomeIcon icon={faCss3} />
+          </span>
+          <span className={styles.operators}>
+            <FontAwesomeIcon icon={faPlus} />
+          </span>
+          <span className={styles.logoJs}>
+            <FontAwesomeIcon icon={faJs} />
+          </span>
+          <span className={styles.operators}>
+            <FontAwesomeIcon icon={faEquals} />
+          </span>
+          <span className={styles.logoReact}>
+            <FontAwesomeIcon icon={faReact} />
+          </span>
         </div>
       </main>
 

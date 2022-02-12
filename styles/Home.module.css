@@ -22,20 +22,33 @@
 }
 .icons {
   display: flex;
-  color: #91ad1c;
-  width: 20rem;
+  color: #E8573B;
+  /* width: 20rem; */
   justify-content: center;
-  padding-top: 4px;
-  animation: floating 5s linear 2s infinite;
+  align-items: center;
+  padding-top: 3rem;
+  /* animation: floating 5s linear 2s infinite; */
 }
-.icons :nth-child(0){
-  color: red;
+.icons :not(.operators) :nth-child(n){
+  margin: 0.2rem;
+  width: 4rem;
 }
-.icons :nth-child(2){
-  color: green;
+.logoHtml5{
+  color: #E8573B;
 }
-.icons :nth-child(3){
-  color: white;
+.logoCss3{
+  color: #007CC5;
+}
+.logoJs{
+  color: #EFD81D;
+}
+.logoReact{
+  color: #61DAFB;
+}
+.operators{
+  color: #fff;
+  width: 2rem;
+  /* margin-right: 3rem; */
 }
 .footer {
   display: flex;
@@ -68,12 +81,12 @@
   margin: 0;
   line-height: 1.15;
   font-size: calc(4rem + 1.5vw);
+  animation: floating 5s linear 2s infinite;
 }
 
 .title,
 .description {
   text-align: center;
-  animation: floating 5s linear 2s infinite;
 }
 
 .description {
