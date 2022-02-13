@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   min-height: 160px;
   padding: 1rem;
   background-color: #ecf0f1;
@@ -14,8 +14,8 @@
   transition: all 0.2s ease-in-out;
 }
 .navbar.reduce {
-  top: 2rem;
-  min-height: 75px;
+  background-color: #fff;
+  /* background: no-repeat center/80% url("../public/logo.svg"); */
 }
 .navbar__logo {
   position: fixed;
