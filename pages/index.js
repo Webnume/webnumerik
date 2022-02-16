@@ -4,9 +4,6 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { gsap } from "gsap";
-// import { TextPlugin } from "gsap/dist/TextPlugin";
-// import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
@@ -14,12 +11,8 @@ import {
   faJsSquare,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
-import {
-  faPlus,
-  faEquals,
-  faAngleDown,
-} from "@fortawesome/free-solid-svg-icons";
-import indexGaspAnimation from "../utils/gsapAnimation/indexGsapAnimation"
+import { faPlus, faEquals } from "@fortawesome/free-solid-svg-icons";
+import indexGsapAnimations from "../utils/gsapAnimations/indexGsapAnimations";
 
 export default function Home() {
   const logosRef = useRef();
@@ -27,29 +20,10 @@ export default function Home() {
   const welcome2Ref = useRef();
 
   useEffect(() => {
-console.log(indexGaspAnimation);
     //Icons Timelines
-    indexGaspAnimation.welcome1(welcome1Ref.current);
-    indexGaspAnimation.logos(logosRef.current);
-    indexGaspAnimation.typing();
-
-    var tl2 = gsap.timeline({
-      repeat: 0,
-      repeatDelay: 1,
-      scrollTrigger: {
-        trigger: welcome2Ref.current,
-        start: "center bottom",
-        end: "bottom center",
-        scrub: true,
-        markers: true,
-      },
-    });
-    tl2.to(welcome2Ref.current, {
-      height: "100vh",
-      backgroundColor: "#95a5a6",
-      opacity: 1,
-    });
-    
+    indexGsapAnimations().welcome1(welcome1Ref.current);
+    indexGsapAnimations().logos(logosRef.current);
+    indexGsapAnimations().typingEffect();
   }, []);
   return (
     <div className="container">
@@ -94,20 +68,9 @@ console.log(indexGaspAnimation);
             </span>
           </div>
         </div>
-        {/* <div className={styles.scrollDown}>
-          Scroll
-          <span className={styles.arrow}>
-            <FontAwesomeIcon icon={faAngleDown} />
-          </span>
-        </div> */}
-        <div className={styles.welcome2} ref={welcome2Ref}>
-          Disponible pour vous aider dans l'élaboration de votre projet, je vous
-          invite à découvrir ci-dessous l'ensemble de mes références afin de
-          mieux connaître mon profil.
-        </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
