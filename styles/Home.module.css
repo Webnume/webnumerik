@@ -1,15 +1,3 @@
-@keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 .main {
   /* min-height: 100vh; */
   /* padding: 4rem 0; */
@@ -19,6 +7,8 @@
   justify-content: center;
   align-items: center;
   z-index: -1;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .icons {
   display: flex;
@@ -53,7 +43,7 @@
 }
 .welcome1 {
   min-height: 100vh;
-  width: 98vw;
+  width: 100vw;
   padding: 4rem 0;
   display: flex;
   /* flex: 1; */
@@ -179,5 +169,17 @@
     color: #fff;
     width: 1rem;
     margin: 0 1rem;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
