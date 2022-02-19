@@ -34,9 +34,9 @@ export default function Home() {
           className={`${styles.description} ${styles.panel} ${styles.blue}`}
           ref={addToPanelsRef}
         >
-          <div>
-            <h1>Mon portofolio</h1>
-            <p>Ici découvrez mon portofolio ...</p>
+          <div className={styles.Portofoliofirst}>
+            <h1>Mon portfolio</h1>
+            <p>Ici découvrez mon portfolio ...</p>
             <div className={styles.scrollDown}>
               Scroll<div className={styles.arrow}></div>
             </div>
