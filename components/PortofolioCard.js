@@ -28,19 +28,16 @@ function PortofolioCard({
   return (
     <div>
       <div style={{ position: "absolute", top: "0", left: "0" }}>
-        <div style={{ position: "absolute", top: "0", left: "0" }}>
-          <div
-            style={{ position: "relative", width: "100vw", height: "100vh" }}
-          >
-            <Image
-              src={`/${backgroundImg}`}
-              alt={imgAlt}
-              className={styles.panelBackground}
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-            />
-          </div>
+        <div style={{ position: "relative", width: "100vw", height: "100vh" }}>
+          <Image
+            src={`/${backgroundImg}`}
+            alt={imgAlt}
+            className={styles.panelBackground}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            priority
+          />
         </div>
       </div>
       <div className={styles.container}>

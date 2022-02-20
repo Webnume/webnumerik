@@ -34,18 +34,20 @@ export default function Home() {
           className={`${styles.description} ${styles.panel} ${styles.panelBackground}`}
           ref={addToPanelsRef}
         >
-          {/* <div style={{ position: "relative", width: "100vw", height: "100vh" }}> */}
-            <Image
-              src="/pexels-karolina-grabowska-8947463.jpg"
-              alt="portfolio"
-              // width="100vw"
-              // height="100vh"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-              priority
-            />
-          {/* </div> */}
+          <div style={{ position: "absolute", top: "0", left: "0" }}>
+            <div
+              style={{ position: "relative", width: "100vw", height: "100vh" }}
+            >
+              <Image
+                src="/pexels-karolina-grabowska-8947463.jpg"
+                alt="portfolio"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+                priority
+              />
+            </div>
+          </div>
           <div className={styles.Portofoliofirst}>
             <h1>Mon portfolio</h1>
             <p>Ici découvrez mon portfolio ...</p>
@@ -87,7 +89,7 @@ export default function Home() {
           />
         </section>
         <section
-          className={`${styles.panel} ${styles.orange}`}
+          className={`${styles.panel} `}
           ref={addToPanelsRef}
         >
           <PortofolioCard
@@ -108,7 +110,7 @@ export default function Home() {
           />
         </section>
         <section
-          className={`${styles.panel} ${styles.purple}`}
+          className={`${styles.panel} `}
           ref={addToPanelsRef}
         >
           <PortofolioCard
@@ -130,7 +132,7 @@ export default function Home() {
         </section>
 
         <section
-          className={`${styles.panel} ${styles.green}`}
+          className={`${styles.panel} `}
           ref={addToPanelsRef}
         >
           <PortofolioCard
@@ -152,7 +154,7 @@ export default function Home() {
         </section>
 
         <section
-          className={`${styles.panel} ${styles.green}`}
+          className={`${styles.panel} `}
           ref={addToPanelsRef}
         >
           <PortofolioCard
@@ -174,7 +176,7 @@ export default function Home() {
         </section>
 
         <section
-          className={`${styles.panel} ${styles.orange}`}
+          className={`${styles.panel} `}
           ref={addToPanelsRef}
         >
           <PortofolioCard
@@ -196,7 +198,7 @@ export default function Home() {
         </section>
 
         <section
-          className={`${styles.panel} ${styles.green}`}
+          className={`${styles.panel} `}
           ref={addToPanelsRef}
         >
           <PortofolioCard
@@ -216,7 +218,7 @@ export default function Home() {
         </section>
 
         <section
-          className={`${styles.panel} ${styles.green}`}
+          className={`${styles.panel} `}
           ref={addToPanelsRef}
         >
           <PortofolioCard
@@ -238,7 +240,7 @@ export default function Home() {
         </section>
 
         <section
-          className={`${styles.panel} ${styles.green}`}
+          className={`${styles.panel} `}
           ref={addToPanelsRef}
         >
           <PortofolioCard
@@ -259,7 +261,7 @@ export default function Home() {
         </section>
 
         <section
-          className={`${styles.panel} ${styles.green}`}
+          className={`${styles.panel} `}
           ref={addToPanelsRef}
         >
           <PortofolioCard
@@ -281,7 +283,7 @@ export default function Home() {
         </section>
 
         <section
-          className={`${styles.panel} ${styles.green}`}
+          className={`${styles.panel} `}
           ref={addToPanelsRef}
         >
           <PortofolioCard
@@ -302,7 +304,7 @@ export default function Home() {
         </section>
 
         <section
-          className={`${styles.static} ${styles.green}`}
+          className={`${styles.static} `}
           ref={addToPanelsRef}
         >
           static content
