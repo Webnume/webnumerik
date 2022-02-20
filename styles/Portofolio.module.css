@@ -13,6 +13,8 @@
   align-items: center;
   height: 29rem;
   border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 0;
 }
 .left .inner {
   margin: 0.9;
@@ -29,7 +31,8 @@
   height: 100%;
   padding: 2rem;
   border-radius: 1rem;
-  background-color: rgba(255, 255, 255, 0.952);
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 0;
 }
 .right h2 {
   color: #2c3e50;
@@ -53,6 +56,7 @@
   width: 100vw;
 }
 .Portofoliofirst {
+  position: absolute;
   color: #2c3e50;
   transform: rotate(3.4deg) translateY(20.5px);
 }
@@ -65,13 +69,14 @@
 
 .panel .projecttitle {
   position: fixed;
-  top: 15rem;
+  top: 13rem;
   display: flex;
   font-size: 1.5em;
   color: #2c3e50;
   font-weight: 700;
   margin: 0 auto;
-  background-color: #e67e22;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px dashed black;
   border-radius: 22% 25% 26% 32%;
   padding: 0 1rem;
 }
@@ -165,10 +170,6 @@
     ),
     linear-gradient(90deg, #777, #606060);
 }
-.blue {
-  background: center / cover no-repeat
-    url("/pexels-karolina-grabowska-8947463.jpg");
-}
 .orange {
   background-color: #e77614;
   background-image: radial-gradient(
@@ -228,10 +229,6 @@
       transparent 100%
     ),
     linear-gradient(90deg, #ff7600, #ff7600);
-}
-
-.red {
-  background: center / cover no-repeat url("/pexels-picjumbocom-196645.jpg");
 }
 
 .purple {
@@ -349,8 +346,6 @@
 }
 
 .panel {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -359,9 +354,14 @@
   font-size: 1.5em;
   text-align: center;
   position: relative;
+  width: 100vw;
+  height: 100vh;
   box-sizing: border-box;
 }
 
+.panelBackground {
+  z-index: -1;
+}
 .main {
   overflow-x: hidden;
   overflow-y: hidden;
@@ -410,6 +410,9 @@
 .skilltitle {
   margin: 0 2rem;
   margin-bottom: 2rem;
+  background-color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 1rem 1rem 0 0;
 }
 .skills {
   display: flex;
@@ -432,11 +435,18 @@
 .logoCss3 {
   color: #007cc5;
 }
+.logoSass {
+  color: #c76395;
+}
 .logoJs {
   color: #efd81d;
 }
 .logoReact {
   color: #61dafb;
+  width: 2.4rem;
+}
+.logoGit {
+  color: #fa4f28;
   width: 2.4rem;
 }
 

@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function portofolioGsapAnimations() {
   const panel = (panelRef) => {
-    console.log(panelRef);
+    // console.log(panelRef);
     return panelRef.forEach((panel, i) => {
       ScrollTrigger.create({
         trigger: panel,
