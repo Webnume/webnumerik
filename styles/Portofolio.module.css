@@ -16,7 +16,7 @@
   background-color: rgba(255, 255, 255, 0.85);
   z-index: 0;
 }
-.left .inner {
+.inner {
   margin: 0.9;
   color: black;
   background-color: white;
@@ -36,6 +36,9 @@
 }
 .right h2 {
   color: #2c3e50;
+}
+.siteImg{
+  border: 4mm ridge rgba(170, 50, 220, .6);
 }
 .customlist {
   padding-left: 20px;
@@ -67,7 +70,7 @@
   align-items: flex-start;
 }
 
-.panel .projecttitle {
+.projecttitle {
   position: fixed;
   top: 13rem;
   display: flex;
@@ -198,8 +201,12 @@
   /* animation: floating 5s linear 2s infinite; */
 }
 .skills :not(.logoReact) :nth-child(n) {
-  margin: 0.2rem;
+  margin: 0.2rem 0.4rem;
   width: 2rem;
+}
+.skills :nth-child(n) :hover {
+  cursor: pointer;
+  animation: bounce 0.7s ease infinite;
 }
 .logoHtml5 {
   color: #e8573b;
@@ -221,13 +228,52 @@
   color: #fa4f28;
   width: 2.4rem;
 }
+/* .tail {
+  position: fixed;
+  display: none;
+} */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 940px) {
   .Portofoliofirst h1 {
     font-size: 2rem;
   }
   .Portofoliofirst p {
     font-size: 1rem;
+  }
+  .container {
+    margin-top: 6rem;
+    flex-direction: column;
+  }
+  .container:nth-child(1) {
+    margin-top: 0;
+  }
+  .container :not(header) {
+    align-items: center;
+  }
+  .left{
+    width: 90vw;
+    height: 40%;
+    font-size: 1.2rem;
+    margin: 0.5rem ;
+    padding: 1rem;
+  }
+  .right{
+    width: 90vw;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+  }
+  .projecttitle {
+    position: unset;
+    font-size: 1.2rem;
+    margin: 0 0.4rem;
+  }
+  .inner {
+    margin: 0.9;
+    color: black;
+    background-color: white;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -237,6 +283,18 @@
   }
   50% {
     transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
   }
   100% {
     transform: translateY(0px);

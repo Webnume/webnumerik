@@ -9,7 +9,7 @@ import styles from "../styles/Nav.module.css";
 
 function Socialmedia() {
   return (
-    <div className={styles.navbar__socialmedia}>
+    <div className={styles.socialmedia}>
       <a
         href="https://www.linkedin.com/in/yves-ga/"
         target="_blank"

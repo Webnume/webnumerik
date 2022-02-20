@@ -30,7 +30,7 @@ function Nav() {
         scroll ? styles.reduce : "extend-nav"
       }`}
     >
-      <div className={styles.navbar__logo}>
+      <div className={styles.logo}>
         <Link href="/">
           <a rel="noopener noreferrer">
             <Image

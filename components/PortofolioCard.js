@@ -48,9 +48,9 @@ function PortofolioCard({
               <Image
                 src={`/${imgSrc}`}
                 alt={imgAlt}
-                className=""
-                width={250}
-                height={140}
+                className={styles.siteImg}
+                width={200}
+                height={120}
               />
             </a>
           </Link>
