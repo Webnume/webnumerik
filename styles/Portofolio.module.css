@@ -81,14 +81,14 @@
   position: fixed;
   top: 13rem;
   display: flex;
-  font-size: 1.5em;
+  font-size: 2.5vw;
   color: #2c3e50;
   font-weight: 700;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.85);
   border: 1px dashed black;
-  border-radius: 22% 25% 26% 32%;
-  padding: 0 1rem;
+  border-radius: 32% 32% 32% 32%;
+  padding: 0.5rem;
 }
 .panel h2 {
   font-size: 1em;
@@ -279,8 +279,8 @@
   }
   .projecttitle {
     position: unset;
-    font-size: 1.2rem;
-    margin: 0 0.4rem;
+    font-size: 2.7vh;
+    /* margin: 0 0.4rem; */
   }
   .skills :not(.logoReact) :nth-child(n) {
     margin: 0.2rem 0.4rem;
@@ -294,7 +294,7 @@
     color: black;
     background-color: white;
     border-radius: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 
