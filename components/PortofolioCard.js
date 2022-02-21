@@ -42,7 +42,7 @@ function PortofolioCard({
       </div>
       <div className={styles.container}>
         <h1 className={styles.projecttitle}>{projectTitle}</h1>
-        <div className={styles.left}>
+        <div className={`${styles.left}`}>
           <Link href={repoGitLink}>
             <a target="blank" rel="noopener noreferrer">
               <Image
