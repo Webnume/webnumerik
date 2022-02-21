@@ -1,9 +1,13 @@
+// import {useEffect} React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Contact.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useForm } from "react-hook-form";
+import useWindowSize from "../utils/getWindowsSize";
+// import { useEffect } from "react/cjs/react.development";
 
 export default function Home() {
   const {
@@ -13,8 +17,14 @@ export default function Home() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
+  console.log(useWindowSize());
+  const widthSize = useWindowSize().width;
   // watch input value by passing the name of it
   // console.log(watch("nom"));
+  useEffect(() => {
+    useWindowSize;
+  }, [widthSize]);
+
   return (
     <div className="container">
       <Head>
@@ -27,7 +37,11 @@ export default function Home() {
         <div className={styles.left}>
           <div style={{ position: "absolute", top: "0", left: "0" }}>
             <div
-              style={{ position: "relative", width: "100vw", height: "100vh" }}
+              style={{
+                position: "relative",
+                width: "50vw" || (widthSize/2),
+                height: "100vh",
+              }}
             >
               <Image
                 src="/pexels-pixabay-263564.jpg"

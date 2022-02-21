@@ -37,8 +37,8 @@
 .right h2 {
   color: #2c3e50;
 }
-.siteImg{
-  border: 4mm ridge rgba(170, 50, 220, .6);
+.siteImg {
+  border: 4mm ridge rgba(170, 50, 220, 0.6);
 }
 .customlist {
   padding-left: 20px;
@@ -234,6 +234,9 @@
 } */
 
 @media screen and (max-width: 940px) {
+  .Portofoliofirst {
+    transform: rotate(3.4deg) translateY(-7.5px) translateX(-8px) scale(0.9);
+  }
   .Portofoliofirst h1 {
     font-size: 2rem;
   }
@@ -250,23 +253,33 @@
   .container :not(header) {
     align-items: center;
   }
-  .left{
+  .left {
     width: 90vw;
     height: 40%;
-    font-size: 1.2rem;
-    margin: 0.5rem ;
+    font-size: 1rem;
+    margin: 0.5rem;
     padding: 1rem;
   }
-  .right{
+  .right {
     width: 90vw;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
     padding: 0.5rem;
+  }
+  .right h2 {
+    margin: 0;
   }
   .projecttitle {
     position: unset;
     font-size: 1.2rem;
     margin: 0 0.4rem;
+  }
+  .skills :not(.logoReact) :nth-child(n) {
+    margin: 0.2rem 0.4rem;
+    width: 1rem;
+  }
+  .logoReact {
+    width: 1.4rem;
   }
   .inner {
     margin: 0.9;
