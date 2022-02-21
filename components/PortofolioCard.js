@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../styles/Portofolio.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,6 +13,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { nanoid } from "nanoid";
+import useWindowSize from "../utils/getWindowsSize";
 
 function PortofolioCard({
   projectTitle,
@@ -24,7 +25,13 @@ function PortofolioCard({
   imgSrc,
   imgAlt,
   backgroundImg,
-}) {
+}) {  
+  const widthSize = useWindowSize().width;
+  // watch input value by passing the name of it
+  // console.log(watch("nom"));
+  useEffect(() => {
+    useWindowSize;
+  }, [widthSize]);
   return (
     <div>
       <div style={{ position: "absolute", top: "0", left: "0" }}>
@@ -43,9 +50,9 @@ function PortofolioCard({
       <div className={styles.container}>
         <h1 className={styles.projecttitle}>{projectTitle}</h1>
         <div className={`${styles.left}`}>
-          <Link href={repoGitLink}>
+           {widthSize>940 && <Link href={repoGitLink}>
             <a target="blank" rel="noopener noreferrer">
-              <Image
+           <Image
                 src={`/${imgSrc}`}
                 alt={imgAlt}
                 className={styles.siteImg}
@@ -53,7 +60,7 @@ function PortofolioCard({
                 height={120}
               />
             </a>
-          </Link>
+          </Link>}
           <div>
             <div className={styles.inner}>
               <a

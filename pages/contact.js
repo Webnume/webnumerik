@@ -1,5 +1,5 @@
 // import {useEffect} React from "react";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Contact.module.css";

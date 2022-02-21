@@ -145,8 +145,8 @@
   z-index: -1;
 }
 .main {
-  /* overflow-x: hidden;
-  overflow-y: hidden; */
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 /* HEADINGS */
@@ -267,9 +267,6 @@
     font-size: 1rem;
     margin: 0.5rem;
     padding: 1rem;
-  }
-  .siteImg{
-    width: 5px;
   }
   .right {
     width: 90vw;
