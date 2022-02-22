@@ -251,7 +251,7 @@ export default function Home() {
             ]}
             imgSrc="webnume_projet_3.png"
             imgAlt="projet 3"
-            backgroundImg="pexels-anastasia-lebedeva-9335711.jpg"
+            backgroundImg="pexels-emre-can-acer-2449364.jpg"
           />
         </section>
 

@@ -25,6 +25,7 @@
   background-color: white;
   border-radius: 0.5rem;
   margin-bottom: 5rem;
+  border: solid 0.5px;
 }
 .right {
   display: flex;
@@ -39,6 +40,9 @@
 }
 .right h2 {
   color: #2c3e50;
+  text-transform: uppercase;
+  font-weight:bolder;
+  font-style: italic;
 }
 .siteImg {
   border: 4mm ridge rgba(170, 50, 220, 0.6);

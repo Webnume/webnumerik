@@ -30,7 +30,7 @@ function Nav() {
         scroll ? styles.reduce : "extend-nav"
       }`}
     >
-      <div className={styles.logo}>
+      <div className={`${styles.logo} ${scroll ? styles.logoBackGround : ""}`}>
         <Link href="/">
           <a rel="noopener noreferrer">
             <Image
@@ -43,7 +43,7 @@ function Nav() {
           </a>
         </Link>
       </div>
-      <ul className={styles.navbar__links}>
+      <ul className={`${styles.navbar__links} ${scroll ? styles.logoBackGround : ""}`}>
         <li className={`${styles.navbar__item} ${styles.slideInDown1}`}>
           <Link href="/">
             <a className={styles.navbar__link}>

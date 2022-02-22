@@ -15,7 +15,8 @@
   z-index: 1;
 }
 .navbar.reduce {
-  background-color: #fff;
+  background-color: transparent;
+  /* background-color: #fff; */
   /* background: no-repeat center/80% url("../public/logo.svg"); */
 }
 .logo {
@@ -24,8 +25,21 @@
   left: 1rem;
 }
 
+.logoBackGround {
+  background-color: rgba(255, 255, 255, 0.623);
+  background-color: white;
+  border-radius: 16px;
+  padding: 0.5rem;
+  transition: all 0.25s ease-in-out;
+}
+
 .navbar__links {
   display: flex;
+}
+.navbar__linksBackGround {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 2rem;
 }
 
 .navbar__link {
@@ -160,7 +174,7 @@
     left: -3rem;
   }
   .socialmedia {
-    right: 6.3rem;
+    right: 5.3rem;
   }
   .navbar__links {
     flex-direction: column;
