@@ -25,7 +25,7 @@ function PortofolioCard({
   imgSrc,
   imgAlt,
   backgroundImg,
-}) {  
+}) {
   const widthSize = useWindowSize().width;
   // watch input value by passing the name of it
   // console.log(watch("nom"));
@@ -50,17 +50,19 @@ function PortofolioCard({
       <div className={styles.container}>
         <h1 className={styles.projecttitle}>{projectTitle}</h1>
         <div className={`${styles.left}`}>
-           {widthSize>940 && <Link href={repoGitLink}>
-            <a target="blank" rel="noopener noreferrer">
-           <Image
-                src={`/${imgSrc}`}
-                alt={imgAlt}
-                className={styles.siteImg}
-                width={200}
-                height={120}
-              />
-            </a>
-          </Link>}
+          {widthSize > 940 && (
+            <Link href={repoGitLink}>
+              <a target="blank" rel="noopener noreferrer">
+                <Image
+                  src={`/${imgSrc}`}
+                  alt={imgAlt}
+                  className={styles.siteImg}
+                  width={200}
+                  height={120}
+                />
+              </a>
+            </Link>
+          )}
           <div>
             <div className={styles.inner}>
               <a
