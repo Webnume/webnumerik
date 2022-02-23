@@ -44,8 +44,11 @@ function PortofolioCard({
       <div className={styles.container}>
         <h1 className={styles.projecttitle}>{projectTitle}</h1>
         <div className={`${styles.left}`}>
-          <div className={styles.siteImg}>
-            <Image src={`/${imgSrc}`} alt={imgAlt} width={200} height={120} />
+          <div className={styles.siteInfos}>
+            <span className={styles.siteImg}>
+              <Image src={`/${imgSrc}`} alt={imgAlt} width={200} height={120} />
+            </span>
+
             <div className={styles.inner}>
               <a
                 href={demoLink}

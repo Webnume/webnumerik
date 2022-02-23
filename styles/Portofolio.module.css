@@ -52,7 +52,7 @@
   border-radius: 4rem;
   border: solid 0.1rem;
 }
-.siteImg {
+.siteInfos {
   display: flex;
   flex-direction: column;
   /* border: 1px solid #248984; */
@@ -335,6 +335,9 @@
     left: -24px;
     top: -23px;
     z-index: -1;
+  }
+  .siteImg {
+    display: none;
   }
 }
 
