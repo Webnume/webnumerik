@@ -285,7 +285,7 @@
     font-size: 1rem;
   }
   .container {
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
     flex-direction: column;
   }
   .container:nth-child(1) {
@@ -296,10 +296,11 @@
   }
   .left {
     flex-direction: row;
+    flex-wrap: nowrap;
     width: 90vw;
     height: 40%;
     font-size: 1rem;
-    margin: 0.5rem;
+    /* margin: 0.5rem; */
     padding: 1rem;
   }
   .right {
@@ -307,13 +308,14 @@
     font-size: 1rem;
     margin-bottom: 2rem;
     padding: 0.5rem;
+
   }
   .right h2 {
     margin: 0;
   }
   .projecttitle {
     position: unset;
-    font-size: 2.7vh;
+    font-size: 1rem;
     /* margin: 0 0.4rem; */
   }
   .skills :not(.logoReact) :nth-child(n) {
@@ -338,6 +340,9 @@
   }
   .siteImg {
     display: none;
+  }
+  .underThumb {
+    margin-left: 1rem;
   }
 }
 
