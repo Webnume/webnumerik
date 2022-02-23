@@ -44,10 +44,8 @@ function PortofolioCard({
       <div className={styles.container}>
         <h1 className={styles.projecttitle}>{projectTitle}</h1>
         <div className={`${styles.left}`}>
-            <span className={styles.siteImg}>
-              <Image src={`/${imgSrc}`} alt={imgAlt} width={200} height={120} />
-            </span>
-          <div className={styles.underThumb}>
+          <div className={styles.siteImg}>
+            <Image src={`/${imgSrc}`} alt={imgAlt} width={200} height={120} />
             <div className={styles.inner}>
               <a
                 href={demoLink}
@@ -74,22 +72,22 @@ function PortofolioCard({
                 <span>b</span>
               </a>
             </div>
-            <span className={styles.skilltitle}>Technos </span>
+          </div>
+          <div className={styles.underThumb}>
             <div className={styles.skills}>
+              <span className={styles.infos}> {inHover}</span>
+              <span className={styles.skilltitle}>Technos </span>
               {technos.map((techno) => {
                 if (techno === "html")
                   return (
                     <div key={nanoid(10)}>
                       <span
                         className={styles.logoHtml5}
-                        onMouseEnter={() => setHover("html")}
+                        onMouseEnter={() => setHover("Html")}
                         onMouseLeave={() => setHover("")}
                       >
                         <FontAwesomeIcon icon={faHtml5} />
                       </span>
-                      {inHover === "html" && (
-                        <span className={styles.infos}>Html</span>
-                      )}
                     </div>
                   );
                 if (techno === "css")
@@ -97,14 +95,11 @@ function PortofolioCard({
                     <div key={nanoid(10)}>
                       <span
                         className={styles.logoCss3}
-                        onMouseEnter={() => setHover("css")}
+                        onMouseEnter={() => setHover("Css")}
                         onMouseLeave={() => setHover("")}
                       >
                         <FontAwesomeIcon icon={faCss3Alt} />
                       </span>
-                      {inHover === "css" && (
-                        <span className={styles.infos}>Css</span>
-                      )}
                     </div>
                   );
 
@@ -113,14 +108,11 @@ function PortofolioCard({
                     <div key={nanoid(10)}>
                       <span
                         className={styles.logoSass}
-                        onMouseEnter={() => setHover("sass")}
+                        onMouseEnter={() => setHover("Préprocesseur Sass")}
                         onMouseLeave={() => setHover("")}
                       >
                         <FontAwesomeIcon icon={faSass} />
                       </span>
-                      {inHover === "sass" && (
-                        <span className={styles.infos}>Préprocesseur sass</span>
-                      )}
                     </div>
                   );
                 if (techno === "js")
@@ -128,14 +120,11 @@ function PortofolioCard({
                     <div key={nanoid(10)}>
                       <span
                         className={styles.logoJs}
-                        onMouseEnter={() => setHover("js")}
+                        onMouseEnter={() => setHover("JavaScript")}
                         onMouseLeave={() => setHover("")}
                       >
                         <FontAwesomeIcon icon={faJsSquare} />
                       </span>
-                      {inHover === "js" && (
-                        <span className={styles.infos}>JavaScript</span>
-                      )}
                     </div>
                   );
                 if (techno === "react")
@@ -143,14 +132,11 @@ function PortofolioCard({
                     <div key={nanoid(10)}>
                       <span
                         className={styles.logoReact}
-                        onMouseEnter={() => setHover("react")}
+                        onMouseEnter={() => setHover("React")}
                         onMouseLeave={() => setHover("")}
                       >
                         <FontAwesomeIcon icon={faReact} />
                       </span>
-                      {inHover === "react" && (
-                        <span className={styles.infos}>React</span>
-                      )}
                     </div>
                   );
                 if (techno === "git")
@@ -158,16 +144,11 @@ function PortofolioCard({
                     <div key={nanoid(10)}>
                       <span
                         className={styles.logoGit}
-                        onMouseEnter={() => setHover("git")}
+                        onMouseEnter={() => setHover("Git gestion de versions")}
                         onMouseLeave={() => setHover("")}
                       >
                         <FontAwesomeIcon icon={faGitSquare} />
                       </span>
-                      {inHover === "git" && (
-                        <span className={styles.infos}>
-                          Git gestion de versions
-                        </span>
-                      )}
                     </div>
                   );
                 if (techno === "jest")
@@ -175,7 +156,7 @@ function PortofolioCard({
                     <div key={nanoid(10)}>
                       <span
                         className={styles.logoJest}
-                        onMouseEnter={() => setHover("jest")}
+                        onMouseEnter={() => setHover("Jest")}
                         onMouseLeave={() => setHover("")}
                       >
                         <Image
@@ -186,9 +167,6 @@ function PortofolioCard({
                           height={30}
                         />
                       </span>
-                      {inHover === "jest" && (
-                        <span className={styles.infos}>jest</span>
-                      )}
                     </div>
                   );
               })}

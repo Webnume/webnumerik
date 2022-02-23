@@ -15,6 +15,7 @@
   border-radius: 2rem;
   /* background-color: rgba(255, 255, 255, 0.90); */
   z-index: 0;
+  flex-wrap: wrap;
 }
 .left img {
   border: 4mm ridge rgba(170, 50, 220, 0.6);
@@ -24,9 +25,11 @@
   color: black;
   background-color: white;
   border-radius: 0.5rem;
-  /* margin-bottom: 5rem; */
+  margin: 2rem 0;
   border: solid 0.5px;
-  width: 82%;
+  padding: 0.5rem;
+  font-size: smaller;
+  /* width: 82%; */
 }
 .right {
   display: flex;
@@ -36,7 +39,7 @@
   /* height: 100%; */
   padding: 2rem;
   border-radius: 1rem;
-  background-color: rgba(255, 255, 255, 0.90);
+  background-color: rgba(255, 255, 255, 0.9);
   z-index: 0;
 }
 .right h2 {
@@ -50,7 +53,10 @@
   border: solid 0.1rem;
 }
 .siteImg {
-  border: 1px solid #248984;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid #248984; */
+  align-items: center;
 }
 .customlist {
   padding-left: 20px;
@@ -195,7 +201,11 @@
   background-size: contain;
 }
 .skilltitle {
+  position: absolute;
+  left: -24px;
+  top: -36px;
   margin: 0 2rem;
+  color: #2c3e50;
   /* margin-bottom: 2rem; */
   background-color: white;
   padding: 0.3rem 0.7rem;
@@ -209,7 +219,7 @@
   /* width: 272px; */
   justify-content: center;
   align-items: center;
-  padding: 0.25rem 1rem;
+  padding: 0.3rem;
   background-color: white;
   border-radius: 1rem;
 }
@@ -253,16 +263,18 @@
   position: absolute;
   top: 0px;
   padding: 0 0.6rem;
-  /* background-color: #248984; */
+  background-color: #248984;
   font-size: 17px;
-  border-radius: 10px;
-  color: gray;
+  z-index: 10;
+  color: white;
 }
-.underThumb{
-  display: flex;flex-direction: column;align-items: center;
+.underThumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 600px) {
   .Portofoliofirst {
     transform: rotate(3.4deg) translateY(-7.5px) translateX(-8px) scale(0.8);
   }
@@ -312,11 +324,17 @@
     width: 1.4rem;
   }
   .inner {
+    font-size: 0.9rem;
     margin: 0.9;
     color: black;
     background-color: white;
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
+  }
+  .skilltitle {
+    left: -24px;
+    top: -23px;
+    z-index: -1;
   }
 }
 
