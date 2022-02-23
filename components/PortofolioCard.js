@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Portofolio.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,7 +13,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { nanoid } from "nanoid";
-import useWindowSize from "../utils/getWindowsSize";
 
 function PortofolioCard({
   projectTitle,
@@ -26,12 +25,7 @@ function PortofolioCard({
   imgAlt,
   backgroundImg,
 }) {
-  const widthSize = useWindowSize().width;
-  // watch input value by passing the name of it
-  // console.log(watch("nom"));
-  useEffect(() => {
-    useWindowSize;
-  }, [widthSize]);
+  const [inHover, setHover] = useState("");
   return (
     <div>
       <div style={{ position: "absolute", top: "0", left: "0" }}>
@@ -50,20 +44,10 @@ function PortofolioCard({
       <div className={styles.container}>
         <h1 className={styles.projecttitle}>{projectTitle}</h1>
         <div className={`${styles.left}`}>
-          {widthSize > 940 && (
-            <Link href={repoGitLink}>
-              <a target="blank" rel="noopener noreferrer">
-                <Image
-                  src={`/${imgSrc}`}
-                  alt={imgAlt}
-                  className={styles.siteImg}
-                  width={200}
-                  height={120}
-                />
-              </a>
-            </Link>
-          )}
-          <div>
+            <span className={styles.siteImg}>
+              <Image src={`/${imgSrc}`} alt={imgAlt} width={200} height={120} />
+            </span>
+          <div className={styles.underThumb}>
             <div className={styles.inner}>
               <a
                 href={demoLink}
@@ -90,53 +74,123 @@ function PortofolioCard({
                 <span>b</span>
               </a>
             </div>
-            <span className={styles.skilltitle}>Technos utilisées</span>
+            <span className={styles.skilltitle}>Technos </span>
             <div className={styles.skills}>
               {technos.map((techno) => {
                 if (techno === "html")
                   return (
-                    <span key={nanoid(10)} className={styles.logoHtml5}>
-                      <FontAwesomeIcon icon={faHtml5} />
-                    </span>
-                  );
-                if (techno === "html")
-                  return (
-                    <span key={nanoid(10)} className={styles.logoHtml5}>
-                      <FontAwesomeIcon icon={faHtml5} />
-                    </span>
+                    <div key={nanoid(10)}>
+                      <span
+                        className={styles.logoHtml5}
+                        onMouseEnter={() => setHover("html")}
+                        onMouseLeave={() => setHover("")}
+                      >
+                        <FontAwesomeIcon icon={faHtml5} />
+                      </span>
+                      {inHover === "html" && (
+                        <span className={styles.infos}>Html</span>
+                      )}
+                    </div>
                   );
                 if (techno === "css")
                   return (
-                    <span key={nanoid(10)} className={styles.logoCss3}>
-                      <FontAwesomeIcon icon={faCss3Alt} />
-                    </span>
+                    <div key={nanoid(10)}>
+                      <span
+                        className={styles.logoCss3}
+                        onMouseEnter={() => setHover("css")}
+                        onMouseLeave={() => setHover("")}
+                      >
+                        <FontAwesomeIcon icon={faCss3Alt} />
+                      </span>
+                      {inHover === "css" && (
+                        <span className={styles.infos}>Css</span>
+                      )}
+                    </div>
                   );
 
                 if (techno === "sass")
                   return (
-                    <span key={nanoid(10)} className={styles.logoSass}>
-                      <FontAwesomeIcon icon={faSass} />
-                    </span>
+                    <div key={nanoid(10)}>
+                      <span
+                        className={styles.logoSass}
+                        onMouseEnter={() => setHover("sass")}
+                        onMouseLeave={() => setHover("")}
+                      >
+                        <FontAwesomeIcon icon={faSass} />
+                      </span>
+                      {inHover === "sass" && (
+                        <span className={styles.infos}>Préprocesseur sass</span>
+                      )}
+                    </div>
                   );
                 if (techno === "js")
                   return (
-                    <span key={nanoid(10)} className={styles.logoJs}>
-                      <FontAwesomeIcon icon={faJsSquare} />
-                    </span>
+                    <div key={nanoid(10)}>
+                      <span
+                        className={styles.logoJs}
+                        onMouseEnter={() => setHover("js")}
+                        onMouseLeave={() => setHover("")}
+                      >
+                        <FontAwesomeIcon icon={faJsSquare} />
+                      </span>
+                      {inHover === "js" && (
+                        <span className={styles.infos}>JavaScript</span>
+                      )}
+                    </div>
                   );
                 if (techno === "react")
                   return (
-                    <span key={nanoid(10)} className={styles.logoReact}>
-                      <FontAwesomeIcon icon={faReact} />
-                    </span>
+                    <div key={nanoid(10)}>
+                      <span
+                        className={styles.logoReact}
+                        onMouseEnter={() => setHover("react")}
+                        onMouseLeave={() => setHover("")}
+                      >
+                        <FontAwesomeIcon icon={faReact} />
+                      </span>
+                      {inHover === "react" && (
+                        <span className={styles.infos}>React</span>
+                      )}
+                    </div>
                   );
                 if (techno === "git")
                   return (
-                    <span key={nanoid(10)} className={styles.logoGit}>
-                      <FontAwesomeIcon icon={faGitSquare} />
-                    </span>
+                    <div key={nanoid(10)}>
+                      <span
+                        className={styles.logoGit}
+                        onMouseEnter={() => setHover("git")}
+                        onMouseLeave={() => setHover("")}
+                      >
+                        <FontAwesomeIcon icon={faGitSquare} />
+                      </span>
+                      {inHover === "git" && (
+                        <span className={styles.infos}>
+                          Git gestion de versions
+                        </span>
+                      )}
+                    </div>
                   );
-                else return techno;
+                if (techno === "jest")
+                  return (
+                    <div key={nanoid(10)}>
+                      <span
+                        className={styles.logoJest}
+                        onMouseEnter={() => setHover("jest")}
+                        onMouseLeave={() => setHover("")}
+                      >
+                        <Image
+                          src="/jest-icon.svg"
+                          alt="jest"
+                          // className={styles.panelBackground}
+                          width={20}
+                          height={30}
+                        />
+                      </span>
+                      {inHover === "jest" && (
+                        <span className={styles.infos}>jest</span>
+                      )}
+                    </div>
+                  );
               })}
             </div>
           </div>
