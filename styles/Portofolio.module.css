@@ -285,7 +285,7 @@
     font-size: 1rem;
   }
   .container {
-    /* margin-top: 6rem; */
+    margin-top: 2.5rem;
     flex-direction: column;
   }
   .container:nth-child(1) {
