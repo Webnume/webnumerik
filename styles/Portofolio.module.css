@@ -312,6 +312,8 @@
   }
   .right h2 {
     margin: 0;
+    padding: 0 10px;
+    font-size: 0.8rem;
   }
   .projecttitle {
     position: unset;

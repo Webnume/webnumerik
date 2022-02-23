@@ -61,14 +61,6 @@ export default function Home() {
           className={`${styles.panel} ${styles.red212}`}
           ref={addToPanelsRef}
         >
-          {/* <Image
-            src="/pexels-karolina-grabowska-8947463.jpg"
-            alt="projet 14"
-            className={styles.panelBackground}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-          /> */}
           <PortofolioCard
             projectTitle="Faire Passer une librairie Jquery vers React"
             demoLink="https://optimistic-shockley-a18fe4.netlify.app/"
