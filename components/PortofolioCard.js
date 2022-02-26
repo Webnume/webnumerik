@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "../styles/Portofolio.module.css";
+import "../styles/Portofolio.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
@@ -13,6 +14,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { nanoid } from "nanoid";
+import portofolioGsapAnimations from "../utils/gsapAnimations/portofolioGsapAnimations";
+import { gsap } from "gsap";
 
 function PortofolioCard({
   projectTitle,
@@ -26,6 +29,34 @@ function PortofolioCard({
   backgroundImg,
 }) {
   const [inHover, setHover] = useState("");
+  const container = useRef();
+  const q = gsap.utils.selector(container);
+
+  const leftRef = useRef([]);
+  leftRef.current = [];
+  const addToLeftRef = (el) => {
+    if (el && !leftRef.current.includes(el)) {
+      leftRef.current.push(el);
+    }
+  };
+
+  useEffect(() => {
+    // portofolioGsapAnimations().panelContent(projectRef.current);
+    gsap.from(q("[data-title],[data-left]"), {
+      x: 500,
+      opacity: 0,
+      duration: 1.5,
+      ease: "elastic",
+      scrollTrigger: {
+        trigger: "[data-title]",
+        markers: true,
+        start: "top 80%",
+        end: "top 30%",
+        scrub: 1,
+      },
+    });
+  }, []);
+
   return (
     <div>
       <div style={{ position: "absolute", top: "0", left: "0" }}>
@@ -41,9 +72,11 @@ function PortofolioCard({
           />
         </div>
       </div>
-      <div className={styles.container}>
-        <h1 className={styles.projecttitle}>{projectTitle}</h1>
-        <div className={`${styles.left}`}>
+      <div className={styles.container} ref={container}>
+        <h1 className={styles.projecttitle} data-title>
+          {projectTitle}
+        </h1>
+        <div className={`${styles.left}`} data-left>
           <div className={styles.siteInfos}>
             <span className={styles.siteImg}>
               <Image src={`/${imgSrc}`} alt={imgAlt} width={200} height={120} />

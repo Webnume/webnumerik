@@ -17,7 +17,6 @@ import indexGsapAnimations from "../utils/gsapAnimations/indexGsapAnimations";
 export default function Home() {
   const logosRef = useRef();
   const welcome1Ref = useRef();
-  const welcome2Ref = useRef();
 
   useEffect(() => {
     //Icons Timelines
