@@ -274,7 +274,7 @@
   align-items: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 777px) {
   .Portofoliofirst {
     transform: rotate(3.4deg) translateY(-7.5px) translateX(-8px) scale(0.8);
   }

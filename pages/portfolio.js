@@ -10,7 +10,6 @@ import PortofolioCard from "../components/PortofolioCard";
 export default function Home() {
   const panelsRef = useRef([]);
   panelsRef.current = [];
-
   const addToPanelsRef = (el) => {
     if (el && !panelsRef.current.includes(el)) {
       panelsRef.current.push(el);

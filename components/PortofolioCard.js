@@ -14,7 +14,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { nanoid } from "nanoid";
-import portofolioGsapAnimations from "../utils/gsapAnimations/portofolioGsapAnimations";
 import { gsap } from "gsap";
 
 function PortofolioCard({
@@ -32,30 +31,22 @@ function PortofolioCard({
   const container = useRef();
   const q = gsap.utils.selector(container);
 
-  const leftRef = useRef([]);
-  leftRef.current = [];
-  const addToLeftRef = (el) => {
-    if (el && !leftRef.current.includes(el)) {
-      leftRef.current.push(el);
-    }
-  };
-
-  useEffect(() => {
-    // portofolioGsapAnimations().panelContent(projectRef.current);
-    gsap.from(q("[data-title],[data-left]"), {
-      x: 500,
-      opacity: 0,
-      duration: 1.5,
-      ease: "elastic",
-      scrollTrigger: {
-        trigger: "[data-title]",
-        markers: true,
-        start: "top 80%",
-        end: "top 30%",
-        scrub: 1,
-      },
-    });
-  }, []);
+  // useEffect(() => {
+  //   // portofolioGsapAnimations().panelContent(projectRef.current);
+  //   gsap.from(q("[data-title],[data-left]"), {
+  //     x: 500,
+  //     opacity: 0,
+  //     duration: 1.5,
+  //     ease: "elastic",
+  //     scrollTrigger: {
+  //       trigger: "[data-title]",
+  //       markers: true,
+  //       start: "top 80%",
+  //       end: "top 30%",
+  //       scrub: 1,
+  //     },
+  //   });
+  // }, []);
 
   return (
     <div>
