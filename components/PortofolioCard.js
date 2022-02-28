@@ -14,7 +14,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { nanoid } from "nanoid";
-import { gsap } from "gsap";
 
 function PortofolioCard({
   projectTitle,
@@ -29,24 +28,6 @@ function PortofolioCard({
 }) {
   const [inHover, setHover] = useState("");
   const container = useRef();
-  const q = gsap.utils.selector(container);
-
-  // useEffect(() => {
-  //   // portofolioGsapAnimations().panelContent(projectRef.current);
-  //   gsap.from(q("[data-title],[data-left]"), {
-  //     x: 500,
-  //     opacity: 0,
-  //     duration: 1.5,
-  //     ease: "elastic",
-  //     scrollTrigger: {
-  //       trigger: "[data-title]",
-  //       markers: true,
-  //       start: "top 80%",
-  //       end: "top 30%",
-  //       scrub: 1,
-  //     },
-  //   });
-  // }, []);
 
   return (
     <div>
@@ -200,7 +181,7 @@ function PortofolioCard({
             </div>
           </div>
         </div>
-        <div className={styles.right}>
+        <div className={styles.right} data-right>
           <h2>Mission réalisée</h2>
           <p>{mission}</p>
           <h2>Compétences déployées</h2>

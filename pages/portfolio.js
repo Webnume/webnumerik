@@ -15,9 +15,11 @@ export default function Home() {
       panelsRef.current.push(el);
     }
   };
-
+  console.log()
   useEffect(() => {
     portofolioGsapAnimations().panel(panelsRef.current);
+    // return () => {};
+    console.log("render");
   }, []);
 
   return (
