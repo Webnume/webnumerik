@@ -17,12 +17,12 @@ function portofolioGsapAnimations() {
       tl.from(q("[data-title],[data-left]"), {
         x: -100,
         opacity: 0,
-        duration: 1.5,
+        // duration: 1.5,
         ease: "elastic",
         scrollTrigger: {
           trigger: panel,
-          start: "top 70%",
-          // end: "top bottom",
+          start: "top 10%",
+          // end: "bottom top",
           scrub: true,
           // markers: true,
         },
@@ -31,26 +31,27 @@ function portofolioGsapAnimations() {
       tl.from(q("[data-right]"), {
         x: 100,
         opacity: 0,
-        duration: 1.5,
+        // duration: 1.5,
         ease: "elastic",
         scrollTrigger: {
           trigger: panel,
-          start: "top 70%",
-          // end: "top bottom",
+          start: "top 10%",
+          // end: "bottom top",
           scrub: true,
           // markers: true,
+          // snap: 5,
         },
       });
 
         ScrollTrigger.create({
           animation: tl,
           trigger: panel,
-          // start: "top top",
-          // end: "top 60%",
-          pin: i === panelsRef.length - 1 ? false : true,
-          pinSpacing: false,
-          snap: 5,
-          // scrub: 1,
+          start: "top top",
+        //   // end: "top 60%",
+        //   // pin: i === panelsRef.length - 1 ? false : true,
+        //   // pinSpacing: false,
+          snap: 1,
+          scrub: 1,
           // markers: true,
         });
     });

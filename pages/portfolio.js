@@ -266,9 +266,9 @@ export default function Home() {
           />
         </section>
 
-        <section className={`${styles.static} `} ref={addToPanelsRef}>
+        {/* <section className={`${styles.static} `} ref={addToPanelsRef}>
           static content
-        </section>
+        </section> */}
       </main>
 
       {/* <Footer /> */}
