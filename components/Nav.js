@@ -3,11 +3,16 @@ import Link from "next/link";
 import styles from "../styles/Nav.module.css";
 import Image from "next/image";
 import Socialmedia from "./Socialmedia";
+import navGsapAnimations from "../utils/gsapAnimations/navfGsapAnimations";
 
 function Nav() {
+  // useEffect(() => {
+  //   window.addEventListener("scroll", listenScrollEvent);
+  //   return () => window.removeEventListener("scroll", listenScrollEvent);
+  // }, []);
   useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
-    return () => window.removeEventListener("scroll", listenScrollEvent);
+   navGsapAnimations().navAnimation()
+  
   }, []);
 
   const [showLinks, setShowLinks] = useState(false);
@@ -29,6 +34,7 @@ function Nav() {
       className={`${styles.navbar} ${showLinks ? styles.shownav : "hide-nav"} ${
         scroll ? styles.reduce : "extend-nav"
       }`}
+      data-nav
     >
       <div className={`${styles.logo} ${scroll ? styles.logoBackGround : ""}`}>
         <Link href="/">
@@ -43,7 +49,11 @@ function Nav() {
           </a>
         </Link>
       </div>
-      <ul className={`${styles.navbar__links} ${scroll ? styles.logoBackGround : ""}`}>
+      <ul
+        className={`${styles.navbar__links} ${
+          scroll ? styles.logoBackGround : ""
+        }`}
+      >
         <li className={`${styles.navbar__item} ${styles.slideInDown1}`}>
           <Link href="/">
             <a className={styles.navbar__link}>

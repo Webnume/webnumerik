@@ -28,30 +28,4 @@ function indexGsapAnimations() {
   return { welcome1, typingEffect, logos };
 }
 
-// const indexGaspAnimation = {
-//   welcome2(welcome2Ref) {
-//     let tl2 = gsap.timeline({
-//       repeat: 0,
-//       repeatDelay: 1,
-//       scrollTrigger: {
-//         trigger: welcome2Ref,
-//         start: "top bottom",
-//         end: "+=400",
-//         scrub: true,
-//         // markers: true,
-//       },
-//     });
-//     return tl2.from(welcome2Ref, {
-//       height: 0,
-//       backgroundColor: "#fff",
-//       opacity: 0,
-//       x: -2000,
-//       width: 0,
-//       filter: "blur(4px)",
-//       ease: "Power1.out",
-//       // ease: "back.out(1.7)"
-//     });
-//   },
-// };
-
 export default indexGsapAnimations;
