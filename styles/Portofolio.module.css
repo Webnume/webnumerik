@@ -102,10 +102,11 @@
   font-weight: 700;
   margin: 0 auto;
   text-transform: uppercase;
-  /* background-color: rgba(255, 255, 255, 0.85); */
+  background-color: rgba(255, 255, 255, 0.85);
   /* border: 1px dashed black; */
-  text-shadow: rgb(255, 255, 255) 2px 1px 10px;
+  text-shadow: rgb(255, 255, 255) 3px 2px 8px;
   padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 .panel h2 {
   font-size: 1em;

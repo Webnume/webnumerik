@@ -18,8 +18,7 @@ export default function Home() {
   console.log()
   useEffect(() => {
     portofolioGsapAnimations().panel(panelsRef.current);
-    // return () => {};
-    console.log("render");
+    return () => {};
   }, []);
 
   return (

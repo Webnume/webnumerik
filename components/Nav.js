@@ -3,13 +3,13 @@ import Link from "next/link";
 import styles from "../styles/Nav.module.css";
 import Image from "next/image";
 import Socialmedia from "./Socialmedia";
-import navGsapAnimations from "../utils/gsapAnimations/navfGsapAnimations";
+import navGsapAnimations from "../utils/gsapAnimations/navGsapAnimations";
 
 function Nav() {
-  // useEffect(() => {
-  //   window.addEventListener("scroll", listenScrollEvent);
-  //   return () => window.removeEventListener("scroll", listenScrollEvent);
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
   useEffect(() => {
    navGsapAnimations().navAnimation()
   

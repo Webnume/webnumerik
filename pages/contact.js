@@ -40,7 +40,7 @@ export default function Home() {
               style={{
                 position: "relative",
                 width: "50vw" || (widthSize/2),
-                height: "100vh",
+                height: widthSize>700 ? "100vh" : "0vh",
               }}
             >
               <Image

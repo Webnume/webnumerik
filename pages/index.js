@@ -39,7 +39,9 @@ export default function Home() {
           </h2>
           <h1 className={styles.title}>
             Développeur Web{" "}
-            <a href="https://nextjs.org" id="reactText">
+            <a href="https://nextjs.org" id="reactText"
+            className={styles.reactText}
+            >
               !RJeSact
             </a>
           </h1>

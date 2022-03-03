@@ -7,7 +7,7 @@
   width: 100vw;
   min-height: 160px;
   padding: 1rem;
-  background-color: #ecf0f1;
+  background-color: transparent;
   color: #2c3e50;
   top: 0;
   font-size: 16px;
@@ -23,6 +23,10 @@
   position: fixed;
   top: 0.5rem;
   left: 1rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2rem;
+  padding: 1rem .5rem .3rem .5rem;
+  transform: scale(.8);
 }
 
 .logoBackGround {
@@ -162,8 +166,9 @@
     width: 100vw;
     min-height: 89px;
     padding: 1rem;
-    background-color: #ecf0f1;
+    /* background-color: #ecf0f1; */
     color: #2c3e50;
+    height: 100vh;
     top: 0;
     font-size: 16px;
     transition: all 0.2s ease-in-out;
@@ -173,6 +178,7 @@
     transform: scale(0.5);
     top: -2.6rem;
     left: -4.3rem;
+    margin: .5rem;
   }
   .socialmedia {
     right: 5.3rem;
@@ -219,6 +225,8 @@
     right: 1rem;
     width: 40px;
     height: 40px;
+    top: 0;
+    margin: 1rem;
   }
   .navbar__burger:hover {
     cursor: pointer;
