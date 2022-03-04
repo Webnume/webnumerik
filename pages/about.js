@@ -68,7 +68,7 @@ export default function Home() {
       <Header />
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">ABOUT!</a>
+          Mon <a href="https://nextjs.org">Parcours</a>
         </h1>
         <Timeline items= {timelineArray} />
        
@@ -103,7 +103,7 @@ export default function Home() {
         </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -32,7 +32,7 @@ function PortofolioCard({
   return (
     <div>
       <div style={{ position: "absolute", top: "0", left: "0" }}>
-        <div style={{ position: "relative", width: "100vw", height: "100vh" }}>
+        <div style={{ position: "relative", width: "100vw", height: "100vh",filter: "blur(9px)" }}>
           <Image
             src={`/${backgroundImg}`}
             alt={imgAlt}
