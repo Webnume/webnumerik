@@ -3,8 +3,61 @@ import Image from "next/image";
 import styles from "../styles/About.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Timeline from "../components/Timeline";
 
 export default function Home() {
+  const timelineArray = [
+    {
+      title: "Title 1",
+      description: "Desc 1",
+      date: "1 March 1990",
+    },
+    {
+      title: "Title 2",
+      description: "Desc 2",
+      date: "2 March 1994",
+    },
+    {
+      title: "Title 1",
+      description: "Desc 1",
+      date: "1 March 1990",
+    },
+    {
+      title: "Title 2",
+      description: "Desc 2",
+      date: "2 March 1994",
+    },
+    {
+      title: "Title 1",
+      description: "Desc 1",
+      date: "1 March 1990",
+    },
+    {
+      title: "Title 2",
+      description: "Desc 2",
+      date: "2 March 1994",
+    },
+    {
+      title: "Title 1",
+      description: "Desc 1",
+      date: "1 March 1990",
+    },
+    {
+      title: "Title 2",
+      description: "Desc 2",
+      date: "2 March 1994",
+    },
+    {
+      title: "Title 1",
+      description: "Desc 1",
+      date: "1 March 1990",
+    },
+    {
+      title: "Title 2",
+      description: "Desc 2",
+      date: "2 March 1994",
+    },
+  ];
   return (
     <div className="container">
       <Head>
@@ -17,12 +70,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">ABOUT!</a>
         </h1>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
+        <Timeline items= {timelineArray} />
+       
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
@@ -54,7 +103,7 @@ export default function Home() {
         </div>
       </main>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }
