@@ -100,20 +100,15 @@ export default function Home() {
           <li>
             Refactoriser du code pour qu’il soit plus moderne et optimisé.
           </li>
+          <li>HTML/ CSS/ SASS</li>
+          <li>JavaScript ES6</li>
+          <li>ReactJS / Redux</li>
+          <li>Responsive Design / W3C / Accessibilité </li>
         </ul>
-        <p>          
-          Aujourd'hui, je souhaite mettre toutes mes compétences à profit en
-          collaborant, en toute confiance, sur des projets web. Développement :
-        </p>
-          <ul className={styles.customlist}>
-            <li>HTML</li>
-            <li>CSS / SASS</li>
-            <li>JavaScript ES6</li>
-            <li>ReactJS / Redux</li>
-            <li>Responsive Design / W3C / Accessibilité </li>
-          </ul>
         <p>
-          Sérieux et autonome, je suis à l'écoute de vos besoins et je serais heureux de vous aider.
+          Aujourd'hui, je souhaite mettre toutes mes compétences à profit en
+          collaborant, en toute confiance, sur des projets web. Sérieux et autonome, je suis à l'écoute de vos besoins et je serais
+          heureux de vous aider.
         </p>
         <Timeline items={timelineArray} />
 
