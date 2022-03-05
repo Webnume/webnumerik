@@ -70,8 +70,53 @@ export default function Home() {
         <h1 className={styles.title}>
           Mon <a href="https://nextjs.org">Parcours</a>
         </h1>
-        <Timeline items= {timelineArray} />
-       
+        <p>
+          Issu d'un cursus scientifique, je me suis d'abord lancé en autodidacte
+          dans le domaine de la création web dès 1999 par passion. Ensuite, j'ai
+          validé une formation diplômante de développeur d'application front-end
+          ReactJS chez OpenClassRoom. Les compétences acquises grâce à cette
+          formation :
+        </p>
+        <ul className={styles.customlist}>
+          <li>
+            Choisir une solution technique adaptée à votre client et travailler
+            en mode Agile ;
+          </li>
+          <li>Créer des sites web avec HTML et CSS ;</li>
+          <li>
+            Créer des applications web dynamiques avec Javascript et ReactJS ;
+          </li>
+          <li>
+            Communiquer avec le back-end de l’application grâce à une API ;
+          </li>
+          <li>
+            Mettre en œuvre des test unitaires et d’intégration et débugger le
+            code ;
+          </li>
+          <li>
+            Résoudre des problèmes techniques avec un langage de programmation
+            et des algorithmes ;
+          </li>
+          <li>
+            Refactoriser du code pour qu’il soit plus moderne et optimisé.
+          </li>
+        </ul>
+        <p>          
+          Aujourd'hui, je souhaite mettre toutes mes compétences à profit en
+          collaborant, en toute confiance, sur des projets web. Développement :
+        </p>
+          <ul className={styles.customlist}>
+            <li>HTML</li>
+            <li>CSS / SASS</li>
+            <li>JavaScript ES6</li>
+            <li>ReactJS / Redux</li>
+            <li>Responsive Design / W3C / Accessibilité </li>
+          </ul>
+        <p>
+          Sérieux et autonome, je suis à l'écoute de vos besoins et je serais heureux de vous aider.
+        </p>
+        <Timeline items={timelineArray} />
+
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>

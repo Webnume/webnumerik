@@ -1,5 +1,5 @@
 // import {useEffect} React from "react";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Contact.module.css";
@@ -7,7 +7,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useForm } from "react-hook-form";
 import useWindowSize from "../utils/getWindowsSize";
-// import { useEffect } from "react/cjs/react.development";
+import { gsap } from "gsap";
 
 export default function Home() {
   const {
@@ -21,9 +21,42 @@ export default function Home() {
   const widthSize = useWindowSize().width;
   // watch input value by passing the name of it
   // console.log(watch("nom"));
+  const rightRef = useRef();
+  const leftRef = useRef();
+  // const q = gsap.utils.selector(rightRef.current);
+
+
   useEffect(() => {
     useWindowSize;
   }, [widthSize]);
+
+  useEffect(() => {
+    let tl = gsap.timeline();
+
+    tl
+    .add("start")
+    .from(rightRef.current, {
+      duration: 1,
+      ease: "bounce.out",
+      x: 200,
+      opacity: 0,
+      repeat: 0,
+    },"start")
+    .from(leftRef.current, {
+      duration: 1,
+      ease: "bounce.out",
+      x: -200,
+      opacity: 0,
+      repeat: 0,
+    },"start")
+    .to(leftRef.current.querySelector(".description"), {
+      duration: 1,
+      ease: "bounce.out",
+      x: -200,
+      opacity: 0,
+      repeat: 0,
+    },"start")
+  }, []);
 
   return (
     <div className="container">
@@ -34,13 +67,13 @@ export default function Home() {
       </Head>
       <Header />
       <main className={styles.main}>
-        <div className={styles.left}>
-          <div style={{ position: "absolute", top: "0", left: "0" }}>
+        <div className={styles.left} ref={leftRef}>
+          {/* <div style={{ position: "absolute", top: "0", left: "0" }}>
             <div
               style={{
                 position: "relative",
-                width: "50vw" || (widthSize/2),
-                height: widthSize>700 ? "100vh" : "0vh",
+                width: "50vw" || widthSize / 2,
+                height: widthSize > 700 ? "100vh" : "0vh",
               }}
             >
               <Image
@@ -53,7 +86,7 @@ export default function Home() {
                 priority
               />
             </div>
-          </div>
+          </div> */}
           <div className={styles.wrapper}>
             <h1 className={styles.title}>LAISSEZ UN MOT</h1>
             <p className={styles.description}>
@@ -62,7 +95,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className={styles.right}>
+        <div className={styles.right} ref={rightRef}>
           {" "}
           {/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
           <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
