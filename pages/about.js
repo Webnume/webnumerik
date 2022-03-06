@@ -24,7 +24,7 @@ export default function Home() {
     },
     {
       title: "Licence SNV",
-      description: "Sciences de la Nature et de la Vie mention Biologie des Organismes",
+      description: "Sciences de la Nature et de la Vie mention Biologie des Organismes.",
       date: "1995 - 1999",
     },
     {
