@@ -45,8 +45,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Mon <a href="https://nextjs.org">Parcours</a>
         </h1>
-        <p>
-          Issu d'un cursus scientifique, je me suis d'abord lancé en autodidacte
+        <p>Issu d'un cursus scientifique, je me suis d'abord lancé en autodidacte
           dans le domaine de la création web dès 1999 par passion. Ensuite, j'ai
           validé une formation diplômante de développeur d'application front-end
           ReactJS chez OpenClassRoom. Les compétences acquises grâce à cette

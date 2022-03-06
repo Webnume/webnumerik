@@ -49,13 +49,13 @@ export default function Home() {
       opacity: 0,
       repeat: 0,
     },"start")
-    // .to(leftRef.current.querySelector(".description"), {
-    //   duration: 1,
-    //   ease: "bounce.out",
-    //   x: -200,
-    //   opacity: 0,
-    //   repeat: 0,
-    // },"start")
+    .to(leftRef.current.querySelector(".description"), {
+      duration: 1,
+      ease: "bounce.out",
+      x: -200,
+      opacity: 0,
+      repeat: 0,
+    },"start")
   }, []);
 
   return (
