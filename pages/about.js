@@ -8,54 +8,29 @@ import Timeline from "../components/Timeline";
 export default function Home() {
   const timelineArray = [
     {
-      title: "Title 1",
-      description: "Desc 1",
-      date: "1 March 1990",
+      title: "Développeur d'application - JavaScript React",
+      description: "Diplôme et titre RNCP de niveau 6 (BAC +3/4). Formation à plein temps de 12 mois.",
+      date: "2020 - 2021",
     },
     {
-      title: "Title 2",
-      description: "Desc 2",
-      date: "2 March 1994",
+      title: "Technicien informatique indépendant",
+      description: "Réalisation, sécurisation et installation des nouveaux équipements ou logiciels de parc informatique d’entreprise ou de particuliers, ensuite l’entretien et la réparation des différents matériels.",
+      date: "2013 - 2020",
     },
     {
-      title: "Title 1",
-      description: "Desc 1",
-      date: "1 March 1990",
+      title: "Webmaster freelance",
+      description: "Conception, développement et entretien de sites internets. Mise en forme et en ligne des contenus, maintien de plateforme technique et référencement.",
+      date: "1999 - 2013",
     },
     {
-      title: "Title 2",
-      description: "Desc 2",
-      date: "2 March 1994",
+      title: "Licence SNV",
+      description: "Sciences de la Nature et de la Vie mention Biologie des Organismes",
+      date: "1995 - 1999",
     },
     {
-      title: "Title 1",
-      description: "Desc 1",
-      date: "1 March 1990",
-    },
-    {
-      title: "Title 2",
-      description: "Desc 2",
-      date: "2 March 1994",
-    },
-    {
-      title: "Title 1",
-      description: "Desc 1",
-      date: "1 March 1990",
-    },
-    {
-      title: "Title 2",
-      description: "Desc 2",
-      date: "2 March 1994",
-    },
-    {
-      title: "Title 1",
-      description: "Desc 1",
-      date: "1 March 1990",
-    },
-    {
-      title: "Title 2",
-      description: "Desc 2",
-      date: "2 March 1994",
+      title: "BAC S",
+      description: "Baccalauréat Scientifique option Biologie.",
+      date: "1994 - 1995",
     },
   ];
   return (
