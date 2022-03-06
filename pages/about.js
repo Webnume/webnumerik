@@ -9,22 +9,26 @@ export default function Home() {
   const timelineArray = [
     {
       title: "Développeur d'application - JavaScript React",
-      description: "Diplôme et titre RNCP de niveau 6 (BAC +3/4). Formation à plein temps de 12 mois.",
+      description:
+        "Diplôme et titre RNCP de niveau 6 (BAC +3/4). Formation à plein temps de 12 mois.",
       date: "2020 - 2021",
     },
     {
       title: "Technicien informatique indépendant",
-      description: "Réalisation, sécurisation et installation des nouveaux équipements ou logiciels de parc informatique d’entreprise ou de particuliers, ensuite l’entretien et la réparation des différents matériels.",
+      description:
+        "Réalisation, sécurisation et installation des nouveaux équipements ou logiciels de parc informatique d’entreprise ou de particuliers, ensuite l’entretien et la réparation des différents matériels.",
       date: "2013 - 2020",
     },
     {
       title: "Webmaster freelance",
-      description: "Conception, développement et entretien de sites internets. Mise en forme et en ligne des contenus, maintien de plateforme technique et référencement.",
+      description:
+        "Conception, développement et entretien de sites internets. Mise en forme et en ligne des contenus, maintien de plateforme technique et référencement.",
       date: "1999 - 2013",
     },
     {
       title: "Licence SNV",
-      description: "Sciences de la Nature et de la Vie mention Biologie des Organismes.",
+      description:
+        "Sciences de la Nature et de la Vie mention Biologie des Organismes.",
       date: "1995 - 1999",
     },
     {
@@ -43,13 +47,14 @@ export default function Home() {
       <Header />
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Mon <a href="https://nextjs.org">Parcours</a>
+          Mon <span>Parcours</span>
         </h1>
-        <p>Issu d'un cursus scientifique, je me suis d'abord lancé en autodidacte
+        <p>
+          Issu d'un cursus scientifique, je me suis d'abord lancé en autodidacte
           dans le domaine de la création web dès 1999 par passion. Ensuite, j'ai
-          validé une formation diplômante de développeur d'application front-end
-          ReactJS chez OpenClassRoom. Les compétences acquises grâce à cette
-          formation :
+          validé une formation diplômante de développeur d'applications
+          front-end ReactJS chez OpenClassRoom. Les compétences acquises grâce à
+          cette formation :
         </p>
         <ul className={styles.customlist}>
           <li>
@@ -81,39 +86,37 @@ export default function Home() {
         </ul>
         <p>
           Aujourd'hui, je souhaite mettre toutes mes compétences à profit en
-          collaborant, en toute confiance, sur des projets web. Sérieux et autonome, je suis à l'écoute de vos besoins et je serais
-          heureux de vous aider.
+          collaborant, en toute confiance, sur des projets web. Sérieux et
+          autonome, je suis à l'écoute de vos besoins et je serais heureux de
+          vous aider.
         </p>
         <Timeline items={timelineArray} />
 
+        <h2 className={styles.title}>
+          Mes <span>Soft Skills</span>
+        </h2>
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <div className={styles.card}>
+            <h2>Confiance &rarr;</h2>
+            <p>J'aime travailler dans un climat de bienveillance, de confiance et d'honnêteté.</p>
+          </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <div className={styles.card}>
+            <h2>Adaptabilité &rarr;</h2>
+            <p>Je suis humble, capable de m'adapter et de me remettre en question.</p>
+          </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <div className={styles.card}>
+            <h2>Responsable &rarr;</h2>
+            <p>J'ai une intelligence émottionnelle qui me donne un sens des responsabilités. </p>
+          </div>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
+          <div className={styles.card}>
+            <h2>Collaboration &rarr;</h2>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Je souhaite faire partie d'une équipe de travail pour de riches échanges.
             </p>
-          </a>
+          </div>
         </div>
       </main>
 

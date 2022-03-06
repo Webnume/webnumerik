@@ -9,6 +9,7 @@
     z-index: -1;
     overflow-x: hidden;
     overflow-y: hidden;
+    padding: 0 2rem;
   }
   .icons {
     display: flex;
@@ -58,7 +59,7 @@
     flex-grow: 1;
   }
   
-  .title a {
+  .title span {
     color: #096868;
     text-decoration: none;
   }
