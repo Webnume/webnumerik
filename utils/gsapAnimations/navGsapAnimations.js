@@ -9,7 +9,7 @@ function navGsapAnimations() {
   const navAnimation = () => {
     const showAnim = gsap
       .from("[data-nav]", {
-        yPercent: -150,
+        yPercent: -1500,
         paused: true,
         duration: 0.5,
         opacity: 0.5,
