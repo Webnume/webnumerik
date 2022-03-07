@@ -1,4 +1,3 @@
-// import {useEffect} React from "react";
 import React, { useEffect, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
@@ -17,8 +16,8 @@ export default function Home() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
-  console.log(useWindowSize());
-  const widthSize = useWindowSize().width;
+  // console.log(useWindowSize());
+  // const widthSize = useWindowSize().width;
   // watch input value by passing the name of it
   // console.log(watch("nom"));
   const rightRef = useRef();
@@ -26,9 +25,9 @@ export default function Home() {
   // const q = gsap.utils.selector(rightRef.current);
 
 
-  useEffect(() => {
-    useWindowSize;
-  }, [widthSize]);
+  // useEffect(() => {
+  //   useWindowSize;
+  // }, [widthSize]);
 
   useEffect(() => {
     let tl = gsap.timeline();

@@ -168,7 +168,6 @@
     padding: 1rem;
     /* background-color: #ecf0f1; */
     color: #2c3e50;
-    height: 100vh;
     top: 0;
     font-size: 16px;
     transition: all 0.2s ease-in-out;
@@ -199,9 +198,12 @@
     z-index: 1;
   }
   .shownav .navbar__links {
+    position: fixed;
     width: 100vw;
+    top:0;
     right: 0;
     visibility: visible;
+    height: 100vh;
   }
   /* .navbar__item::after {
     content: "";
