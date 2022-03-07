@@ -108,7 +108,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <h2>Responsable &rarr;</h2>
-            <p>J'ai une intelligence émottionnelle qui me donne un sens des responsabilités. </p>
+            <p>J'ai une intelligence émotionnelle qui me donne un sens des responsabilités. </p>
           </div>
 
           <div className={styles.card}>
