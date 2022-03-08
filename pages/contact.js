@@ -1,61 +1,89 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Contact.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useForm } from "react-hook-form";
-import useWindowSize from "../utils/getWindowsSize";
 import { gsap } from "gsap";
+import { sendForm } from "@emailjs/browser";
 
 export default function Home() {
   const {
     register,
     handleSubmit,
-    // watch,
+    getValues,
+    reset,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
-  // console.log(useWindowSize());
-  // const widthSize = useWindowSize().width;
-  // watch input value by passing the name of it
-  // console.log(watch("nom"));
+  // const onSubmit = (data) => console.log(data);
   const rightRef = useRef();
   const leftRef = useRef();
-  // const q = gsap.utils.selector(rightRef.current);
+  const form = useRef();
+  const [replyTo, setReplyTo] = useState({});
+  const onSubmit = () => {
+    // e.preventDefault();
 
-
-  // useEffect(() => {
-  //   useWindowSize;
-  // }, [widthSize]);
-
+    sendForm(
+      "service_61kxv15",
+      "template_f5slp2g",
+      form.current,
+      "EYm3Yz_oxNRXuNCCY"
+    ).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+    reset();
+  };
   useEffect(() => {
     let tl = gsap.timeline();
 
-    tl
-    .add("start")
-    .from(rightRef.current, {
-      duration: 1,
-      ease: "bounce.out",
-      x: 200,
-      opacity: 0,
-      repeat: 0,
-    },"start")
-    .from(leftRef.current, {
-      duration: 1,
-      ease: "bounce.out",
-      x: -200,
-      opacity: 0,
-      repeat: 0,
-    },"start")
-    .to(leftRef.current.querySelector(".description"), {
-      duration: 1,
-      ease: "bounce.out",
-      x: -200,
-      opacity: 0,
-      repeat: 0,
-    },"start")
+    tl.add("start")
+      .from(
+        rightRef.current,
+        {
+          duration: 1,
+          ease: "bounce.out",
+          x: 200,
+          opacity: 0,
+          repeat: 0,
+        },
+        "start"
+      )
+      .from(
+        leftRef.current,
+        {
+          duration: 1,
+          ease: "bounce.out",
+          x: -200,
+          opacity: 0,
+          repeat: 0,
+        },
+        "start"
+      )
+      .to(
+        leftRef.current.querySelector(".description"),
+        {
+          duration: 1,
+          ease: "bounce.out",
+          x: -200,
+          opacity: 0,
+          repeat: 0,
+        },
+        "start"
+      );
+    console.log(getValues("email") === "");
   }, []);
+
+  const handleInputChange = (e) =>
+    setReplyTo({
+      ...replyTo,
+      reply_to: e.currentTarget.value,
+    });
 
   return (
     <div className="container">
@@ -97,7 +125,11 @@ export default function Home() {
         <div className={styles.right} ref={rightRef}>
           {" "}
           {/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
-          <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className={styles.form}
+            ref={form}
+          >
             {/* register your input into the hook by invoking the "register" function */}
             <label htmlFor="nom">Nom *</label>
             <input
@@ -105,6 +137,7 @@ export default function Home() {
               placeholder="Nom"
               {...register("nom", { required: true })}
               id="nom"
+              name="nom"
               className={styles.inputText}
             />
             {/* errors will return when field validation fails  */}
@@ -119,7 +152,9 @@ export default function Home() {
               placeholder="Email"
               {...register("email", { required: true })}
               id="email"
+              name="email"
               className={styles.inputText}
+              onChange={handleInputChange}
             />
             {/* errors will return when field validation fails  */}
             {errors.email && (
@@ -131,12 +166,27 @@ export default function Home() {
               placeholder="Message..."
               {...register("message", { required: true })}
               id="message"
+              name="message"
               className={styles.inputText}
             ></textarea>
             {/* errors will return when field validation fails  */}
             {errors.message && (
               <span className={styles.error}>This field is required</span>
             )}
+            <input
+              {...register("from_name")}
+              id="from_name"
+              name="from_name"
+              type="hidden"
+              value="WebNumerik.fr"
+            />
+            <input
+              {...register("reply_to")}
+              id="reply_to"
+              name="reply_to"
+              type="hidden"
+              value={replyTo}
+            />
 
             <input
               type="submit"
