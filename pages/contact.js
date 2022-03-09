@@ -12,7 +12,6 @@ export default function Home() {
   const {
     register,
     handleSubmit,
-    getValues,
     reset,
     formState: { errors },
   } = useForm();
@@ -23,7 +22,6 @@ export default function Home() {
   const [replyTo, setReplyTo] = useState({});
   const onSubmit = () => {
     // e.preventDefault();
-
     sendForm(
       "service_61kxv15",
       "template_f5slp2g",
@@ -39,44 +37,35 @@ export default function Home() {
     );
     reset();
   };
-  useEffect(() => {
-    let tl = gsap.timeline();
 
-    tl.add("start")
-      .from(
-        rightRef.current,
-        {
-          duration: 1,
-          ease: "bounce.out",
-          x: 200,
-          opacity: 0,
-          repeat: 0,
-        },
-        "start"
-      )
-      .from(
-        leftRef.current,
-        {
-          duration: 1,
-          ease: "bounce.out",
-          x: -200,
-          opacity: 0,
-          repeat: 0,
-        },
-        "start"
-      )
-      .to(
-        leftRef.current.querySelector(".description"),
-        {
-          duration: 1,
-          ease: "bounce.out",
-          x: -200,
-          opacity: 0,
-          repeat: 0,
-        },
-        "start"
-      );
-    console.log(getValues("email") === "");
+  useEffect(() => {
+    const largeur = window.innerWidth;
+    let tl = gsap.timeline();
+    tl.add("start");
+    tl.from(
+      rightRef.current,
+      {
+        duration: 1,
+        ease: "bounce.out",
+        x: largeur > 700 ? +200 : -200,
+        opacity: 0,
+        repeat: 0,
+      },
+      "start"
+    );
+
+    tl.from(
+      leftRef.current,
+      {
+        duration: 1,
+        ease: "bounce.out",
+        x: -200,
+        opacity: 0,
+        repeat: 0,
+      },
+      "start"
+    );
+    // console.log(getValues("email") === "");
   }, []);
 
   const handleInputChange = (e) =>
