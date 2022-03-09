@@ -39,7 +39,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const largeur = window.innerWidth;
+    // const largeur = window.innerWidth;
     let tl = gsap.timeline();
     tl.add("start");
     tl.from(
@@ -47,7 +47,7 @@ export default function Home() {
       {
         duration: 1,
         ease: "bounce.out",
-        x: largeur > 700 ? +200 : -200,
+        // x: largeur > 700 ? +200 : -200,
         opacity: 0,
         repeat: 0,
       },
