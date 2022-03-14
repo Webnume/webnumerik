@@ -31,7 +31,7 @@ h1{
   list-style:none;
   position:relative;
   width:50%;
-  padding:20px 40px;
+  padding: 13px 40px 20px 40px;
   box-sizing:border-box;
 }
 .timeline ul li:nth-child(odd){
@@ -67,9 +67,9 @@ h1{
   height:10px;
   top:24px;
   left:-4px;
-  background:rgba(233,33,99,1);
+  background:#869d00;
   border-radius:50%;
-  box-shadow:0 0 0 3px rgba(233,33,99,0.2);
+  box-shadow:0 0 0 3px #869d0059;
 }
 .timeline ul li h3{
   padding:0;
@@ -93,10 +93,10 @@ h1{
   right:-165px;
   margin:0;
   padding:8px 16px;
-  background:rgba(233,33,99,1);
+  background:#869d00;
   color:#fff;
   border-radius:18px;
-  box-shadow:0 0 0 3px rgba(233,33,99,0.3);
+  box-shadow:0 0 0 3px #869d0059;
 }
 .timeline ul li:nth-child(even) .time
 {
@@ -105,10 +105,10 @@ h1{
   left:-165px;
   margin:0;
   padding:8px 16px;
-  background:rgba(233,33,99,1);
+  background:#869d00;
   color:#fff;
   border-radius:18px;
-  box-shadow:0 0 0 3px rgba(233,33,99,0.3);
+  box-shadow:0 0 0 3px #869d005e;
 }
 /* @media(max-width:1000px)
 {
