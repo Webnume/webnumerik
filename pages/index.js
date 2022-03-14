@@ -34,13 +34,24 @@ export default function Home() {
       <Header />
       <main className={styles.main}>
         <div className={styles.welcome1} ref={welcome1Ref}>
+          <section className={styles.video}>
+            <video loop autoPlay muted>
+              <source
+                src="./Thunderstorm.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </section>
           <h2 className={styles.description}>
-            Je suis <span className={styles.myName}>Yves</span>,{" "}
+            Je suis <span className={styles.myName}>Yves</span>{" "}
           </h2>
           <h1 className={styles.title}>
-            Développeur Web{" "}
-            <a href="https://nextjs.org" id="reactText"
-            className={styles.reactText}
+            Développeur <span className={styles.myDev}>Web</span> {" "}
+            <a
+              href="https://nextjs.org"
+              id="reactText"
+              className={styles.reactText}
             >
               !RJeSact
             </a>
