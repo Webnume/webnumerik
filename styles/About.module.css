@@ -1,200 +1,231 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
 
 .main {
-    /* min-height: 100vh; */
-    margin-top: 14rem;
-    /* flex: 1; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    padding: 0 2rem;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0 2rem;
+}
+.section1,
+.section2,
+.section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 2rem;
+  font-size: 1.3rem;
+}
+.section1 {
+  background-color: #096868;
+}
+.section1 > p {
+  color: #c3ffff;
+}
+.section2 {
+  background-color: transparent;
+}
+.section3 {
+  background-color: #e3ef9e;
+}
+.icons {
+  display: flex;
+  color: #e8573b;
+  /* width: 20rem; */
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  /* animation: floating 5s linear 2s infinite; */
+}
+.icons :not(.operators, .logoReact) :nth-child(n) {
+  margin: 0.2rem;
+  width: 4rem;
+}
+.logoHtml5 {
+  color: #e8573b;
+}
+.logoCss3 {
+  color: #007cc5;
+}
+.logoJs {
+  color: #efd81d;
+}
+.logoReact {
+  color: #61dafb;
+  width: 7rem;
+}
+.operators {
+  color: #fff;
+  width: 2rem;
+  margin: 0 1rem;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.title span {
+  color: #096868;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin-bottom: 3rem;
+  line-height: 1.15;
+  font-size: calc(2rem + 1.5vw);
+  border: #000 solid 1px;
+  border-radius: 2rem;
+  padding: 1rem;
+  animation: floating 5s linear 2s infinite;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 1rem 0;
+  left: 0;
+  line-height: 1.5;
+  font-size: calc(1.5rem + 1vw);
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-bottom: 5rem;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.reactText {
+  text-shadow: #000 1px 1px 10px;
+}
+.customlist {
+  padding-left: 20px;
+  list-style: none;
+  margin: 2rem 0;
+  background-color: #0ddede;
+  color: #206161;
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+}
+.customlist li {
+  margin-bottom: 10px;
+}
+.customlist li:before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  margin: 0 5px 0 -15px;
+  color: #2c3e50;
+  opacity: 0.8;
+}
+@media screen and (max-width: 600px) {
+  .main {
+    margin-top: 7rem;
   }
-  .icons {
-    display: flex;
-    color: #e8573b;
-    /* width: 20rem; */
-    justify-content: center;
-    align-items: center;
-    padding-top: 3rem;
-    /* animation: floating 5s linear 2s infinite; */
+  .section1,
+  .section2,
+  .section3 {
+    padding: 2rem;
+  }
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .description {
+    font-size: 1.3rem;
   }
   .icons :not(.operators, .logoReact) :nth-child(n) {
     margin: 0.2rem;
-    width: 4rem;
+    width: 2rem;
   }
-  .logoHtml5 {
-    color: #e8573b;
-  }
-  .logoCss3 {
-    color: #007cc5;
-  }
-  .logoJs {
-    color: #efd81d;
+  .title {
+    font-size: 2rem;
   }
   .logoReact {
     color: #61dafb;
-    width: 7rem;
+    width: 3rem;
   }
   .operators {
     color: #fff;
-    width: 2rem;
+    width: 1rem;
     margin: 0 1rem;
   }
-  
-  .footer {
-    display: flex;
-    flex: 1;
-    padding: 2rem 0;
-    border-top: 1px solid #eaeaea;
-    justify-content: center;
-    align-items: center;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
   }
-  
-  .footer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+  50% {
+    transform: translateY(20px);
   }
-  
-  .title span {
-    color: #096868;
-    text-decoration: none;
+  100% {
+    transform: translateY(0px);
   }
-  
-  .title a:hover,
-  .title a:focus,
-  .title a:active {
-    text-decoration: underline;
-  }
-  
-  .title {
-    margin-bottom: 3rem;
-    line-height: 1.15;
-    /* font-size: calc(4rem + 1.5vw); */
-    border:#000 solid 1px;
-    border-radius: 2rem;
-    padding: 1rem;
-    animation: floating 5s linear 2s infinite;
-  }
-  
-  .title,
-  .description {
-    text-align: center;
-  }
-  
-  .description {
-    margin: 1rem 0;
-    left: 0;
-    line-height: 1.5;
-    font-size: calc(1.5rem + 1vw);
-  }
-  
-  .code {
-    background: #fafafa;
-    border-radius: 5px;
-    padding: 0.75rem;
-    font-size: 1.1rem;
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-      Bitstream Vera Sans Mono, Courier New, monospace;
-  }
-  
-  .grid {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 800px;
-  }
-  
-  .card {
-    margin: 1rem;
-    padding: 1.5rem;
-    text-align: left;
-    color: inherit;
-    text-decoration: none;
-    border: 1px solid #eaeaea;
-    border-radius: 10px;
-    transition: color 0.15s ease, border-color 0.15s ease;
-    max-width: 300px;
-  }
-  
-  .card:hover,
-  .card:focus,
-  .card:active {
-    color: #0070f3;
-    border-color: #0070f3;
-  }
-  
-  .card h2 {
-    margin: 0 0 1rem 0;
-    font-size: 1.5rem;
-  }
-  
-  .card p {
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-  .reactText{
-  text-shadow: #000 1px 1px 10px;
-  }
-  .customlist {
-    padding-left: 20px;
-    list-style: none;
-    margin: 2rem 0;
-    background-color: #eaeaea;
-    padding: 2rem 4rem;
-    border-radius: 1rem;
-  }
-  .customlist li {
-    margin-bottom: 10px;
-  }
-  .customlist li:before {
-    font-family: "FontAwesome";
-    content: "\f00c";
-    margin: 0 5px 0 -15px;
-    color: #2c3e50;
-    opacity: 0.8;
-  }
-  @media screen and (max-width: 600px) {
-    .grid {
-      width: 100%;
-      flex-direction: column;
-    }
-    .description{
-      font-size: 1.3rem;
-    }
-    .icons :not(.operators, .logoReact) :nth-child(n) {
-      margin: 0.2rem;
-      width: 2rem;
-    }
-    .title{
-      font-size: 2.5rem;
-    }
-    .logoReact {
-      color: #61dafb;
-      width: 3rem;
-    }
-    .operators {
-      color: #fff;
-      width: 1rem;
-      margin: 0 1rem;
-    }
-  }
-  
-  @keyframes floating {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(20px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
+}
