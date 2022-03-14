@@ -227,13 +227,11 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  color: #e8573b;
-  /* width: 272px; */
   justify-content: center;
   align-items: center;
   padding: 0.3rem;
   background-color: white;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
 }
 .skills :not(.logoReact) :nth-child(n) {
   margin: 0.2rem 0.4rem;
