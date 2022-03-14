@@ -35,7 +35,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.welcome1} ref={welcome1Ref}>
           <h2 className={styles.description}>
-            Je suis Yves, freelance Front-end{" "}
+            Je suis <span className={styles.myName}>Yves</span>,{" "}
           </h2>
           <h1 className={styles.title}>
             Développeur Web{" "}
