@@ -127,7 +127,7 @@
 .grid {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
   margin-bottom: 5rem;
@@ -155,28 +155,29 @@
 .card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
-  color: #869d00;
+  color: #475300;
 }
-.card h2::after { 
+.card h2::after {
   font-family: "FontAwesome";
-  /* content: "\f4c4"; */
-  margin: 0 5px 0 15px;
-  color: #2c3e50;
-  /* opacity: 0.8; */
+  margin: 0 5px 0 2rem;
+  color: #869d00;
+  font-size: 4rem;
 }
-.card h2::after { 
-  /* font-family: "FontAwesome"; */
+.grid:nth-child(1n) h2::after {
   content: "\f4c4";
   /* margin: 0 5px 0 15px; */
-  /* color: #2c3e50; */
-  /* opacity: 0.8; */
 }
-.card h2::after { 
-  /* font-family: "FontAwesome"; */
+.card:nth-child(2) h2::after {
   content: "\f2a3";
   /* margin: 0 5px 0 15px; */
-  /* color: #2c3e50; */
-  /* opacity: 0.8; */
+}
+.card:nth-child(3) h2::after {
+  content: "\f164";
+  /* margin: 0 5px 0 15px; */
+}
+.card:nth-child(4) h2::after {
+  content: "\f0c0";
+  /* margin: 0 5px 0 15px; */
 }
 .card p {
   margin: 0;
@@ -215,7 +216,7 @@
     padding: 2rem;
   }
   .grid {
-    width: 100%;
+    /* width: 100%; */
     flex-direction: column;
   }
   .description {
