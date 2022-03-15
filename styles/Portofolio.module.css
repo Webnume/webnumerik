@@ -3,7 +3,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  /* margin-top: 10rem; */
   justify-content: space-around;
   align-items: stretch;
 }
@@ -16,9 +15,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* height: 29rem; */
   border-radius: 2rem;
-  /* background-color: rgba(255, 255, 255, 0.90); */
   z-index: 0;
   flex-wrap: wrap;
 }
@@ -26,7 +23,6 @@
   border: 4mm ridge rgba(170, 50, 220, 0.6);
 }
 .inner {
-  /* margin: 0.9; */
   color: black;
   background-color: white;
   border-radius: 0.5rem;
@@ -35,7 +31,6 @@
   padding: 0.5rem;
   font-size: smaller;
   box-shadow: 5px 5px 15px black;
-  /* width: 82%; */
 }
 .right {
   display: flex;

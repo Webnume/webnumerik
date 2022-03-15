@@ -116,7 +116,7 @@ export default function Home() {
           </h2>
           <div className={styles.grid}>
             <div className={styles.card}>
-              <h2>Confiance &rarr;</h2>
+              <h2>Confiance</h2>
               <p>
                 J'aime travailler dans un climat de bienveillance, de confiance
                 et d'honnêteté.
@@ -124,7 +124,7 @@ export default function Home() {
             </div>
 
             <div className={styles.card}>
-              <h2>Adaptabilité &rarr;</h2>
+              <h2>Adaptabilité</h2>
               <p>
                 Je suis humble, capable de m'adapter et de me remettre en
                 question.
@@ -132,7 +132,7 @@ export default function Home() {
             </div>
 
             <div className={styles.card}>
-              <h2>Responsable &rarr;</h2>
+              <h2>Responsable</h2>
               <p>
                 J'ai une intelligence émotionnelle qui me donne un sens des
                 responsabilités.{" "}
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
 
             <div className={styles.card}>
-              <h2>Collaboration &rarr;</h2>
+              <h2>Collaboration</h2>
               <p>
                 Je souhaite faire partie d'une équipe de travail pour de riches
                 échanges.
