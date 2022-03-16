@@ -25,7 +25,16 @@ function indexGsapAnimations() {
     tl.to("#reactText", { duration: 2, text: "ReactJS!" });
   };
 
-  return { welcome1, typingEffect, logos };
+  const button = (buttonRef) => {
+    return tl.to(buttonRef, {
+      bottom: "3rem",
+      duration:.5,
+      ease: "power4.out(1.7)",
+      opacity: 1,
+    });
+  };
+
+  return { welcome1, typingEffect, logos, button };
 }
 
 export default indexGsapAnimations;

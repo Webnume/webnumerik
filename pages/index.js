@@ -17,12 +17,14 @@ import indexGsapAnimations from "../utils/gsapAnimations/indexGsapAnimations";
 export default function Home() {
   const logosRef = useRef();
   const welcome1Ref = useRef();
+  const buttonRef = useRef();
 
   useEffect(() => {
     //Icons Timelines
     indexGsapAnimations().welcome1(welcome1Ref.current);
     indexGsapAnimations().logos(logosRef.current);
     indexGsapAnimations().typingEffect();
+    indexGsapAnimations().button(buttonRef.current);
   }, []);
   return (
     <div className="container">
@@ -36,10 +38,7 @@ export default function Home() {
         <div className={styles.welcome1} ref={welcome1Ref}>
           <section className={styles.video}>
             <video loop autoPlay muted>
-              <source
-                src="./Thunderstorm.mp4"
-                type="video/mp4"
-              />
+              <source src="./Thunderstorm.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </section>
@@ -47,14 +46,11 @@ export default function Home() {
             Je suis <span className={styles.myName}>Yves</span>{" "}
           </h2>
           <h1 className={styles.title}>
-            Développeur <span className={styles.myDev}>Web</span> {" "}
-            <a
-              href="https://nextjs.org"
-              id="reactText"
-              className={styles.reactText}
-            >
+            Développeur Web
+            {/* <span className={styles.myDev}>Web</span> */}{" "}
+            <span id="reactText" className={styles.reactText}>
               !RJeSact
-            </a>
+            </span>
           </h1>
           <div className={styles.icons} ref={logosRef}>
             <span className={styles.logoHtml5}>
@@ -79,6 +75,9 @@ export default function Home() {
               <FontAwesomeIcon icon={faReact} />
             </span>
           </div>
+          <button className={styles.buttonContact} ref={buttonRef}>
+            CONTACTEZ-MOI
+          </button>
         </div>
       </main>
 
