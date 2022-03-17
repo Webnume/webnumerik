@@ -23,8 +23,8 @@ export default function Home() {
     //Icons Timelines
     indexGsapAnimations().welcome1(welcome1Ref.current);
     indexGsapAnimations().logos(logosRef.current);
-    indexGsapAnimations().typingEffect();
     indexGsapAnimations().button(buttonRef.current);
+    indexGsapAnimations().typingEffect();
   }, []);
   return (
     <div className="container">

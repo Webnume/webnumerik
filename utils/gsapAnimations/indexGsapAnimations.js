@@ -22,13 +22,13 @@ function indexGsapAnimations() {
   };
 
   const typingEffect = () => {
-    tl.to("#reactText", { duration: 2, text: "ReactJS!" });
+    tl.to("#reactText", { duration: 2, text: "ReactJS!", delay:1 });
   };
 
   const button = (buttonRef) => {
     return tl.to(buttonRef, {
       bottom: "3rem",
-      duration:.5,
+      // duration:.5,
       ease: "power4.out(1.7)",
       opacity: 1,
     });

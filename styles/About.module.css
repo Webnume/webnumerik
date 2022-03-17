@@ -107,6 +107,16 @@
   text-align: center;
 }
 
+.title2 {
+  margin-bottom: 3rem;
+  line-height: 1.15;
+  font-size: calc(2rem + 1.5vw);
+  padding: 1rem;
+}
+.title2 span {
+  color: #869d00;
+  text-decoration: none;
+}
 .description {
   margin: 1rem 0;
   left: 0;

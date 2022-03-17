@@ -39,13 +39,13 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // const largeur = window.innerWidth;
+    const largeur = window.innerWidth;
     let tl = gsap.timeline();
     tl.add("start");
     tl.from(
       rightRef.current,
       {
-        duration: 1,
+        duration: 2,
         ease: "bounce.out",
         // x: largeur > 700 ? +200 : -200,
         opacity: 0,

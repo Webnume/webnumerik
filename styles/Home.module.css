@@ -171,6 +171,7 @@
   }
   .description {
     font-size: 1.3rem;
+    margin-top: 4rem 0;
   }
   .icons :not(.operators, .logoReact) :nth-child(n) {
     margin: 0.2rem;
@@ -187,6 +188,9 @@
     color: #fff;
     width: 1rem;
     margin: 0 1rem;
+  }
+  .buttonContact {
+    padding: .5rem .75rem;
   }
 }
 

@@ -111,7 +111,7 @@ export default function Home() {
           <Timeline items={timelineArray} />
         </section>
         <section className={styles.section3}>
-          <h2 className={styles.title}>
+          <h2 className={styles.title2}>
             Mes <span>Soft Skills</span>
           </h2>
           <div className={styles.grid}>
