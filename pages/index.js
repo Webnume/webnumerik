@@ -13,6 +13,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPlus, faEquals } from "@fortawesome/free-solid-svg-icons";
 import indexGsapAnimations from "../utils/gsapAnimations/indexGsapAnimations";
+import Link from "next/link";
 
 export default function Home() {
   const logosRef = useRef();
@@ -75,9 +76,11 @@ export default function Home() {
               <FontAwesomeIcon icon={faReact} />
             </span>
           </div>
-          <button className={styles.buttonContact} ref={buttonRef}>
-            CONTACTEZ-MOI
-          </button>
+          <Link href="/contact">
+            <button className={styles.buttonContact} ref={buttonRef}>
+              CONTACTEZ-MOI
+            </button>
+          </Link>
         </div>
       </main>
 

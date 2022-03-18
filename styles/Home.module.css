@@ -146,9 +146,9 @@
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   margin-top: 2rem;
-  background-color: #639900;
+  background-color: #efd81d;
   font-weight: 700;
-  color: white;
+  color: #334900;
   font-size: 1.5rem;
   transition: 0.5s ease-in-out;
   animation: clickMe 1.2s ease-in-out 2s infinite;
