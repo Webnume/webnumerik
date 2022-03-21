@@ -24,13 +24,6 @@ function Socialmedia() {
       >
         <FontAwesomeIcon icon={faGit} />
       </a>
-      <a
-        href="https://codepen.io/webnume/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FontAwesomeIcon icon={faCodepen} />
-      </a>
     </div>
   );
 }
