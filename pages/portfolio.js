@@ -85,7 +85,7 @@ export default function Home() {
             projectTitle="Utiliser une API pour un compte utilisateur bancaire avec React"
             demoLink="https://gifted-noether-9500a4.netlify.app/"
             repoGitLink="https://github.com/Webnume/Y.GABA_13_18032021"
-            technos={["html", "css", "js", "react"]}
+            technos={["html", "css", "js", "react", "git"]}
             mission="Compléter le code du site en mettant en place une authentification via JWT (JSON Web Tokens). Ecrire des appels à l'API REST pour connecter le front au back et modéliser une API."
             skills={[
               "Implémenter un gestionnaire d'état dans une application React avec Redux",
