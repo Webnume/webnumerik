@@ -65,7 +65,7 @@ export default function Home() {
             projectTitle="Faire Passer une librairie Jquery vers React"
             demoLink="https://optimistic-shockley-a18fe4.netlify.app/"
             repoGitLink="https://github.com/Webnume/Y.GABA_14_18032021"
-            technos={["html", "css", "js", "react"]}
+            technos={["html", "css", "js", "react", "git"]}
             mission="Convertir une application entière et ses plugins de Jquery vers
             React en ajoutant un système de gestion d'état Redux. Déployer un
             composant en librairie sur NPM."
@@ -103,7 +103,7 @@ export default function Home() {
             projectTitle="Développer un tableau de bord d'analytics avec React"
             demoLink="https://gallant-kare-abce48.netlify.app/"
             repoGitLink="https://github.com/Webnume/Y.GABA_12_Netlify_18032021"
-            technos={["html", "css", "js", "react"]}
+            technos={["html", "css", "js", "react", "git"]}
             mission="Intégrer des graphiques et des diagrammes avec React pour SportSee, un tableau de bord d'analytics de sport. Une API est utilisée pour récupérer les données."
             skills={[
               "Assurer la qualité des données d'une application",
@@ -141,7 +141,7 @@ export default function Home() {
             projectTitle="Définir les besoins pour une app de soutien scolaire"
             demoLink="https://public.zenkit.com/i/u7x1VngwAd/F-ZRpoF0X/page-connexion?v=nwuwn4JCAC"
             repoGitLink="https://public.zenkit.com/i/u7x1VngwAd/F-ZRpoF0X/page-connexion?v=nwuwn4JCAC"
-            technos={["html", "css", "js", "react"]}
+            technos={["html", "css", "js", "react", "git"]}
             mission="Définir les besoins d'une association de soutien scolaire avec les outils agiles comme les User Stories. Disponibles sur la plateforme Zenkit "
             skills={[
               "Les diagrammes de cas d’usage.",
