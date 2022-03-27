@@ -108,6 +108,25 @@
   margin-bottom: 1rem;
   box-shadow: rgb(0 0 0) 3px 2px 8px;
 }
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.panel:nth-child(1n) {
+  background-image: radial-gradient(circle, #c4c4c4, #a5a5a5, #878787, #6a6a6a, #4e4e4e);
+}
+.panelBackground {
+  z-index: -1;
+}
 .panel h2 {
   font-size: 1em;
   font-weight: 300;
@@ -146,22 +165,6 @@
   margin: 0;
 }
 
-.panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  font-size: 1.5em;
-  text-align: center;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  box-sizing: border-box;
-}
-.panelBackground {
-  z-index: -1;
-}
 .main {
   overflow-x: hidden;
   overflow-y: hidden;

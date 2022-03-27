@@ -32,7 +32,13 @@ function PortofolioCard({
   return (
     <div>
       <div style={{ position: "absolute", top: "0", left: "0" }}>
-        <div style={{ position: "relative", width: "100vw", height: "100vh",filter: "blur(9px)" }}>
+        {/* <div
+          style={{
+            position: "relative",
+            width: "100vw",
+            height: "100vh",
+          }}
+        >
           <Image
             src={`/${backgroundImg}`}
             alt={imgAlt}
@@ -42,7 +48,7 @@ function PortofolioCard({
             objectPosition="center"
             priority
           />
-        </div>
+        </div> */}
       </div>
       <div className={styles.container} ref={container}>
         <h1 className={styles.projecttitle} data-title>

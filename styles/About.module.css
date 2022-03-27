@@ -221,6 +221,9 @@
   .main {
     margin-top: 7rem;
   }
+  .card h2::after {
+    font-size: 2rem;
+  }
   .section1,
   .section2,
   .section3 {
