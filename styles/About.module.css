@@ -172,7 +172,7 @@
   color: #869d00;
   font-size: 3rem;
   display: inline-block;
-  animation: softSkills 0.7s ease infinite;
+  animation:   0.6s linear 1s infinite alternate softSkills;
 }
 .grid:nth-child(1n) h2::after {
   content: "\f4c4";
@@ -271,9 +271,10 @@
 @keyframes softSkills {
   0% {
     transform: scale(1);
+    color: #869d00;
   }
   50% {
-    transform: scale(.98);
+    transform: scale(.99);
     opacity: .9;
   }
   100% {
