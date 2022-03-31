@@ -367,7 +367,7 @@
 .flip > .front,
 .flip > .back {
   display: block;
-  color: white;
+  color: #248984;
   width: inherit;
   background-size: cover !important;
   background-position: center !important;
@@ -380,7 +380,7 @@
 .flip > .back p {
   font-size: 0.9125rem;
   line-height: 160%;
-  color: #999;
+  color: rgb(214, 214, 214);
 }
 
 .textShadow {
