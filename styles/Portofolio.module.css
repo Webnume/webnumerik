@@ -66,6 +66,9 @@
   padding: 0.5rem 1rem;
   border-radius: 4rem;
 }
+.right h2:nth-child(n) {
+  margin-top: 1rem;
+}
 .siteInfos {
   display: flex;
   flex-direction: column;
