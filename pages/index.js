@@ -1,9 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
@@ -48,7 +46,7 @@ export default function Home() {
           </h2>
           <h1 className={styles.title}>
             Développeur Web
-            {/* <span className={styles.myDev}>Web</span> */}{" "}
+            {" "}
             <span id="reactText" className={styles.reactText}>
               !RJeSact
             </span>
@@ -76,15 +74,13 @@ export default function Home() {
               <FontAwesomeIcon icon={faReact} />
             </span>
           </div>
-          <Link href="/contact">
+          <Link href="/Contact">
             <button className={styles.buttonContact} ref={buttonRef}>
               CONTACTEZ-MOI
             </button>
           </Link>
         </div>
       </main>
-
-      {/* <Footer /> */}
     </div>
   );
 }

@@ -1,27 +1,23 @@
 import React, { useEffect, useRef, useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Contact.module.css";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { useForm } from "react-hook-form";
 import { gsap } from "gsap";
 import { sendForm } from "@emailjs/browser";
 
-export default function Home() {
+export default function Contact() {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm();
-  // const onSubmit = (data) => console.log(data);
   const rightRef = useRef();
   const leftRef = useRef();
   const form = useRef();
   const [replyTo, setReplyTo] = useState({});
   const onSubmit = () => {
-    // e.preventDefault();
     sendForm(
       "service_61kxv15",
       "template_f5slp2g",
@@ -39,7 +35,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const largeur = window.innerWidth;
     let tl = gsap.timeline();
     tl.add("start");
     tl.from(
@@ -47,7 +42,6 @@ export default function Home() {
       {
         duration: 2,
         ease: "bounce.out",
-        // x: largeur > 700 ? +200 : -200,
         opacity: 0,
         repeat: 0,
       },
@@ -65,7 +59,6 @@ export default function Home() {
       },
       "start"
     );
-    // console.log(getValues("email") === "");
   }, []);
 
   const handleInputChange = (e) =>
@@ -84,25 +77,6 @@ export default function Home() {
       <Header />
       <main className={styles.main}>
         <div className={styles.left} ref={leftRef}>
-          {/* <div style={{ position: "absolute", top: "0", left: "0" }}>
-            <div
-              style={{
-                position: "relative",
-                width: "50vw" || widthSize / 2,
-                height: widthSize > 700 ? "100vh" : "0vh",
-              }}
-            >
-              <Image
-                src="/pexels-pixabay-263564.jpg"
-                alt="contact"
-                className={styles.panelBackground}
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
-                priority
-              />
-            </div>
-          </div> */}
           <div className={styles.wrapper}>
             <h1 className={styles.title}>LAISSEZ UN MOT</h1>
             <p className={styles.description}>

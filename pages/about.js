@@ -1,13 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/About.module.css";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Timeline from "../components/Timeline";
 import { gsap } from "gsap";
 
-export default function Home() {
+export default function About() {
   const timelineArray = [
     {
       title: "Développeur d'application - JavaScript React",
@@ -149,8 +147,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      {/* <Footer /> */}
     </div>
   );
 }

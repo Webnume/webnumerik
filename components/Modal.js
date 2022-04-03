@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import styles from "../styles/Modal.module.css";
 import Image from "next/image";
-// import closeModal from "../public/close_modal.png";
 
 const Modal = (props) => {
   const closeOnEscapeKeyDown = (e) => {

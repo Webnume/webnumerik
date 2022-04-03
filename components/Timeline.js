@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-// import "./Timeline.css";
-// import styles from "../styles/Timeline.css"
 import { nanoid } from "nanoid";
 
 import { gsap } from "gsap";

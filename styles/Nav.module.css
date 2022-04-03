@@ -130,9 +130,7 @@
 }
 .socialmedia {
   display: flex;
-  width: 60px;
   position: fixed;
-  top: 0.3rem;
   right: 0.3rem;
   color: #91ad1c;
   z-index: 0;

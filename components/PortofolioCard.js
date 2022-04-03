@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import styles from "../styles/Portofolio.module.css";
-import "../styles/Portofolio.module.css";
 import Modal from "./Modal";
 import Image from "next/image";
 import { nanoid } from "nanoid";
@@ -18,16 +17,11 @@ function PortofolioCard({
   backgroundImg,
   flipvertical,
 }) {
-  // const [inHover, setHover] = useState("");
   const container = useRef();
   const [showModal, setShowModal] = useState(false);
 
-  // const openModal = () => {
-  //   return console.log("open");
-  // };
   return (
     <>
-      {/* <h4>Horizontal Flip</h4> */}
       <div
         className={
           flipvertical ? `${styles.flip} ${styles.flipvertical}` : styles.flip
@@ -52,25 +46,7 @@ function PortofolioCard({
           </button>
           <Modal onClose={() => setShowModal(false)} show={showModal}>
             <div>
-              <div style={{ position: "absolute", top: "0", left: "0" }}>
-                {/* <div
-          style={{
-            position: "relative",
-            width: "100vw",
-            height: "100vh",
-          }}
-        >
-          <Image
-            src={`/${backgroundImg}`}
-            alt={imgAlt}
-            className={styles.panelBackground}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            priority
-          />
-        </div> */}
-              </div>
+              <div style={{ position: "absolute", top: "0", left: "0" }}></div>
               <div className={styles.container} ref={container}>
                 <h1 className={styles.projecttitle} data-title>
                   {projectTitle}
@@ -123,7 +99,7 @@ function PortofolioCard({
                     <p>{mission}</p>
                     <h2>Compétences déployées</h2>
                     <ul className={styles.customlist}>
-                      {skills.map((skill, index) => {
+                      {skills.map((skill) => {
                         return <li key={nanoid(10)}>{skill}</li>;
                       })}
                     </ul>

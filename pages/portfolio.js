@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Portofolio.module.css";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import portofolioGsapAnimations from "../utils/gsapAnimations/portofolioGsapAnimations";
 import PortofolioCard from "../components/PortofolioCard";
 
@@ -86,10 +84,10 @@ export default function Portfolio() {
     }
   };
   console.log();
-  useEffect(() => {
-    // portofolioGsapAnimations().panel(panelsRef.current);
-    // return () => {};
-  }, []);
+  // useEffect(() => {
+  //   portofolioGsapAnimations().panel(panelsRef.current);
+  //   return () => {};
+  // }, []);
 
   return (
     <div className={styles.container}>
@@ -100,32 +98,14 @@ export default function Portfolio() {
       </Head>
       <Header />
       <main className={styles.main}>
-          <h1 className={styles.title}>
-            Mon <span>Portfolio</span>
-          </h1>
+        <h1 className={styles.title}>
+          Mon <span>Portfolio</span>
+        </h1>
         <div
           className={`${styles.panel} ${styles.panelBackground}`}
           ref={addToPanelsRef}
         >
-          {/* <div style={{ position: "absolute", top: "0", left: "0" }}>
-            <div
-              style={{ position: "relative", width: "100vw", height: "100vh" }}
-            >
-              <Image
-                src="/pexels-karolina-grabowska-8947463.jpg"
-                alt="portfolio"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
-                priority
-              />
-            </div>
-          </div> */}
           <div className={styles.Portofoliofirst}>
-            {/* <p>Ici découvrez mon portfolio ...</p> */}
-            {/* <div className={styles.scrollDown}>
-              Scroll<div className={styles.arrow}></div>
-            </div> */}
             <div className="card" ref={addToCardsRef}>
               <PortofolioCard
                 projectTitle="Faire Passer une librairie Jquery vers React"

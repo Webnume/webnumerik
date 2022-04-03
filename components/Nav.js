@@ -21,7 +21,7 @@ function Nav() {
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
-  const listenScrollEvent = (event) => {
+  const listenScrollEvent = () => {
     if (window.scrollY < 33) {
       return setScroll(false);
     } else if (window.scrollY > 30) {
@@ -62,21 +62,21 @@ function Nav() {
           </Link>
         </li>
         <li className={`${styles.navbar__item} ${styles.slideInDown2}`}>
-          <Link href="/about">
+          <Link href="/About">
             <a className={styles.navbar__link}>
               <span>ABOUT</span>
             </a>
           </Link>
         </li>
         <li className={`${styles.navbar__item} ${styles.slideInDown3}`}>
-          <Link href="/portfolio">
+          <Link href="/Portfolio">
             <a className={styles.navbar__link}>
               <span>PORTFOLIO</span>
             </a>
           </Link>
         </li>
         <li className={`${styles.navbar__item} ${styles.slideInDown4}`}>
-          <Link href="/contact">
+          <Link href="/Contact">
             <a className={styles.navbar__link}>
               <span>CONTACT</span>
             </a>
