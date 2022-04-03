@@ -78,7 +78,7 @@ export default function Contact() {
       <main className={styles.main}>
         <div className={styles.left} ref={leftRef}>
           <div className={styles.wrapper}>
-            <h1 className={styles.title}>LAISSEZ UN MOT</h1>
+            <h1 className={styles.title}>LAISSEZ UN MOT </h1>
             <p className={styles.description}>
               Des questions ou même juste un petit bonjour, envoyez votre
               message.
