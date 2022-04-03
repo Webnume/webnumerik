@@ -62,21 +62,21 @@ function Nav() {
           </Link>
         </li>
         <li className={`${styles.navbar__item} ${styles.slideInDown2}`}>
-          <Link href="/About">
+          <Link href="/about">
             <a className={styles.navbar__link}>
               <span>ABOUT</span>
             </a>
           </Link>
         </li>
         <li className={`${styles.navbar__item} ${styles.slideInDown3}`}>
-          <Link href="/Portfolio">
+          <Link href="/portfolio">
             <a className={styles.navbar__link}>
               <span>PORTFOLIO</span>
             </a>
           </Link>
         </li>
         <li className={`${styles.navbar__item} ${styles.slideInDown4}`}>
-          <Link href="/Contact">
+          <Link href="/contact">
             <a className={styles.navbar__link}>
               <span>CONTACT</span>
             </a>
