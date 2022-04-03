@@ -167,7 +167,7 @@
   color: #475300;
 }
 .card h2::after {
-  font-family: "FontAwesome";
+  font-family: "FontAwesome", sans-serif;
   margin: 0 5px 0 2rem;
   color: #869d00;
   font-size: 3rem;

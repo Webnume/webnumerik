@@ -50,9 +50,6 @@
 .navbar__link {
   padding: 0.8rem;
   margin: 0 0.8rem;
-  color: inherit;
-}
-.navbar__link {
   position: relative;
   display: inline-block;
   color: #096868;

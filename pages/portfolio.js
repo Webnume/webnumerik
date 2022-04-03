@@ -58,7 +58,6 @@ export default function Portfolio() {
   }
 
   useEffect(() => {
-    // console.log(cardsRef.current);
     cardsRef.current.forEach((element) => {
       // usage:
       batch(element, {

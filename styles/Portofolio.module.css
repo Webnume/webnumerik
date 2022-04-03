@@ -86,7 +86,7 @@
   margin-bottom: 10px;
 }
 .customlist li:before {
-  font-family: "FontAwesome";
+  font-family: "FontAwesome", sans-serif;
   content: "\f00c";
   margin: 0 5px 0 -15px;
   color: #2c3e50;
@@ -318,16 +318,28 @@
 }
 
 .flip {
-  position: relative;
   cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 1em;
+  width: 30vw;
 }
 .flip > .front,
 .flip > .back {
+  color: #248984;
+  width: inherit;
   display: block;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-duration: 0.5s;
   transition-property: transform, opacity;
   font-size: 1rem;
+  background: #313131;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 220px;
+  padding: 1em 2em;
+  border-radius: 10px;
 }
 .flip > .front {
   transform: rotateY(0deg);
@@ -358,26 +370,6 @@
   transform: rotateX(0deg);
 }
 
-.flip {
-  position: relative;
-  display: inline-block;
-  margin-right: 2px;
-  margin-bottom: 1em;
-  /* width: 400px; */
-  width: 30vw;
-}
-.flip > .front,
-.flip > .back {
-  display: block;
-  color: #248984;
-  width: inherit;
-  background: #313131;
-  background-size: cover !important;
-  background-position: center !important;
-  height: 220px;
-  padding: 1em 2em;
-  border-radius: 10px;
-}
 .flip > .front p,
 .flip > .back p {
   font-size: 0.9125rem;

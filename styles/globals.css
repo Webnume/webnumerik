@@ -88,13 +88,8 @@ ul {
 }
 .container {
   padding: 0;
-}
-
-.container {
   display: flex;
   flex-direction: column;
-  /* position: absolute;
-  top: 5rem; */
 }
 label {
   cursor: pointer;
