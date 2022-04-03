@@ -211,7 +211,7 @@
   margin-bottom: 10px;
 }
 .customlist li:before {
-  font-family: "FontAwesome";
+  font-family: "FontAwesome", sans-serif;
   content: "\f00c";
   margin: 0 5px 0 -15px;
   color: #2c3e50;
