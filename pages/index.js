@@ -74,7 +74,7 @@ export default function Home() {
               <FontAwesomeIcon icon={faReact} />
             </span>
           </div>
-          <Link href="/Contact">
+          <Link href="/contact">
             <button className={styles.buttonContact} ref={buttonRef}>
               CONTACTEZ-MOI
             </button>
