@@ -323,7 +323,7 @@
   display: inline-block;
   margin-right: 2px;
   margin-bottom: 1em;
-  width: 30vw;
+  width: 40vw;
 }
 .flip > .front,
 .flip > .back {
@@ -396,7 +396,7 @@
     grid-template-columns: 1fr;
   }
   .Portofoliofirst h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .Portofoliofirst p {
     font-size: 1rem;
