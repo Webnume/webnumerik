@@ -97,7 +97,7 @@ const Skills = ({ technos }) => {
             <div key={nanoid(10)}>
               <span
                 className={styles.logoJest}
-                onMouseEnter={() => setHover("Jest")}
+                onMouseEnter={() => setHover("Jest/ React Testing Library")}
                 onMouseLeave={() => setHover("")}
               >
                 <Image
