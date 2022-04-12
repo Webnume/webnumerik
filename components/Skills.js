@@ -110,6 +110,24 @@ const Skills = ({ technos }) => {
               </span>
             </div>
           );
+        if (techno === "cypress")
+          return (
+            <div key={nanoid(10)}>
+              <span
+                className={styles.logoJest}
+                onMouseEnter={() => setHover("Tested with Cypress.io")}
+                onMouseLeave={() => setHover("")}
+              >
+                <Image
+                  src="/cypress-io.png"
+                  alt="Cypress.io"
+                  // className={styles.panelBackground}
+                  width={30}
+                  height={30}
+                />
+              </span>
+            </div>
+          );
       })}
     </div>
   );
