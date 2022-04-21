@@ -1,3 +1,15 @@
+## Demo live
+
+[WebNumerik](https://webnumerik.vercel.app/)
+
+|                                                                                                    summary                                                                                                    |                                                                                                 score                                                                                                 |                                                                                           to do                                                                                           |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|              [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Webnume_webnumerik&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=Webnume_webnumerik)              |  [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Webnume_webnumerik&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Webnume_webnumerik)  |  [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Webnume_webnumerik&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=Webnume_webnumerik)  |
+| [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Webnume_webnumerik&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=Webnume_webnumerik) | [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Webnume_webnumerik&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Webnume_webnumerik) | [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=Webnume_webnumerik&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=Webnume_webnumerik) |
+|                   [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Webnume_webnumerik&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Webnume_webnumerik)                   |    [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Webnume_webnumerik&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Webnume_webnumerik)    |                                                                                                                                                                                            |
+|        [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Webnume_webnumerik&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Webnume_webnumerik)        |                                                                                                                                                                                                      |   
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -32,7 +44,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## Demo live
-
-[WebNumerik](https://webnumerik.vercel.app/)
