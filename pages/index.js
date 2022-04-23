@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import Header from "../components/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -17,7 +17,7 @@ export default function Home() {
   const logosRef = useRef();
   const welcome1Ref = useRef();
   const buttonRef = useRef();
-
+  indexGsapAnimations().button(buttonRef.current)
   useEffect(() => {
     //Icons Timelines
     indexGsapAnimations().welcome1(welcome1Ref.current);

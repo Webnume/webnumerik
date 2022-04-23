@@ -39,11 +39,11 @@ function indexGsapAnimations() {
   };
 
   const button = (buttonRef) => {
-    return tl.to(buttonRef, {
-      bottom: "3rem",
+    return tl.from(buttonRef, {
+      bottom: "-3rem",
       // duration:.5,
       ease: "power4.out(1.7)",
-      opacity: 1,
+      opacity: 0,
     });
   };
 
