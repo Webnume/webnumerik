@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import styles from "../styles/Portofolio.module.css";
+import styles from "../styles/Portofolio.module.scss";
 import Modal from "./Modal";
 import Image from "next/image";
 import { nanoid } from "nanoid";
@@ -33,7 +33,10 @@ function PortofolioCard({
             backgroundImage: " url(" + backgroundImg + ")",
           }}
         >
-          <h1 className={styles.textShadow}>{projectTitle}</h1>
+          <h2>{projectTitle}</h2>
+            <ul className={styles.customlist2}>
+            {technos.map(techno=> { return <li key={nanoid(10)}>{techno}</li>})}
+            </ul>
         </div>
         <div className={styles.back} onClick={() => setShowModal(true)}>
           <h2>{projectTitle}</h2>

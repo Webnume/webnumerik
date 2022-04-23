@@ -45,8 +45,7 @@ export default function Home() {
             Je suis <span className={styles.myName}>Yves</span>{" "}
           </h2>
           <h1 className={styles.title}>
-            Développeur Web
-            {" "}
+            Développeur Web{" "}
             <span id="reactText" className={styles.reactText}>
               !RJeSact
             </span>
@@ -75,9 +74,11 @@ export default function Home() {
             </span>
           </div>
           <Link href="/contact">
-            <button className={styles.buttonContact} ref={buttonRef}>
-              CONTACTEZ-MOI
-            </button>
+            <a>
+              <button className={styles.buttonContact} ref={buttonRef}>
+                CONTACTEZ-MOI
+              </button>
+            </a>
           </Link>
         </div>
       </main>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../styles/Portofolio.module.css";
+import styles from "../styles/Portofolio.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
