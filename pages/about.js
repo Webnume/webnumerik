@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Head from "next/head";
-import styles from "../styles/About.module.css";
+import styles from "../styles/About.module.scss";
 import Header from "../components/Header";
 import Timeline from "../components/Timeline";
 import { gsap } from "gsap";
@@ -60,51 +60,58 @@ export default function About() {
       <Header />
       <main className={styles.main} ref={mainRef}>
         <h1 className={styles.title}>
-          Mon <span>Parcours</span>
+          A Propos de <span>Moi</span>
         </h1>
         <section className={styles.section1}>
           <p>
-            Issu d'un cursus scientifique, je me suis d'abord lancé en
-            autodidacte dans le domaine de la création web dès 1999 par passion.
-            Ensuite, j'ai validé une formation diplômante de développeur
-            d'applications front-end ReactJS chez OpenClassRoom. Les compétences
-            acquises grâce à cette formation :
+            Issu d'un cursus scientifique, je me suis d'abord lancé, par passion
+            et en autodidacte, dans la création et la maintenance de sites internet
+            dès 1999. <br />
+            Pour valider mes compétences, j'ai obtenu un diplôme reconnu par
+            l'État de développeur d'applications front-end ReactJS chez
+            OpenClassRooms. <br />
+            <br />
+            Un petit résumé  de mes compétences :
           </p>
+
           <ul className={styles.customlist}>
+            <li>Je code en HTML/ CSS (SASS)/ JavaScript/ ReactJS/ Redux.</li>
+            <li>Je teste mon code avec : Jest/ Testing library/ Cypress. </li>
             <li>
-              Choisir une solution technique adaptée à votre client et
-              travailler en mode Agile ;
-            </li>
-            <li>Créer des sites web avec HTML et CSS ;</li>
-            <li>
-              Créer des applications web dynamiques avec Javascript et ReactJS ;
+              Je choisis la solution technique la plus adaptée et je
+              travaille en mode Agile.
             </li>
             <li>
-              Communiquer avec le back-end de l’application grâce à une API ;
+              Je crée des applications web dynamiques avec Javascript et ReactJS.
             </li>
             <li>
-              Mettre en œuvre des test unitaires et d’intégration et débugger le
-              code ;
+              J'alimente le front-end par le back-end grâce à une API.
             </li>
             <li>
-              Résoudre des problèmes techniques avec un langage de programmation
-              et des algorithmes ;
+              Je mets en œuvre des tests unitaires et d’intégration et je débugge le
+              code.
             </li>
             <li>
-              Refactoriser du code pour qu’il soit plus moderne et optimisé.
+              Je résous des problèmes techniques avec un langage de programmation
+              et des algorithmes.
             </li>
-            <li>HTML/ CSS/ SASS</li>
-            <li>JavaScript ES6</li>
-            <li>ReactJS / Redux</li>
-            <li>Responsive Design / W3C / Accessibilité </li>
+            <li>
+              Je refactorise le code pour qu’il soit plus moderne et optimisé.
+            </li>
+            <li>
+              Je documente le code pour qu’il soit maintenable.
+            </li>
+            <li>Je produis un code de qualité : Sonar/ Responsive Design/ W3C/ Accessibilité. </li>
           </ul>
           <p>
-            Aujourd'hui, je souhaite mettre toutes mes compétences à profit en
-            collaborant, en toute confiance, sur des projets web. Sérieux et
+            Aujourd'hui, je souhaite collaborer, en toute confiance, sur des projets web. <br />Sérieux et
             autonome, je suis à l'écoute de vos besoins et je serais heureux de
             vous aider.
           </p>
         </section>
+        <h2 className={styles.title}>
+          Ma <span>Formation</span>
+        </h2>
         <section className={styles.section2}>
           <Timeline items={timelineArray} />
         </section>
