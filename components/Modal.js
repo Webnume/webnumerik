@@ -34,17 +34,9 @@ const Modal = (props) => {
               src="/close_modal.png"
               alt={styles.closeModal}
               onClick={props.onClose}
-              width="50%"
-              height="50%"
+              width="25%"
+              height="25%"
             />
-            {/* <Image
-            className="close-modal"
-                  src={closeModal}
-                  alt="close-modal"
-                  // className={styles.panelBackground}
-                  width={20}
-                  height={30}
-                /> */}
           </div>
           <div className={styles.modalBody}>{props.children}</div>
         </div>

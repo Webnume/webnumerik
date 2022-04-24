@@ -8,7 +8,13 @@ import { gsap } from "gsap";
 export default function About() {
   const timelineArray = [
     {
-      title: "Développeur d'application - JavaScript React",
+      title: "Développeur Frontend ReactJS - Freelance",
+      description:
+        "Développement d'application web à partir de ReactJS et de son environnement.",
+      date: "2021 - 2022",
+    },
+    {
+      title: "Formation de Développeur d'application - JavaScript React",
       description:
         "Diplôme et titre RNCP de niveau 6 (BAC +3/4). Formation à plein temps de 12 mois.",
       date: "2020 - 2021",
@@ -110,7 +116,7 @@ export default function About() {
           </p>
         </section>
         <h2 className={styles.title}>
-          Ma <span>Formation</span>
+          Mon <span>Parcours</span>
         </h2>
         <section className={styles.section2}>
           <Timeline items={timelineArray} />
