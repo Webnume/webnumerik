@@ -280,12 +280,20 @@
   }
 }
 .customlist2 {
+  // list-style: none ;
   background-color: white;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  & li:before {
+    font-family: "FontAwesome", sans-serif;
+    content: "\f00c";
+    margin: 0 5px 0 -15px;
+    color: #91ad1c;
+    opacity: 0.8;
+  }
 }
 .static {
   height: 100vh;
