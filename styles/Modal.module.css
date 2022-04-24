@@ -35,10 +35,13 @@
 }
 
 .modalContent {
+  position: relative;
   height: 80vh;
   background-color: #fff;
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
 }
 
 .modal.enter-done .modalContent {
@@ -50,12 +53,14 @@
 }
 
 .modalHeader {
-  padding: 10px;
+  position: absolute;
+    right: 0;
+    top: 0;
+
 }
 
 .modalBody {
   padding: 1rem;
-  /* overflow-y: auto; */
 }
 
 @media screen and (max-width: 700px) {
