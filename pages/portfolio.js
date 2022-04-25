@@ -199,28 +199,9 @@ export default function Portfolio() {
                 imgSrc="webnume_projet_10.png"
                 imgAlt="projet 10"
                 backgroundImg="pexels-george-becker-374918.jpg"
-                flipvertical={false} 
+                flipvertical={false}
               />
             </div>
-            {/* <div className="card" ref={addToCardsRef}>
-              <PortofolioCard
-                projectTitle="Débugger et tester un SaaS RH"
-                demoLink="https://webnume.github.io/Y.GABA_9_18032021/"
-                repoGitLink="https://github.com/Webnume/Y.GABA_9_18032021"
-                technos={["html", "css", "js", "react", "git", "jest"]}
-                mission="L'application de gestion de notes de frais Billed est pleine de bugs. Correction du code et implémentation des tests unitaires et d'intégration pour que ce ne soit plus le cas."
-                skills={[
-                  "Ecrire des tests unitaires avec JavaScript",
-                  "Débugger une application web avec le Chrome Debugger",
-                  "Rédiger un plan de test end-to-end manuel",
-                  "Ecrire des tests d'intégration avec JavaScript",
-                ]}
-                imgSrc="webnume_projet_9.png"
-                imgAlt="projet 9"
-                backgroundImg="pexels-kindel-media-8325709.jpg" 
-                flipvertical={true}     
-              />
-            </div> */}
             <div className="card" ref={addToCardsRef}>
               <PortofolioCard
                 projectTitle="Développer un algorithme de recherche en JavaScript"
@@ -234,7 +215,7 @@ export default function Portfolio() {
                 ]}
                 imgSrc="webnume_projet_7.png"
                 imgAlt="projet 7"
-                backgroundImg="pexels-jakson-martins-3503098.jpg" 
+                backgroundImg="pexels-jakson-martins-3503098.jpg"
                 flipvertical={false}
               />
             </div>
@@ -253,8 +234,8 @@ export default function Portfolio() {
                 ]}
                 imgSrc="webnume_projet_6.png"
                 imgAlt="projet 6"
-                backgroundImg="pexels-produtora-midtrack-7130236.jpg"  
-                flipvertical={true} 
+                backgroundImg="pexels-produtora-midtrack-7130236.jpg"
+                flipvertical={true}
               />
             </div>
             <div className="card" ref={addToCardsRef}>
