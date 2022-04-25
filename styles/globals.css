@@ -98,8 +98,6 @@ label {
   margin-top: 2rem;
 }
 input, textarea {
-  border-radius: 5px;
-  box-sizing: border-box;
   width: 30vw;
 }
 input:hover, input:focus, textarea:hover, textarea:focus  {

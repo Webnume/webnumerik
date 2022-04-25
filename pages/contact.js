@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Head from "next/head";
-import styles from "../styles/Contact.module.css";
+import styles from "../styles/Contact.module.scss";
 import Header from "../components/Header";
 import { useForm } from "react-hook-form";
 import { gsap } from "gsap";

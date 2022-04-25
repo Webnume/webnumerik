@@ -3,168 +3,140 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* z-index: -1; */
   overflow-x: hidden;
   overflow-y: hidden;
-}
-.icons {
-  display: flex;
-  color: #e8573b;
-  justify-content: center;
-  align-items: center;
-  padding-top: 3rem;
-  filter: drop-shadow(2px 4px 6px black);
-}
-.icons :not(.operators, .logoReact) :nth-child(n) {
-  margin: 0.2rem;
-  width: 4rem;
-}
-.logoHtml5 {
-  color: #e8573b;
-}
-.logoCss3 {
-  color: #007cc5;
-}
-.logoJs {
-  color: #efd81d;
-}
-.logoReact {
-  color: #61dafb;
-  width: 7rem;
-}
-.operators {
-  color: #fff;
-  width: 2rem;
-  margin: 0 1rem;
-}
-.welcome1 {
-  min-height: 100vh;
-  width: 100vw;
-  padding: 4rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: calc(4rem + 1.5vw);
-  animation: floating 5s linear 2s infinite;
-  text-shadow: #000 1px 1px 10px;
-}
-.title a {
-  color: #61dafb;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title,
-.description {
-  text-align: center;
-  color: #248984;
-}
-
-.description {
-  margin-top: 9rem;
-  left: 0;
-  line-height: 1.5;
-  font-size: calc(1.5rem + 1vw);
-  z-index: 1;
-}
-
-.reactText {
-  text-shadow: #000 1px 1px 10px;
-  color: #61dafb;
-}
-.myName {
-  /* background-color: #91ad1c; */
-  color: white;
-  padding: 0.4rem 0.9rem;
-  margin-right: 0.2rem;
-  border-radius: 1rem;
-  border: 1px solid white;
-}
-.myDev {
-  background-color: #243010;
-  color: #ffd600;
-  padding: 0.2rem 0.7rem;
-  margin-right: 0.2rem;
-  border-radius: 1rem;
-  border: 1px solid #91ad1c;
-}
-.video video {
-  position: absolute;
-  left: 0;
-  top: 20%;
-  width: 100%;
-  height: 80%;
-  object-fit: cover;
-  object-position: center;
-  z-index: -1;
-}
-
-.buttonContact {
-  // position: absolute;
-  // bottom: -4rem;
-  cursor: pointer;
-  background: none;
-  border: 2px solid;
-  font: inherit;
-  line-height: 1;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  margin-top: 2rem;
-  background-color: #efd81d;
-  font-weight: 700;
-  color: #334900;
-  font-size: 1.5rem;
-  transition: 0.5s ease-in-out;
-  animation: clickMe 1.2s ease-in-out 2s infinite;
-  opacity: 1;
-  &:hover,
-  &:focus {
-    box-shadow: inset 20em 0 0 0 white;
-    border-color: #096868;
-    color: #096868;
-    background-color: white;
-    animation: clickMe 0.5s linear 2s infinite;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .grid {
-    width: 100%;
+  & .welcome1 {
+    min-height: 100vh;
+    width: 100vw;
+    padding: 4rem 0;
+    display: flex;
     flex-direction: column;
-  }
-  .description {
-    font-size: 1.3rem;
-    margin-top: 4rem 0;
-  }
-  .icons :not(.operators, .logoReact) :nth-child(n) {
-    margin: 0.2rem;
-    width: 2rem;
-  }
-  .title {
-    font-size: 2.5rem;
-  }
-  .logoReact {
-    color: #61dafb;
-    width: 3rem;
-  }
-  .operators {
-    color: #fff;
-    width: 1rem;
-    margin: 0 1rem;
-  }
-  .buttonContact {
-    padding: 0.5rem 0.75rem;
+    justify-content: space-evenly;
+    align-items: center;
+    & .video video {
+      position: absolute;
+      left: 0;
+      top: 20%;
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -1;
+    }
+    & .title,
+    & .description {
+      text-align: center;
+      color: #248984;
+    }
+    & .description {
+      margin-top: 9rem;
+      left: 0;
+      line-height: 1.5;
+      font-size: calc(1.5rem + 1vw);
+      z-index: 1;
+      @media screen and (max-width: 600px) {
+        font-size: 1.3rem;
+        margin-top: 4rem 0;
+      }
+      & .myName {
+        color: white;
+        padding: 0.4rem 0.9rem;
+        margin-right: 0.2rem;
+        border-radius: 1rem;
+        border: 1px solid white;
+      }
+    }
+    & .title {
+      margin: 0;
+      line-height: 1.15;
+      font-size: calc(4rem + 1.5vw);
+      animation: floating 5s linear 2s infinite;
+      text-shadow: #000 1px 1px 10px;
+      @media screen and (max-width: 600px) {
+        font-size: 2.5rem;
+      }
+      & .reactText {
+        text-shadow: #000 1px 1px 10px;
+        color: #61dafb;
+      }
+    }
+    & .icons {
+      display: flex;
+      color: #e8573b;
+      justify-content: center;
+      align-items: center;
+      padding-top: 3rem;
+      filter: drop-shadow(2px 4px 6px black);
+      & :not(.operators, .logoReact) :nth-child(n) {
+        margin: 0.2rem;
+        width: 4rem;
+        @media screen and (max-width: 600px) {
+          margin: 0.2rem;
+          width: 2rem;
+        }
+      }
+      & .logoHtml5 {
+        color: #e8573b;
+      }
+      & .logoCss3 {
+        color: #007cc5;
+      }
+      & .logoJs {
+        color: #efd81d;
+      }
+      & .logoReact {
+        color: #61dafb;
+        width: 7rem;
+        @media screen and (max-width: 600px) {
+          color: #61dafb;
+          width: 3rem;
+        }
+      }
+      & .operators {
+        color: #fff;
+        width: 2rem;
+        margin: 0 1rem;
+        @media screen and (max-width: 600px) {
+          color: #fff;
+          width: 1rem;
+          margin: 0 1rem;
+        }
+      }
+    }
+    & .question{
+      color: white;
+      background-color: #41572a;
+      font-weight: bold;
+      letter-spacing: 0.2rem;
+    }
+    & .buttonContact {
+      cursor: pointer;
+      background: none;
+      border: 2px solid;
+      font: inherit;
+      line-height: 1;
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+      margin-top: 2rem;
+      background-color: #efd81d;
+      font-weight: 700;
+      color: #334900;
+      font-size: 1.5rem;
+      transition: 0.5s ease-in-out;
+      animation: clickMe 1.2s ease-in-out 2s infinite;
+      opacity: 1;
+      &:hover,
+      &:focus {
+        box-shadow: inset 20em 0 0 0 white;
+        border-color: #096868;
+        color: #096868;
+        background-color: white;
+        animation: clickMe 0.5s linear 2s infinite;
+      }
+      @media screen and (max-width: 600px) {
+        padding: 0.5rem 0.75rem;
+      }
+    }
   }
 }
 
