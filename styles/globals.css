@@ -97,7 +97,14 @@ label {
   cursor: pointer;
   margin-top: 2rem;
 }
-
+input, textarea {
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 30vw;
+}
+input:hover, input:focus, textarea:hover, textarea:focus  {
+  border: .1rem solid #91ad1c;
+}
 @media screen and (max-width: 940px) {
   label {
     margin-top: 0;

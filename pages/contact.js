@@ -125,7 +125,7 @@ export default function Contact() {
             )}
 
             <label htmlFor="message">Message *</label>
-            <textarea
+            <textarea rows={4} 
               placeholder="Message..."
               {...register("message", { required: true })}
               id="message"
