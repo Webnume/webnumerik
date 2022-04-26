@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import styles from "../styles/Nav.module.css";
+import styles from "../styles/Nav.module.scss";
 import Image from "next/image";
 import Socialmedia from "./Socialmedia";
 import navGsapAnimations from "../utils/gsapAnimations/navGsapAnimations";
@@ -82,7 +82,7 @@ function Nav() {
             </a>
           </Link>
         </li>
-      </ul>
+      </ul>   
       <Socialmedia />
       <button className={styles.navbar__burger} onClick={handleShowLinks}>
         <span className={styles.burgerbar}></span>

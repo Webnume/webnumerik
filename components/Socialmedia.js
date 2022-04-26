@@ -4,11 +4,18 @@ import {
   faGit,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import styles from "../styles/Nav.module.css";
+import styles from "../styles/Nav.module.scss";
+import Link from "next/link";
+import Image from "next/image";
 
 function Socialmedia() {
   return (
     <div className={styles.socialmedia}>
+    <Link href="/CV- Developper Web FrontEnd ReactJs - Yves GABA.pdf">
+      <a download target="_blank">
+        <Image src="/cv.png" alt="cv" className="" width={40} height={40} />
+      </a>
+    </Link>
       <a
         href="https://www.linkedin.com/in/yves-ga/"
         target="_blank"
