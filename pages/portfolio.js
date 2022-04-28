@@ -150,7 +150,7 @@ export default function Portfolio() {
                 projectTitle="Développer un tableau de bord d'analytics avec React"
                 demoLink="https://gallant-kare-abce48.netlify.app/"
                 repoGitLink="https://github.com/Webnume/Y.GABA_12_Netlify_18032021"
-                technos={["html", "css", "js", "react", "git", "cypress"]}
+                technos={["html", "css", "js", "react", "Recharts", "git", "cypress"]}
                 mission="Intégrer des graphiques et des diagrammes avec React pour SportSee, un tableau de bord d'analytics de sport. Une API est utilisée pour récupérer les données."
                 skills={[
                   "Assurer la qualité des données d'une application",
