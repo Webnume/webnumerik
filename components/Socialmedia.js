@@ -12,7 +12,7 @@ function Socialmedia() {
   return (
     <div className={styles.socialmedia}>
     <Link href="/CV- Developper Web FrontEnd ReactJs - Yves GABA.pdf">
-      <a download target="_blank">
+      <a target="_blank">
         <Image src="/cv.png" alt="cv" className="" width={40} height={40} />
       </a>
     </Link>
