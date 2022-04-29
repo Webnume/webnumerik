@@ -26,6 +26,11 @@ const Modal = (props) => {
         <div
           className={styles.modalContent}
           onClick={(e) => e.stopPropagation()}
+          style={{
+            backgroundImage: "url(" + props.backgroundImg + ")",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
         >
           <div className={styles.modalHeader}>
             <Image

@@ -46,7 +46,11 @@ function PortofolioCard({
           <div className={styles.openModal} onClick={() => setShowModal(true)}>
             <span></span>
           </div>
-          <Modal onClose={() => setShowModal(false)} show={showModal}>
+          <Modal
+            onClose={() => setShowModal(false)}
+            show={showModal}
+            backgroundImg={backgroundImg}
+          >
             <div>
               <div style={{ position: "absolute", top: "0", left: "0" }}></div>
               <div className={styles.container} ref={container}>
