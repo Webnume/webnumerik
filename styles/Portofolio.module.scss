@@ -99,7 +99,7 @@
         align-items: flex-start;
       }
       & .Portofoliofirst {
-        width: 100vw;
+        // width: 100vw;
         margin: 7rem 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -128,7 +128,7 @@
           display: inline-block;
           margin-right: 2px;
           margin-bottom: 1em;
-          width: 40vw;
+          width: 400px;
           @media screen and (max-width: 777px) {
             width: 90vw;
           }
