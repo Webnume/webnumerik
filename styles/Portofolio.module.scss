@@ -57,9 +57,9 @@
       }
       & h2 {
         font-size: 1.2rem;
-        font-weight: 300;
+        font-weight: 900;
         margin-bottom: 0.1rem;
-        text-shadow: 1px 1px 2px rgb(0, 0, 0);
+        // text-shadow: 1px 1px 2px rgb(0, 0, 0);
         background-color: white;
         padding: 0.2rem;
         border-radius: 0.5rem;
@@ -134,7 +134,7 @@
           }
           & > .front,
           & > .back {
-            color: #248984;
+            color: #056964;
             width: inherit;
             display: block;
             transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -198,17 +198,17 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              border: 5px solid black;
+              border: 5px solid #248984;
               box-sizing: border-box;
               border-radius: 5px;
             }
             & span:before {
               color: #fff;
-              background: #000;
+              background: #248984;
               transform: rotateY(0deg) translateZ(25px);
             }
             & span:after {
-              color: #000;
+              color: #248984;
               transform: rotateX(90deg) translateZ(25px);
             }
             & span:hover {
