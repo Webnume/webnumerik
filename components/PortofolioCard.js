@@ -34,19 +34,18 @@ function PortofolioCard({
           }}
         >
           <h2>{projectTitle}</h2>
-            <ul className={styles.customlist2}>
-            {technos.map(techno=> { return <li key={nanoid(10)}>{techno}</li>})}
-            </ul>
+          <ul className={styles.customlist2}>
+            {technos.map((techno) => {
+              return <li key={nanoid(10)}>{techno}</li>;
+            })}
+          </ul>
         </div>
         <div className={styles.back} onClick={() => setShowModal(true)}>
           <h2>{projectTitle}</h2>
           <p>{mission}</p>
-          <button
-            className={styles.openModal}
-            onClick={() => setShowModal(true)}
-          >
-            Détails
-          </button>
+          <div className={styles.openModal} onClick={() => setShowModal(true)}>
+            <span></span>
+          </div>
           <Modal onClose={() => setShowModal(false)} show={showModal}>
             <div>
               <div style={{ position: "absolute", top: "0", left: "0" }}></div>
