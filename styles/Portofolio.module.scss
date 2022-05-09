@@ -360,24 +360,17 @@
 }
 
 .projecttitle {
-  top: 13rem;
-  display: flex;
-  font-size: 2rem;
-  color: black;
-  font-weight: 700;
-  margin: 0 auto;
-  text-transform: uppercase;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 1rem;
-  text-shadow: rgb(255, 255, 255) 3px 2px 8px;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  box-shadow: rgb(0 0 0) 3px 2px 8px;
+    font-size: 2.2rem;
+    color: #248984;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: #000 1px 1px 1px;
+    padding: 0.5rem;
+    margin: 0 auto 1rem;
+    box-shadow: 3px 2px 8px #000;
   @media screen and (max-width: 777px) {
     position: unset;
-    font-size: 1rem;
-    /* margin: 0 0.4rem; */
+    font-size: x-large;
     box-shadow: 5px 5px 15px black;
   }
 }
