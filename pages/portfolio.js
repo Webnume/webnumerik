@@ -108,7 +108,7 @@ export default function Portfolio() {
         >
           <div className={styles.Portofoliofirst}>
 
-            {portfolioData.map((portfolio) => (
+            {portfolioData.map((portfolio,i) => (
               <div className="card" ref={addToCardsRef} key={portfolio.imgAlt}>
                 <PortofolioCard
                   projectTitle={portfolio.projectTitle}
@@ -120,7 +120,7 @@ export default function Portfolio() {
                   imgSrc={portfolio.imgSrc}
                   imgAlt={portfolio.imgAlt}
                   backgroundImg={portfolio.backgroundImg}
-                  flipvertical={false}
+                  flipvertical={i%2===0 ? false : true}
                 />
               </div>
             ))}

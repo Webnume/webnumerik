@@ -14,7 +14,6 @@ export const portfolioData = [
     imgSrc: "webnume_projet_16.jpg",
     imgAlt: "projet 16",
     backgroundImg: "cinema.jpg",
-    flipvertical: false,
   },
   {
     projectTitle: "Mon portfolio Webnumerik",
@@ -24,13 +23,12 @@ export const portfolioData = [
     mission:
       "Mon portfolio qui regroupe mon travail et mes compétences",
     skills: [
-      "Application développée avec NextJS",
+      "Application développée from scratch avec NextJS",
       "Utilisation de GSAP",
     ],
     imgSrc: "webnume_projet_15.jpg",
     imgAlt: "projet 15",
     backgroundImg: "webnume_projet_15_2.jpg",
-    flipvertical: false,
   },
   {
     projectTitle: "Faire Passer une librairie Jquery vers React",
@@ -48,7 +46,6 @@ export const portfolioData = [
     imgSrc: "webnume_projet_14.jpg",
     imgAlt: "projet 14",
     backgroundImg: "pexels-picjumbocom-196645.jpg",
-    flipvertical: false,
   },
   {
     projectTitle:
@@ -67,7 +64,6 @@ export const portfolioData = [
     imgSrc: "webnume_projet_13.jpg",
     imgAlt: "projet 13",
     backgroundImg: "pexels-rodnae-productions-7821706.jpg",
-    flipvertical: true,
   },
   ,
   {
@@ -86,7 +82,6 @@ export const portfolioData = [
     imgSrc: "webnume_projet_12.jpg",
     imgAlt: "projet 12",
     backgroundImg: "pexels-anna-nekrashevich-6802042.jpg",
-    flipvertical: false,
   },
   {
     projectTitle: "Développer une application Web avec React et React Router",
@@ -103,7 +98,6 @@ export const portfolioData = [
     imgSrc: "webnume_projet_11.jpg",
     imgAlt: "projet 11",
     backgroundImg: "pexels-dom-j-310435.jpg",
-    flipvertical: true,
   },
   {
     projectTitle: "Définir les besoins pour une app de soutien scolaire",
@@ -123,7 +117,6 @@ export const portfolioData = [
     imgSrc: "webnume_projet_10.jpg",
     imgAlt: "projet 10",
     backgroundImg: "pexels-george-becker-374918.jpg",
-    flipvertical: false,
   },
   {
     projectTitle: "Développer un algorithme de recherche en JavaScript",
@@ -140,7 +133,6 @@ export const portfolioData = [
     imgSrc: "webnume_projet_7.jpg",
     imgAlt: "projet 7",
     backgroundImg: "pexels-jakson-martins-3503098.jpg",
-    flipvertical: false,
   },
   {
     projectTitle:
@@ -159,7 +151,6 @@ export const portfolioData = [
     imgSrc: "webnume_projet_6.jpg",
     imgAlt: "projet 6",
     backgroundImg: "pexels-produtora-midtrack-7130236.jpg",
-    flipvertical: true,
   },
   {
     projectTitle: "Créez une landing page avec Javascript",
@@ -176,7 +167,6 @@ export const portfolioData = [
     imgSrc: "webnume_projet_4.jpg",
     imgAlt: "projet 4",
     backgroundImg: "pexels-francesco-ungaro-1670977.jpg",
-    flipvertical: false,
   },
   {
     projectTitle: "Dynamiser une page web avec des animations CSS",
@@ -194,7 +184,6 @@ export const portfolioData = [
     imgSrc: "webnume_projet_3.jpg",
     imgAlt: "projet 3",
     backgroundImg: "pexels-emre-can-acer-2449364.jpg",
-    flipvertical: true,
   },
   {
     projectTitle: "Transformer une maquette en site web avec HTML & CSS",
@@ -210,6 +199,5 @@ export const portfolioData = [
     imgSrc: "webnume_projet_2.jpg",
     imgAlt: "projet 2",
     backgroundImg: "pexels-life-of-pix-4703.jpg",
-    flipvertical: false,
   },
 ];

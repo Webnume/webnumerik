@@ -34,12 +34,14 @@
 
 .modalContent {
   position: relative;
-  height: 80vh;
+  height: 80vh;  
+  width: 80vw;
   background-color: #fff;
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   display: flex;
-  align-items: center;
+  align-items: center;  
+  justify-content: center;
 }
 
 .modal.enter-done .modalContent {
