@@ -84,9 +84,7 @@ export default function Portfolio() {
       panelsRef.current.push(el);
     }
   };
-  {
-    console.log(portfolioData);
-  }
+  
   // useEffect(() => {
   //   portofolioGsapAnimations().panel(panelsRef.current);
   //   return () => {};

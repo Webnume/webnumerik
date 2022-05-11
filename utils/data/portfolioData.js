@@ -11,9 +11,25 @@ export const portfolioData = [
       "Gestion d'état avec Redux",
       "Développement avec TypeScript",
     ],
-    imgSrc: "webnume_projet_15.png",
-    imgAlt: "projet 15",
+    imgSrc: "webnume_projet_16.png",
+    imgAlt: "projet 16",
     backgroundImg: "cinema.jpg",
+    flipvertical: false,
+  },
+  {
+    projectTitle: "Mon portfolio Webnumerik",
+    demoLink: "https://webnumerik.fr",
+    repoGitLink: "https://github.com/Webnume/webnumerik",
+    technos: ["html", "css", "js", "react", "git", "nextJS"],
+    mission:
+      "Mon portfolio qui regroupe mon travail et mes compétences",
+    skills: [
+      "Application développée avec NextJS",
+      "Utilisation de GSAP",
+    ],
+    imgSrc: "webnume_projet_15.jpg",
+    imgAlt: "projet 15",
+    backgroundImg: "webnume_projet_15_2.jpg",
     flipvertical: false,
   },
   {
