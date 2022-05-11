@@ -11,7 +11,7 @@ export const portfolioData = [
       "Gestion d'état avec Redux",
       "Développement avec TypeScript",
     ],
-    imgSrc: "webnume_projet_16.png",
+    imgSrc: "webnume_projet_16.jpg",
     imgAlt: "projet 16",
     backgroundImg: "cinema.jpg",
     flipvertical: false,
