@@ -107,6 +107,24 @@ export default function Portfolio() {
           <div className={styles.Portofoliofirst}>
             <div className="card" ref={addToCardsRef}>
               <PortofolioCard
+                projectTitle="Lister des films et gérer leur affichage"
+                demoLink="https://incredible-dango-2228b0.netlify.app/"
+                repoGitLink="https://github.com/Webnume/react-interview-master"
+                technos={["html", "css", "js", "react", "git", "redux", "typeScript"]}
+                mission="Mini-projet: Coder une application React en ajoutant un système de gestion d'état Redux."
+                skills={[
+                  "Lister un contenu JSON en asynchrone",
+                  "Gestion d'état avec Redux",
+                  "Développement avec TypeScript",
+                ]}
+                imgSrc="webnume_projet_15.png"
+                imgAlt="projet 15"
+                backgroundImg="cinema.jpg"
+                flipvertical={false}
+              />
+            </div>
+            <div className="card" ref={addToCardsRef}>
+              <PortofolioCard
                 projectTitle="Faire Passer une librairie Jquery vers React"
                 demoLink="https://optimistic-shockley-a18fe4.netlify.app/"
                 repoGitLink="https://github.com/Webnume/Y.GABA_14_18032021"

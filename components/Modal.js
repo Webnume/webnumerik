@@ -30,6 +30,7 @@ const Modal = (props) => {
             backgroundImage: "url(" + props.backgroundImg + ")",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
+            backgroundPositionX: "100%",
           }}
         >
           <div className={styles.modalHeader}>
