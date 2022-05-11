@@ -137,7 +137,6 @@ const Skills = ({ technos }) => {
                 <Image
                   src="/typescript-original.svg"
                   alt="typescript"
-                  // className={styles.panelBackground}
                   width={30}
                   height={30}
                 />
