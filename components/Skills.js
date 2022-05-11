@@ -103,7 +103,6 @@ const Skills = ({ technos }) => {
                 <Image
                   src="/jest-icon.svg"
                   alt="jest"
-                  // className={styles.panelBackground}
                   width={20}
                   height={30}
                 />
@@ -121,6 +120,23 @@ const Skills = ({ technos }) => {
                 <Image
                   src="/cypress-io.png"
                   alt="Cypress.io"
+                  width={30}
+                  height={30}
+                />
+              </span>
+            </div>
+          );
+        if (techno === "typeScript")
+          return (
+            <div key={nanoid(10)}>
+              <span
+                className={styles.logoJest}
+                onMouseEnter={() => setHover("typeScript")}
+                onMouseLeave={() => setHover("")}
+              >
+                <Image
+                  src="/typescript-original.svg"
+                  alt="typescript"
                   // className={styles.panelBackground}
                   width={30}
                   height={30}
