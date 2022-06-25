@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import ReactDOM from "react-dom";
 import styles from "../styles/Modal.module.css";
 import Image from "next/image";
@@ -10,20 +10,31 @@ const Modal = (props) => {
     }
   };
 
+  const [mount, setMount] = useState(false);
+
+  const onScroll = () => {
+    document.body.style.overflow = "scroll";
+    return null;
+  };
+
   useEffect(() => {
+    setMount(true);
+    // window.addEventListener("scroll", onScroll);
+
     document.body.addEventListener("keydown", closeOnEscapeKeyDown);
     return function cleanup() {
       document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
+      // window.removeEventListener("scroll", onScroll);
     };
   });
 
-  if (!props.show) {
+  if (!props.show && typeof window !== "undefined") {
     document.body.style.overflow = "scroll";
     return null;
   }
-  return ReactDOM.createPortal(
+  return mount ? ReactDOM.createPortal(
     <div onClick={(e) => e.stopPropagation()}>
-    { document.body.style.overflow = "hidden"}
+      { document.body.style.overflow = "hidden"}
       <div className={styles.modal} onClick={props.onClose}>
         <div
           className={styles.modalContent}
@@ -48,7 +59,7 @@ const Modal = (props) => {
       </div>
     </div>,
     document.getElementById("__next")
-  );
+  ): null;
 };
 
 export default Modal;
