@@ -18,12 +18,12 @@ const Modal = (props) => {
   });
 
   if (!props.show) {
-    document.body.style.overflow = "scroll";
+    // document.body.style.overflow = "scroll";
     return null;
   }
   return ReactDOM.createPortal(
     <div onClick={(e) => e.stopPropagation()}>
-    { document.body.style.overflow = "hidden"}
+      {(document.body.style.overflow = "hidden")}
       <div className={styles.modal} onClick={props.onClose}>
         <div
           className={styles.modalContent}
@@ -35,7 +35,6 @@ const Modal = (props) => {
           <div className={styles.modalHeader}>
             <Image
               className={styles.closeModal}
-              // src={closeModal}
               src="/close_modal.png"
               alt={styles.closeModal}
               onClick={props.onClose}

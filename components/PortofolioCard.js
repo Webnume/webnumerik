@@ -70,7 +70,7 @@ function PortofolioCard({
                       </span>
 
                       <div className={styles.inner}>
-                        <a
+                        {demoLink &&<a 
                           href={demoLink}
                           target="blank"
                           rel="noopener noreferrer"
@@ -81,8 +81,7 @@ function PortofolioCard({
                           <span>e</span>
                           <span>m</span>
                           <span>o</span>
-                        </a>{" "}
-                        /{" "}
+                        </a> }
                         <a
                           href={repoGitLink}
                           target="blank"

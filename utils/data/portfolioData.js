@@ -1,5 +1,21 @@
 export const portfolioData = [
   {
+    projectTitle: "ADS MANAGER (gestionnaire de pubs)",
+    // demoLink: "https://incredible-dango-2228b0.netlify.app/",
+    repoGitLink: "https://github.com/Webnume/react-mk-frontend-adsManager",
+    technos: ["html", "css", "js", "react", "git", "React-Query", "MaterialUI", "typeScript"],
+    mission:
+      "Mini-projet: Coder une application React permettant l'édition de bannières de publicité avec React-Query et MaterialUI.",
+    skills: [
+      "Gérer un contenu API REST en asynchrone",
+      "Gestion des données avec React-Query",
+      "Développement avec TypeScript",
+    ],
+    imgSrc: "webnume_projet_17.jpg",
+    imgAlt: "projet 17",
+    backgroundImg: "adsmanager.jpg",
+  },
+  {
     projectTitle: "Lister des films et gérer leur affichage",
     demoLink: "https://incredible-dango-2228b0.netlify.app/",
     repoGitLink: "https://github.com/Webnume/react-interview-master",

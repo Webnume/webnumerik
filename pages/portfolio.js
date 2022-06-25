@@ -84,7 +84,7 @@ export default function Portfolio() {
       panelsRef.current.push(el);
     }
   };
-  
+
   // useEffect(() => {
   //   portofolioGsapAnimations().panel(panelsRef.current);
   //   return () => {};
@@ -107,8 +107,7 @@ export default function Portfolio() {
           ref={addToPanelsRef}
         >
           <div className={styles.Portofoliofirst}>
-
-            {portfolioData.map((portfolio,i) => (
+            {portfolioData.map((portfolio, i) => (
               <div className="card" ref={addToCardsRef} key={portfolio.imgAlt}>
                 <PortofolioCard
                   projectTitle={portfolio.projectTitle}
@@ -120,7 +119,7 @@ export default function Portfolio() {
                   imgSrc={portfolio.imgSrc}
                   imgAlt={portfolio.imgAlt}
                   backgroundImg={portfolio.backgroundImg}
-                  flipvertical={i%2===0 ? false : true}
+                  flipvertical={i % 2 === 0 ? false : true}
                 />
               </div>
             ))}
