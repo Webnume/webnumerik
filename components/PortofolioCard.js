@@ -81,6 +81,7 @@ function PortofolioCard({
                           <span>e</span>
                           <span>m</span>
                           <span>o</span>
+                          <span> / </span>
                         </a> }
                         <a
                           href={repoGitLink}
