@@ -19,6 +19,7 @@ const Modal = (props) => {
 
   if (!props.show) {
     document.body.style.overflow = "scroll";
+    
     return null;
   }
   return ReactDOM.createPortal(
