@@ -1,5 +1,21 @@
 export const portfolioData = [
   {
+    projectTitle: "REST Countries API",
+    demoLink: "https://incandescent-croquembouche-edc9c3.netlify.app/",
+    repoGitLink: "https://github.com/Webnume/rest-countries-front",
+    technos: ["html", "css", "js", "react", "git", "React-Query", "typeScript"],
+    mission:
+      "Mini-projet: Coder une application React permettant l'affichage des pays avec React-Query",
+    skills: [
+      "Gérer un contenu API REST en asynchrone",
+      "Gestion et tri des données avec React-Query",
+      "Développement avec TypeScript",
+    ],
+    imgSrc: "webnume_projet_18.jpg",
+    imgAlt: "projet 18",
+    backgroundImg: "map.jpg",
+  },
+  {
     projectTitle: "ADS MANAGER (gestionnaire de pubs)",
     // demoLink: "https://incredible-dango-2228b0.netlify.app/",
     repoGitLink: "https://github.com/Webnume/react-mk-frontend-adsManager",
