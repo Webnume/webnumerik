@@ -1,11 +1,27 @@
 export const portfolioData = [
   {
+    projectTitle: "Rock Paper Scissors",
+    demoLink: "https://snazzy-sundae-190c28.netlify.app/",
+    repoGitLink: "https://github.com/Webnume/rock-paper-scissors-React",
+    technos: ["html", "sass", "js", "react", "git", "typeScript", "redux"],
+    mission:
+      "Coder une application React permettant de jouer à Pierre-papier-ciseaux (Chifoumi)",
+    skills: [
+      "Gérer un contenu API REST en asynchrone",
+      "Gestion de states avec Redux",
+      "Développement avec TypeScript",
+    ],
+    imgSrc: "desktop-preview.jpg",
+    imgAlt: "projet 18",
+    backgroundImg: "rock-paper-scissors.jpg",
+  },
+  {
     projectTitle: "REST Countries API",
     demoLink: "https://incandescent-croquembouche-edc9c3.netlify.app/",
     repoGitLink: "https://github.com/Webnume/rest-countries-front",
-    technos: ["html", "css", "js", "react", "git", "React-Query", "typeScript"],
+    technos: ["html", "sass", "js", "react", "git", "react-query", "typeScript", "API REST"],
     mission:
-      "Mini-projet: Coder une application React permettant l'affichage des pays avec React-Query",
+      "Coder une application React permettant l'affichage des pays avec React-Query",
     skills: [
       "Gérer un contenu API REST en asynchrone",
       "Gestion et tri des données avec React-Query",
@@ -19,9 +35,9 @@ export const portfolioData = [
     projectTitle: "ADS MANAGER (gestionnaire de pubs)",
     // demoLink: "https://incredible-dango-2228b0.netlify.app/",
     repoGitLink: "https://github.com/Webnume/react-mk-frontend-adsManager",
-    technos: ["html", "css", "js", "react", "git", "React-Query", "MaterialUI", "typeScript"],
+    technos: ["html", "css", "js", "react", "git", "react-query", "MaterialUI", "typeScript", "API REST"],
     mission:
-      "Mini-projet: Coder une application React permettant l'édition de bannières de publicité avec React-Query et MaterialUI.",
+      "Coder une application React permettant l'édition de bannières de publicité avec React-Query et MaterialUI.",
     skills: [
       "Gérer un contenu API REST en asynchrone",
       "Gestion des données avec React-Query",
@@ -35,9 +51,9 @@ export const portfolioData = [
     projectTitle: "Lister des films et gérer leur affichage",
     demoLink: "https://incredible-dango-2228b0.netlify.app/",
     repoGitLink: "https://github.com/Webnume/react-interview-master",
-    technos: ["html", "css", "js", "react", "git", "redux", "typeScript"],
+    technos: ["html", "css", "js", "react", "git", "redux", "typeScript", "API REST"],
     mission:
-      "Mini-projet: Coder une application React en ajoutant un système de gestion d'état Redux.",
+      "Coder une application React en ajoutant un système de gestion d'état Redux.",
     skills: [
       "Lister un contenu JSON en asynchrone",
       "Gestion d'état avec Redux",
@@ -84,7 +100,7 @@ export const portfolioData = [
       "Utiliser une API pour un compte utilisateur bancaire avec React",
     demoLink: "https://gifted-noether-9500a4.netlify.app/",
     repoGitLink: "https://github.com/Webnume/Y.GABA_13_18032021",
-    technos: ["html", "css", "js", "react", "git"],
+    technos: ["html", "css", "js", "react", "git", "API REST"],
     mission:
       "Compléter le code du site en mettant en place une authentification via JWT (JSON Web Tokens). Ecrire des appels à l'API REST pour connecter le front au back et modéliser une API.",
     skills: [
@@ -102,7 +118,7 @@ export const portfolioData = [
     projectTitle: "Développer un tableau de bord d'analytics avec React",
     demoLink: "https://gallant-kare-abce48.netlify.app/",
     repoGitLink: "https://github.com/Webnume/Y.GABA_12_Netlify_18032021",
-    technos: ["html", "css", "js", "react", "Recharts", "git", "cypress"],
+    technos: ["html", "css", "js", "react", "Recharts", "git", "cypress", "API REST"],
     mission:
       "Intégrer des graphiques et des diagrammes avec React pour SportSee, un tableau de bord d'analytics de sport. Une API est utilisée pour récupérer les données.",
     skills: [

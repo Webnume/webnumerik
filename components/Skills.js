@@ -143,6 +143,41 @@ const Skills = ({ technos }) => {
               </span>
             </div>
           );
+          
+        if (techno === "redux")
+          return (
+            <div key={nanoid(10)}>
+              <span
+                className={styles.logoJest}
+                onMouseEnter={() => setHover("redux")}
+                onMouseLeave={() => setHover("")}
+              >
+                <Image
+                  src="/redux-logo-vector.svg"
+                  alt="redux"
+                  width={30}
+                  height={30}
+                />
+              </span>
+            </div>
+          );
+        if (techno === "react-query")
+          return (
+            <div key={nanoid(10)}>
+              <span
+                className={styles.logoJest}
+                onMouseEnter={() => setHover("react-query")}
+                onMouseLeave={() => setHover("")}
+              >
+                <Image
+                  src="/react-query.svg"
+                  alt="react query"
+                  width={30}
+                  height={30}
+                />
+              </span>
+            </div>
+          );
       })}
     </div>
   );
