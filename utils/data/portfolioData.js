@@ -12,7 +12,7 @@ export const portfolioData = [
       "Développement avec TypeScript",
     ],
     imgSrc: "desktop-preview.jpg",
-    imgAlt: "projet 18",
+    imgAlt: "projet 19",
     backgroundImg: "rock-paper-scissors.jpg",
   },
   {
