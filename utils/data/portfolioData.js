@@ -3,7 +3,7 @@ export const portfolioData = [
     projectTitle: "Rock Paper Scissors",
     demoLink: "https://snazzy-sundae-190c28.netlify.app/",
     repoGitLink: "https://github.com/Webnume/rock-paper-scissors-React",
-    technos: ["html", "sass", "js", "react", "git", "typeScript", "redux"],
+    technos: ["html", "sass", "js", "react", "typeScript", "redux"],
     mission:
       "Coder une application React permettant de jouer à Pierre-papier-ciseaux (Chifoumi)",
     skills: [
@@ -19,7 +19,7 @@ export const portfolioData = [
     projectTitle: "REST Countries API",
     demoLink: "https://incandescent-croquembouche-edc9c3.netlify.app/",
     repoGitLink: "https://github.com/Webnume/rest-countries-front",
-    technos: ["html", "sass", "js", "react", "git", "react-query", "typeScript", "API REST"],
+    technos: ["html", "sass", "js", "react", "react-query", "typeScript", "API REST"],
     mission:
       "Coder une application React permettant l'affichage des pays avec React-Query",
     skills: [
@@ -35,7 +35,7 @@ export const portfolioData = [
     projectTitle: "ADS MANAGER (gestionnaire de pubs)",
     // demoLink: "https://incredible-dango-2228b0.netlify.app/",
     repoGitLink: "https://github.com/Webnume/react-mk-frontend-adsManager",
-    technos: ["html", "css", "js", "react", "git", "react-query", "MaterialUI", "typeScript", "API REST"],
+    technos: ["html", "css", "js", "react", "react-query", "MaterialUI", "typeScript", "API REST"],
     mission:
       "Coder une application React permettant l'édition de bannières de publicité avec React-Query et MaterialUI.",
     skills: [
@@ -51,7 +51,7 @@ export const portfolioData = [
     projectTitle: "Lister des films et gérer leur affichage",
     demoLink: "https://incredible-dango-2228b0.netlify.app/",
     repoGitLink: "https://github.com/Webnume/react-interview-master",
-    technos: ["html", "css", "js", "react", "git", "redux", "typeScript", "API REST"],
+    technos: ["html", "css", "js", "react", "redux", "typeScript", "API REST"],
     mission:
       "Coder une application React en ajoutant un système de gestion d'état Redux.",
     skills: [
@@ -67,7 +67,7 @@ export const portfolioData = [
     projectTitle: "Mon portfolio Webnumerik",
     demoLink: "https://webnumerik.fr",
     repoGitLink: "https://github.com/Webnume/webnumerik",
-    technos: ["html", "css", "js", "react", "git", "nextJS"],
+    technos: ["html", "css", "js", "react", "nextJS"],
     mission:
       "Mon portfolio qui regroupe mon travail et mes compétences",
     skills: [
@@ -82,7 +82,7 @@ export const portfolioData = [
     projectTitle: "Faire Passer une librairie Jquery vers React",
     demoLink: "https://optimistic-shockley-a18fe4.netlify.app/",
     repoGitLink: "https://github.com/Webnume/Y.GABA_14_18032021",
-    technos: ["html", "css", "js", "react", "git"],
+    technos: ["html", "css", "js", "react"],
     mission:
       "Convertir une application entière et ses plugins de Jquery vers React en ajoutant un système de gestion d'état Redux. Déployer un composant en librairie sur NPM.",
     skills: [
@@ -100,7 +100,7 @@ export const portfolioData = [
       "Utiliser une API pour un compte utilisateur bancaire avec React",
     demoLink: "https://gifted-noether-9500a4.netlify.app/",
     repoGitLink: "https://github.com/Webnume/Y.GABA_13_18032021",
-    technos: ["html", "css", "js", "react", "git", "API REST"],
+    technos: ["html", "css", "js", "react", "API REST"],
     mission:
       "Compléter le code du site en mettant en place une authentification via JWT (JSON Web Tokens). Ecrire des appels à l'API REST pour connecter le front au back et modéliser une API.",
     skills: [
@@ -118,7 +118,7 @@ export const portfolioData = [
     projectTitle: "Développer un tableau de bord d'analytics avec React",
     demoLink: "https://gallant-kare-abce48.netlify.app/",
     repoGitLink: "https://github.com/Webnume/Y.GABA_12_Netlify_18032021",
-    technos: ["html", "css", "js", "react", "Recharts", "git", "cypress", "API REST"],
+    technos: ["html", "css", "js", "react", "Recharts", "cypress", "API REST"],
     mission:
       "Intégrer des graphiques et des diagrammes avec React pour SportSee, un tableau de bord d'analytics de sport. Une API est utilisée pour récupérer les données.",
     skills: [
@@ -135,7 +135,7 @@ export const portfolioData = [
     projectTitle: "Développer une application Web avec React et React Router",
     demoLink: "https://kasa-oc.netlify.app/",
     repoGitLink: "https://github.com/Webnume/Y.GABA_11_18032021",
-    technos: ["html", "css", "js", "react", "git", "jest"],
+    technos: ["html", "css", "js", "react", "jest"],
     mission:
       "Implémenter le front-end de Kasa, une application de location de logements. Mettre en place des composants avec React et les routes de l'application avec React Router.",
     skills: [
@@ -153,7 +153,7 @@ export const portfolioData = [
       "https://public.zenkit.com/i/u7x1VngwAd/F-ZRpoF0X/page-connexion?v=nwuwn4JCAC",
     repoGitLink:
       "https://public.zenkit.com/i/u7x1VngwAd/F-ZRpoF0X/page-connexion?v=nwuwn4JCAC",
-    technos: ["html", "css", "js", "react", "git"],
+    technos: ["html", "css", "js", "react"],
     mission:
       "Définir les besoins d'une association de soutien scolaire avec les outils agiles comme les User Stories. Disponibles sur la plateforme Zenkit ",
     skills: [
@@ -171,7 +171,7 @@ export const portfolioData = [
     demoLink: "https://webnume.github.io/Y.GABA_7_18032021/",
     repoGitLink:
       "https://github.com/Webnume/Y.GABA_7_18032021/tree/Algorithme-2",
-    technos: ["html", "css", "js", "git"],
+    technos: ["html", "css", "js"],
     mission:
       "Implémenter un algorithme de recherche de recettes de cuisines pour le site Les Petits Plats grâce à des outils et méthodes avancées de Javascript ainsi que Bootstrap pour l'interface.",
     skills: [
@@ -187,7 +187,7 @@ export const portfolioData = [
       "Créer un site accessible pour une plateforme de photographes",
     demoLink: "https://webnume.github.io/Y.GABA_6_18032021/index.html",
     repoGitLink: "https://github.com/Webnume/Y.GABA_6_18032021",
-    technos: ["html", "css", "js", "git"],
+    technos: ["html", "css", "js"],
     mission:
       "Construire un prototype fonctionnel en fournissant tout le HTML, le CSS et le JavaScript nécessaires pour l'équipe de back-end qui l'intégrera une fois terminé.",
     skills: [
@@ -204,7 +204,7 @@ export const portfolioData = [
     projectTitle: "Créez une landing page avec Javascript",
     demoLink: "https://webnume.github.io/Y.GABA_4_18032021/index.html",
     repoGitLink: "https://github.com/Webnume/Y.GABA_4_18032021",
-    technos: ["html", "css", "js", "git"],
+    technos: ["html", "css", "js"],
     mission:
       "Construire un prototype fonctionnel en fournissant tout le HTML, le CSS et le JavaScript nécessaires pour l'équipe de back-end qui l'intégrera une fois terminé.",
     skills: [
@@ -220,7 +220,7 @@ export const portfolioData = [
     projectTitle: "Dynamiser une page web avec des animations CSS",
     demoLink: "https://webnume.github.io/Y.GABA_3_18032021/",
     repoGitLink: "https://github.com/Webnume/Y.GABA_3_18032021",
-    technos: ["html", "css", "js", "sass", "git"],
+    technos: ["html", "css", "js", "sass"],
     mission:
       "Développer un site à partir d'une maquette et l'animer avec du CSS.",
     skills: [
@@ -237,7 +237,7 @@ export const portfolioData = [
     projectTitle: "Transformer une maquette en site web avec HTML & CSS",
     demoLink: "https://webnume.github.io/Y.GABA_2_18032021/",
     repoGitLink: "https://github.com/Webnume/Y.GABA_2_18032021",
-    technos: ["html", "css", "js", "sass", "git"],
+    technos: ["html", "css", "js", "sass"],
     mission: "Développer un site à partir d'une maquette Figma",
     skills: [
       "Utiliser un système de gestion de versions pour le suivi du projet",
