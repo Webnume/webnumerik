@@ -115,7 +115,7 @@ export default function About() {
             vous aider.
           </p>
         </section>
-        <h2 className={styles.title}>
+        <h2 className={styles.title2}>
           Mon <span>Parcours</span>
         </h2>
         <section className={styles.section2}>
