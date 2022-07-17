@@ -151,8 +151,8 @@ export const portfolioData = [
     projectTitle: "Définir les besoins pour une app de soutien scolaire",
     demoLink:
       "https://public.zenkit.com/i/u7x1VngwAd/F-ZRpoF0X/page-connexion?v=nwuwn4JCAC",
-    repoGitLink:
-      "https://public.zenkit.com/i/u7x1VngwAd/F-ZRpoF0X/page-connexion?v=nwuwn4JCAC",
+    // repoGitLink:
+    //   "https://public.zenkit.com/i/u7x1VngwAd/F-ZRpoF0X/page-connexion?v=nwuwn4JCAC",
     technos: ["html", "css", "js", "react"],
     mission:
       "Définir les besoins d'une association de soutien scolaire avec les outils agiles comme les User Stories. Disponibles sur la plateforme Zenkit ",

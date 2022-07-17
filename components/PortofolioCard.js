@@ -70,30 +70,34 @@ function PortofolioCard({
                       </span>
 
                       <div className={styles.inner}>
-                        {demoLink &&<a 
-                          href={demoLink}
-                          target="blank"
-                          rel="noopener noreferrer"
-                          className="hover-shadow hover-color"
-                        >
-                          <span>Live</span>
-                          <span>D</span>
-                          <span>e</span>
-                          <span>m</span>
-                          <span>o</span>
-                          <span> / </span>
-                        </a> }
-                        <a
-                          href={repoGitLink}
-                          target="blank"
-                          rel="noopener noreferrer"
-                          className="hover-shadow hover-color"
-                        >
-                          <span>Git</span>
-                          <span>H</span>
-                          <span>u</span>
-                          <span>b</span>
-                        </a>
+                        {demoLink && (
+                          <a
+                            href={demoLink}
+                            target="blank"
+                            rel="noopener noreferrer"
+                            className="hover-shadow hover-color"
+                          >
+                            <span>Live</span>
+                            <span>D</span>
+                            <span>e</span>
+                            <span>m</span>
+                            <span>o</span>
+                          </a>
+                        )}
+                        {demoLink && repoGitLink && <span> / </span>}
+                        {repoGitLink && (
+                          <a
+                            href={repoGitLink}
+                            target="blank"
+                            rel="noopener noreferrer"
+                            className="hover-shadow hover-color"
+                          >
+                            <span>Git</span>
+                            <span>H</span>
+                            <span>u</span>
+                            <span>b</span>
+                          </a>
+                        )}
                       </div>
                     </div>
                     <div className={styles.underThumb}>
