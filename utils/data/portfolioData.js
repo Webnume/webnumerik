@@ -33,7 +33,7 @@ export const portfolioData = [
   },
   {
     projectTitle: "ADS MANAGER (gestionnaire de pubs)",
-    // demoLink: "https://incredible-dango-2228b0.netlify.app/",
+    demoLink: "https://serene-pie-dd151c.netlify.app/",
     repoGitLink: "https://github.com/Webnume/react-mk-frontend-adsManager",
     technos: ["html", "css", "js", "react", "react-query", "MaterialUI", "typeScript", "API REST"],
     mission:
