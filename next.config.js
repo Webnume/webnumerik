@@ -1,8 +1,3 @@
 module.exports = {
-  reactStrictMode: true,
-  experimental: {
-      images: {
-          layoutRaw: true
-      }
-  },
+  reactStrictMode: true
 };

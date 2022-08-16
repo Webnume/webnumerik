@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import styles from "../styles/Portofolio.module.scss";
 import Modal from "./Modal";
-import Image from "next/future/image";
+import Image from "next/image";
 import { nanoid } from "nanoid";
 import Skills from "./Skills";
 

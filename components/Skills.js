@@ -9,7 +9,6 @@ import {
   faReact,
   faGitSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import Image from "next/future/image";
 
 const logos = [
   {
@@ -135,12 +134,7 @@ const Skills = ({ technos }) => {
               {logo.fontAwesome ? (
                 <FontAwesomeIcon icon={logo.fontAwesome} />
               ) : (
-                <Image
-                  src={`/${logo.image}`}
-                  alt={logo.id}
-                  width={30}
-                  height={30}
-                />
+                <img src={`/${logo.image}`} alt="" />
               )}
             </span>
           </a>

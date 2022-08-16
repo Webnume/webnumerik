@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "../styles/Nav.module.scss";
-import Image from "next/future/image";
+import Image from "next/image";
 import Socialmedia from "./Socialmedia";
 import navGsapAnimations from "../utils/gsapAnimations/navGsapAnimations";
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import styles from "../styles/Modal.module.css";
-import Image from "next/future/image";
+import Image from "next/image";
 
 const Modal = (props) => {
   const [mount, setMount] = useState(false);

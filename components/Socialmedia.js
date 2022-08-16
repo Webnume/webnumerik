@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import styles from "../styles/Nav.module.scss";
 import Link from "next/link";
-import Image from "next/future/image";
+import Image from "next/image";
 
 function Socialmedia() {
   return (
