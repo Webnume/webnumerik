@@ -63,7 +63,7 @@ const logos = [
   {
     id: "cypress",
     fontAwesome: null,
-    image: "cypress-io.png",
+    image: "cypress.io.svg",
     classname: styles.logoJest,
     hoverDescription: "E2E tests with Cypress",
   },

@@ -59,15 +59,14 @@ function PortofolioCard({
                 </h1>
                 <div className={styles.content}>
                   <div className={`${styles.left}`} data-left>
-                    {/* <div className={styles.siteInfos}>
-                    </div> */}
                       <span className={styles.siteImg}>
+                      <a href={demoLink} target="_blank" rel="noopener noreferrer">
                         <Image
                           src={`/${imgSrc}`}
                           alt={imgAlt}
                           width={200}
                           height={120}
-                        />
+                        /></a>
                       </span>
 
                       <div className={styles.inner}>
@@ -107,7 +106,6 @@ function PortofolioCard({
                   <div className={styles.right} data-right>
                     <h2 className={`${styles.right} ${styles.descriptiontitle}`}>Description</h2>
                     <p>{mission}</p>
-                    {/* <h2>Compétences déployées</h2> */}
                     <ul className={styles.customlist}>
                       {skills.map((skill) => {
                         return <li key={nanoid(10)}>{skill}</li>;
