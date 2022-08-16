@@ -59,52 +59,61 @@ function PortofolioCard({
                 </h1>
                 <div className={styles.content}>
                   <div className={`${styles.left}`} data-left>
-                      <span className={styles.siteImg}>
-                      <a href={demoLink} target="_blank" rel="noopener noreferrer">
+                    <span className={styles.siteImg}>
+                      <a
+                        href={demoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image
                           src={`/${imgSrc}`}
                           alt={imgAlt}
                           width={200}
                           height={120}
-                        /></a>
-                      </span>
+                        />
+                      </a>
+                    </span>
 
-                      <div className={styles.inner}>
-                        {demoLink && (
-                          <a
-                            href={demoLink}
-                            target="blank"
-                            rel="noopener noreferrer"
-                            className="hover-shadow hover-color"
-                          >
-                            <span>Live</span>
-                            <span>D</span>
-                            <span>e</span>
-                            <span>m</span>
-                            <span>o</span>
-                          </a>
-                        )}
-                        {demoLink && repoGitLink && <span> / </span>}
-                        {repoGitLink && (
-                          <a
-                            href={repoGitLink}
-                            target="blank"
-                            rel="noopener noreferrer"
-                            className="hover-shadow hover-color"
-                          >
-                            <span>Git</span>
-                            <span>H</span>
-                            <span>u</span>
-                            <span>b</span>
-                          </a>
-                        )}
-                      </div>
+                    <div className={styles.inner}>
+                      {demoLink && (
+                        <a
+                          href={demoLink}
+                          target="blank"
+                          rel="noopener noreferrer"
+                          className="hover-shadow hover-color"
+                        >
+                          <span>Live</span>
+                          <span>D</span>
+                          <span>e</span>
+                          <span>m</span>
+                          <span>o</span>
+                        </a>
+                      )}
+                      {demoLink && repoGitLink && <span> / </span>}
+                      {repoGitLink && (
+                        <a
+                          href={repoGitLink}
+                          target="blank"
+                          rel="noopener noreferrer"
+                          className="hover-shadow hover-color"
+                        >
+                          <span>Git</span>
+                          <span>H</span>
+                          <span>u</span>
+                          <span>b</span>
+                        </a>
+                      )}
+                    </div>
                     <div className={styles.underThumb}>
                       <Skills technos={technos} />
                     </div>
                   </div>
                   <div className={styles.right} data-right>
-                    <h2 className={`${styles.right} ${styles.descriptiontitle}`}>Description</h2>
+                    <h2
+                      className={`${styles.right} ${styles.descriptiontitle}`}
+                    >
+                      Description
+                    </h2>
                     <p>{mission}</p>
                     <ul className={styles.customlist}>
                       {skills.map((skill) => {
