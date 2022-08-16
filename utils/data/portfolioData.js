@@ -1,5 +1,24 @@
 export const portfolioData = [
   {
+    projectTitle: "E-commerce product page",
+    demoLink: "https://loquacious-pothos-f79409.netlify.app/",
+    repoGitLink: "https://github.com/Webnume/ecommerce-product-page-React",
+    technos: ["html", "js", "react", "typeScript", "styledComponents", "useContext"],
+    mission:
+      "The challenge is to build a product page with a lightbox product gallery and cart functionality!",
+    skills: [
+      "View the optimal layout for the site depending on their device's screen size",
+      "See hover states for all interactive elements on the page",
+      "Open a lightbox gallery by clicking on the large product image",
+      "Switch the large product image by clicking on the small thumbnail images",
+      "Add items to the cart",
+      "View the cart and remove items from it",
+    ],
+    imgSrc: "ecommerce-product-page.jpg",
+    imgAlt: "projet 20",
+    backgroundImg: "ecom.jpg",
+  },
+  {
     projectTitle: "Rock Paper Scissors",
     demoLink: "https://snazzy-sundae-190c28.netlify.app/",
     repoGitLink: "https://github.com/Webnume/rock-paper-scissors-React",
@@ -11,7 +30,7 @@ export const portfolioData = [
       "Gestion de states avec Redux",
       "Développement avec TypeScript",
     ],
-    imgSrc: "desktop-preview.jpg",
+    imgSrc: "webnume_projet_19.jpg",
     imgAlt: "projet 19",
     backgroundImg: "rock-paper-scissors.jpg",
   },
@@ -19,7 +38,15 @@ export const portfolioData = [
     projectTitle: "REST Countries API",
     demoLink: "https://incandescent-croquembouche-edc9c3.netlify.app/",
     repoGitLink: "https://github.com/Webnume/rest-countries-front",
-    technos: ["html", "sass", "js", "react", "react-query", "typeScript", "API REST"],
+    technos: [
+      "html",
+      "sass",
+      "js",
+      "react",
+      "react-query",
+      "typeScript",
+      "API REST",
+    ],
     mission:
       "Coder une application React permettant l'affichage des pays avec React-Query",
     skills: [
@@ -35,7 +62,16 @@ export const portfolioData = [
     projectTitle: "ADS MANAGER (gestionnaire de pubs)",
     demoLink: "https://serene-pie-dd151c.netlify.app/",
     repoGitLink: "https://github.com/Webnume/react-mk-frontend-adsManager",
-    technos: ["html", "css", "js", "react", "react-query", "MaterialUI", "typeScript", "API REST"],
+    technos: [
+      "html",
+      "css",
+      "js",
+      "react",
+      "react-query",
+      "MaterialUI",
+      "typeScript",
+      "API REST",
+    ],
     mission:
       "Coder une application React permettant l'édition de bannières de publicité avec React-Query et MaterialUI.",
     skills: [
@@ -67,9 +103,8 @@ export const portfolioData = [
     projectTitle: "Mon portfolio Webnumerik",
     demoLink: "https://webnumerik.fr",
     repoGitLink: "https://github.com/Webnume/webnumerik",
-    technos: ["html", "css", "js", "react", "nextJS"],
-    mission:
-      "Mon portfolio qui regroupe mon travail et mes compétences",
+    technos: ["html", "css", "js", "react", "nextjs"],
+    mission: "Mon portfolio qui regroupe mon travail et mes compétences",
     skills: [
       "Application développée from scratch avec NextJS",
       "Utilisation de GSAP",
@@ -220,7 +255,7 @@ export const portfolioData = [
     projectTitle: "Dynamiser une page web avec des animations CSS",
     demoLink: "https://webnume.github.io/Y.GABA_3_18032021/",
     repoGitLink: "https://github.com/Webnume/Y.GABA_3_18032021",
-    technos: ["html", "css", "js", "sass"],
+    technos: ["html", "css", "js", "sass", "git"],
     mission:
       "Développer un site à partir d'une maquette et l'animer avec du CSS.",
     skills: [

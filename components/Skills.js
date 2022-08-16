@@ -12,172 +12,179 @@ import {
 import Image from "next/image";
 import { nanoid } from "nanoid";
 
+const logos = [
+  {
+    id: "html",
+    fontAwesome: faHtml5,
+    image: "",
+    classname: styles.logoHtml5,
+    hoverDescription: "Html",
+    href: "https://developer.mozilla.org/fr/docs/Web/HTML",
+  },
+  {
+    id: "css",
+    fontAwesome: faCss3Alt,
+    image: "",
+    classname: styles.logoCss3,
+    hoverDescription: "Css",
+    href: "https://developer.mozilla.org/fr/docs/Web/CSS",
+  },
+  {
+    id: "sass",
+    fontAwesome: faSass,
+    image: "",
+    classname: styles.logoSass,
+    hoverDescription: "Préprocesseur Sass",
+    href: "https://sass-lang.com/",
+  },
+  {
+    id: "js",
+    fontAwesome: faJsSquare,
+    image: "",
+    classname: styles.logoJs,
+    hoverDescription: "Javascript",
+    href: "https://developer.mozilla.org/fr/docs/Web/JavaScript",
+  },
+  {
+    id: "react",
+    fontAwesome: faReact,
+    image: "",
+    classname: styles.logoReact,
+    hoverDescription: "React",
+    href: "https://reactjs.org/",
+  },
+  {
+    id: "git",
+    fontAwesome: faGitSquare,
+    image: "",
+    classname: styles.logoGit,
+    hoverDescription: "Git versionning",
+    href: "https://git-scm.com/",
+  },
+  {
+    id: "jest",
+    fontAwesome: null,
+    image: "jest-icon.svg",
+    classname: styles.logoJest,
+    hoverDescription: "Jest/ React Testing Library",
+    href: "https://jestjs.io/",
+  },
+  {
+    id: "cypress",
+    fontAwesome: null,
+    image: "cypress-io.png",
+    classname: styles.logoJest,
+    hoverDescription: "E2E tests with Cypress",
+    href: "https://www.cypress.io/",
+  },
+  {
+    id: "typeScript",
+    fontAwesome: null,
+    image: "typescript-original.svg",
+    classname: styles.logoJest,
+    hoverDescription: "TypeScript",
+    href: "https://www.typescriptlang.org/",
+  },
+  {
+    id: "styledComponents",
+    fontAwesome: null,
+    image: "styled-components.svg",
+    classname: styles.styledcomponents,
+    hoverDescription: "Styled Components",
+    href: "https://www.styled-components.com/",
+  },
+  {
+    id: "redux",
+    fontAwesome: null,
+    image: "redux-logo-vector.svg",
+    classname: styles.logoJest,
+    hoverDescription: "Redux",
+    href: "https://redux.js.org/",
+  },
+  {
+    id: "nextjs",
+    fontAwesome: null,
+    image: "nextjs-logo.svg",
+    classname: styles.logoJest,
+    hoverDescription: "NextJs",
+    href: "https://nextjs.org/",
+  },
+  {
+    id: "react-query",
+    fontAwesome: null,
+    image: "react-query.svg",
+    classname: styles.logoJest,
+    hoverDescription: "React Query",
+    href: "https://tanstack.com/",
+  },
+];
+
 const Skills = ({ technos }) => {
   const [inHover, setHover] = useState("");
+
+  const skillSelector = (tech) => {
+    const logo = logos.find((logo) => logo.id === tech);
+    return (
+      logo && (
+        <div key={logo.id}>
+          <a href={logo.href} target="_blank" rel="noopener noreferrer">
+            <span
+              className={logo.classname}
+              onMouseEnter={() => setHover(logo.hoverDescription)}
+              onMouseLeave={() => setHover("")}
+            >
+              {logo.fontAwesome ? (
+                <FontAwesomeIcon icon={logo.fontAwesome} />
+              ) : (
+                <Image
+                  src={`/${logo.image}`}
+                  alt={logo.id}
+                  width={30}
+                  height={30}
+                />
+              )}
+            </span>
+          </a>
+        </div>
+      )
+    );
+  };
+
   return (
     <div className={styles.skills}>
       <span className={styles.infos}> {inHover}</span>
-      <span className={styles.skilltitle}>Technos </span>
+      {/* <span className={styles.skilltitle}>Stack </span> */}
       {technos.map((techno) => {
-        if (techno === "html")
-          return (
-            <div key={nanoid(10)}>
-              <span
-                className={styles.logoHtml5}
-                onMouseEnter={() => setHover("Html")}
-                onMouseLeave={() => setHover("")}
-              >
-                <FontAwesomeIcon icon={faHtml5} />
-              </span>
-            </div>
-          );
-        if (techno === "css")
-          return (
-            <div key={nanoid(10)}>
-              <span
-                className={styles.logoCss3}
-                onMouseEnter={() => setHover("Css")}
-                onMouseLeave={() => setHover("")}
-              >
-                <FontAwesomeIcon icon={faCss3Alt} />
-              </span>
-            </div>
-          );
-
-        if (techno === "sass")
-          return (
-            <div key={nanoid(10)}>
-              <span
-                className={styles.logoSass}
-                onMouseEnter={() => setHover("Préprocesseur Sass")}
-                onMouseLeave={() => setHover("")}
-              >
-                <FontAwesomeIcon icon={faSass} />
-              </span>
-            </div>
-          );
-        if (techno === "js")
-          return (
-            <div key={nanoid(10)}>
-              <span
-                className={styles.logoJs}
-                onMouseEnter={() => setHover("JavaScript")}
-                onMouseLeave={() => setHover("")}
-              >
-                <FontAwesomeIcon icon={faJsSquare} />
-              </span>
-            </div>
-          );
-        if (techno === "react")
-          return (
-            <div key={nanoid(10)}>
-              <span
-                className={styles.logoReact}
-                onMouseEnter={() => setHover("React")}
-                onMouseLeave={() => setHover("")}
-              >
-                <FontAwesomeIcon icon={faReact} />
-              </span>
-            </div>
-          );
-        if (techno === "git")
-          return (
-            <div key={nanoid(10)}>
-              <span
-                className={styles.logoGit}
-                onMouseEnter={() => setHover("Git gestion de versions")}
-                onMouseLeave={() => setHover("")}
-              >
-                <FontAwesomeIcon icon={faGitSquare} />
-              </span>
-            </div>
-          );
-        if (techno === "jest")
-          return (
-            <div key={nanoid(10)}>
-              <span
-                className={styles.logoJest}
-                onMouseEnter={() => setHover("Jest/ React Testing Library")}
-                onMouseLeave={() => setHover("")}
-              >
-                <Image
-                  src="/jest-icon.svg"
-                  alt="jest"
-                  width={20}
-                  height={30}
-                />
-              </span>
-            </div>
-          );
-        if (techno === "cypress")
-          return (
-            <div key={nanoid(10)}>
-              <span
-                className={styles.logoJest}
-                onMouseEnter={() => setHover("Tested with Cypress.io")}
-                onMouseLeave={() => setHover("")}
-              >
-                <Image
-                  src="/cypress-io.png"
-                  alt="Cypress.io"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-          );
-        if (techno === "typeScript")
-          return (
-            <div key={nanoid(10)}>
-              <span
-                className={styles.logoJest}
-                onMouseEnter={() => setHover("typeScript")}
-                onMouseLeave={() => setHover("")}
-              >
-                <Image
-                  src="/typescript-original.svg"
-                  alt="typescript"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-          );
-          
-        if (techno === "redux")
-          return (
-            <div key={nanoid(10)}>
-              <span
-                className={styles.logoJest}
-                onMouseEnter={() => setHover("redux")}
-                onMouseLeave={() => setHover("")}
-              >
-                <Image
-                  src="/redux-logo-vector.svg"
-                  alt="redux"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-          );
-        if (techno === "react-query")
-          return (
-            <div key={nanoid(10)}>
-              <span
-                className={styles.logoJest}
-                onMouseEnter={() => setHover("react-query")}
-                onMouseLeave={() => setHover("")}
-              >
-                <Image
-                  src="/react-query.svg"
-                  alt="react query"
-                  width={30}
-                  height={30}
-                />
-              </span>
-            </div>
-          );
+        switch (techno) {
+          case "html":
+            return skillSelector("html");
+          case "css":
+            return skillSelector("css");
+          case "sass":
+            return skillSelector("sass");
+          case "js":
+            return skillSelector("js");
+          case "react":
+            return skillSelector("react");
+          case "git":
+            return skillSelector("git");
+          case "jest":
+            return skillSelector("jest");
+          case "cypress":
+            return skillSelector("cypress");
+          case "typeScript":
+            return skillSelector("typeScript");
+          case "styledComponents":
+            return skillSelector("styledComponents");
+          case "redux":
+            return skillSelector("redux");
+          case "nextjs":
+            return skillSelector("nextjs");
+          case "react-query":
+            return skillSelector("react-query");
+          default:
+            return null;
+        }
       })}
     </div>
   );

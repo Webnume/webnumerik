@@ -59,7 +59,8 @@ function PortofolioCard({
                 </h1>
                 <div className={styles.content}>
                   <div className={`${styles.left}`} data-left>
-                    <div className={styles.siteInfos}>
+                    {/* <div className={styles.siteInfos}>
+                    </div> */}
                       <span className={styles.siteImg}>
                         <Image
                           src={`/${imgSrc}`}
@@ -99,15 +100,14 @@ function PortofolioCard({
                           </a>
                         )}
                       </div>
-                    </div>
                     <div className={styles.underThumb}>
                       <Skills technos={technos} />
                     </div>
                   </div>
                   <div className={styles.right} data-right>
-                    <h2>Mission réalisée</h2>
+                    <h2 className={`${styles.right} ${styles.descriptiontitle}`}>Description</h2>
                     <p>{mission}</p>
-                    <h2>Compétences déployées</h2>
+                    {/* <h2>Compétences déployées</h2> */}
                     <ul className={styles.customlist}>
                       {skills.map((skill) => {
                         return <li key={nanoid(10)}>{skill}</li>;

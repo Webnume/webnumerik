@@ -9,6 +9,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import { portfolioData } from "../utils/data/portfolioData";
+import Skills from "../components/Skills";
+import { allTechnos } from "../utils/allTechnos";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.config({
@@ -106,8 +108,10 @@ export default function Portfolio() {
           className={`${styles.panel} ${styles.panelBackground}`}
           ref={addToPanelsRef}
         >
+            <Skills technos={allTechnos()} />
           <div className={styles.Portofoliofirst}>
-            {portfolioData.map((portfolio, i) => (
+            {/* {allTechnos()} */}
+            {portfolioData?.map((portfolio, i) => (
               <div className="card" ref={addToCardsRef} key={portfolio.imgAlt}>
                 <PortofolioCard
                   projectTitle={portfolio.projectTitle}
