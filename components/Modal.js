@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import styles from "../styles/Modal.module.css";
-import Image from "next/image";
+import Image from "next/future/image";
 
 const Modal = (props) => {
   const [mount, setMount] = useState(false);
@@ -42,8 +42,8 @@ const Modal = (props) => {
                   src="/close_modal.png"
                   alt={styles.closeModal}
                   onClick={props.onClose}
-                  width="25%"
-                  height="25%"
+                  width="25"
+                  height="25"
                 />
               </div>
               <div className={styles.modalBody}>{props.children}</div>

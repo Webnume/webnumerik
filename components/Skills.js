@@ -9,8 +9,7 @@ import {
   faReact,
   faGitSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import Image from "next/image";
-import { nanoid } from "nanoid";
+import Image from "next/future/image";
 
 const logos = [
   {
