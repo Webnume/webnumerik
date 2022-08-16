@@ -17,7 +17,6 @@ const logos = [
     image: "",
     classname: styles.logoHtml5,
     hoverDescription: "Html",
-    href: "https://developer.mozilla.org/fr/docs/Web/HTML",
   },
   {
     id: "css",
@@ -25,7 +24,6 @@ const logos = [
     image: "",
     classname: styles.logoCss3,
     hoverDescription: "Css",
-    href: "https://developer.mozilla.org/fr/docs/Web/CSS",
   },
   {
     id: "sass",
@@ -33,7 +31,6 @@ const logos = [
     image: "",
     classname: styles.logoSass,
     hoverDescription: "Préprocesseur Sass",
-    href: "https://sass-lang.com/",
   },
   {
     id: "js",
@@ -41,7 +38,6 @@ const logos = [
     image: "",
     classname: styles.logoJs,
     hoverDescription: "Javascript",
-    href: "https://developer.mozilla.org/fr/docs/Web/JavaScript",
   },
   {
     id: "react",
@@ -49,7 +45,6 @@ const logos = [
     image: "",
     classname: styles.logoReact,
     hoverDescription: "React",
-    href: "https://reactjs.org/",
   },
   {
     id: "git",
@@ -57,7 +52,6 @@ const logos = [
     image: "",
     classname: styles.logoGit,
     hoverDescription: "Git versionning",
-    href: "https://git-scm.com/",
   },
   {
     id: "jest",
@@ -65,7 +59,6 @@ const logos = [
     image: "jest-icon.svg",
     classname: styles.logoJest,
     hoverDescription: "Jest/ React Testing Library",
-    href: "https://jestjs.io/",
   },
   {
     id: "cypress",
@@ -73,7 +66,6 @@ const logos = [
     image: "cypress-io.png",
     classname: styles.logoJest,
     hoverDescription: "E2E tests with Cypress",
-    href: "https://www.cypress.io/",
   },
   {
     id: "typeScript",
@@ -81,7 +73,6 @@ const logos = [
     image: "typescript-original.svg",
     classname: styles.logoJest,
     hoverDescription: "TypeScript",
-    href: "https://www.typescriptlang.org/",
   },
   {
     id: "styledComponents",
@@ -89,7 +80,6 @@ const logos = [
     image: "styled-components.svg",
     classname: styles.styledcomponents,
     hoverDescription: "Styled Components",
-    href: "https://www.styled-components.com/",
   },
   {
     id: "redux",
@@ -97,7 +87,6 @@ const logos = [
     image: "redux-logo-vector.svg",
     classname: styles.logoJest,
     hoverDescription: "Redux",
-    href: "https://redux.js.org/",
   },
   {
     id: "nextjs",
@@ -105,7 +94,6 @@ const logos = [
     image: "nextjs-logo.svg",
     classname: styles.logoJest,
     hoverDescription: "NextJs",
-    href: "https://nextjs.org/",
   },
   {
     id: "react-query",
@@ -113,7 +101,6 @@ const logos = [
     image: "react-query.svg",
     classname: styles.logoJest,
     hoverDescription: "React Query",
-    href: "https://tanstack.com/",
   },
 ];
 
@@ -125,7 +112,6 @@ const Skills = ({ technos }) => {
     return (
       logo && (
         <div key={logo.id}>
-          <a href={logo.href} target="_blank" rel="noopener noreferrer">
             <span
               className={logo.classname}
               onMouseEnter={() => setHover(logo.hoverDescription)}
@@ -137,7 +123,6 @@ const Skills = ({ technos }) => {
                 <img src={`/${logo.image}`} alt="" />
               )}
             </span>
-          </a>
         </div>
       )
     );
