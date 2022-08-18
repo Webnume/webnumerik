@@ -241,14 +241,14 @@
 .left {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   border-radius: 2rem;
   z-index: 0;
   flex-wrap: wrap;
   @media screen and (max-width: 777px) {
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 90vw;
     height: 40%;
     font-size: 1rem;

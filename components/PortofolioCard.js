@@ -54,11 +54,11 @@ function PortofolioCard({
             <div>
               <div style={{ position: "absolute", top: "0", left: "0" }}></div>
               <div className={styles.container} ref={container}>
+                <div className={styles.content}>
+                  <div className={`${styles.left}`} data-left>
                 <h1 className={styles.projecttitle} data-title>
                   {projectTitle}
                 </h1>
-                <div className={styles.content}>
-                  <div className={`${styles.left}`} data-left>
                     <span className={styles.siteImg}>
                       <a
                         href={demoLink}
