@@ -3,15 +3,9 @@ export const portfolioData = [
     projectTitle: "Euromillions suggests numbers.",
     demoLink: "https://curious-palmier-d08c6b.netlify.app/",
     repoGitLink: "https://github.com/Webnume/euromillion-suggestions",
-    technos: [
-      "html",
-      "js",
-      "react",
-      "nodejs",
-      "express"
-    ],
+    technos: ["html", "js", "react", "nodejs", "express"],
     mission:
-      "This app is made for you if you need of inspiration to choose your Euromillions numbers. The algorithm is based on the output probabilities of the numbers. These numbers are updated automatically with each result twice a week. Good luck ! Please play reasonably.",
+      "This app is made for you if you need inspiration to choose your Euromillions numbers. The algorithm is based on the output probabilities of the numbers. These numbers are updated automatically with each result twice a week. Good luck ! Please play reasonably.",
     skills: [
       "View the optimal layout for the site depending on their device's screen size",
       "Use Webscraping to get the results of the Euromillions",
