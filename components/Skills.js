@@ -102,6 +102,13 @@ const logos = [
     classname: styles.logoJest,
     hoverDescription: "React Query",
   },
+  {
+    id: "nodejs",
+    fontAwesome: null,
+    image: "node.js_logo.svg",
+    classname: styles.logoJest,
+    hoverDescription: "NodeJS",
+  },
 ];
 
 const Skills = ({ technos }) => {
@@ -160,6 +167,8 @@ const Skills = ({ technos }) => {
             return skillSelector("nextjs");
           case "react-query":
             return skillSelector("react-query");
+          case "nodejs":
+            return skillSelector("nodejs");
           default:
             return null;
         }

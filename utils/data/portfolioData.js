@@ -1,9 +1,38 @@
 export const portfolioData = [
   {
+    projectTitle: "Euromillion suggests numbers.",
+    demoLink: "https://curious-palmier-d08c6b.netlify.app/",
+    repoGitLink: "https://github.com/Webnume/euromillion-suggestions",
+    technos: [
+      "html",
+      "js",
+      "react",
+      "nodejs",
+      "express"
+    ],
+    mission:
+      "This app is made for you if you need of inspiration to choose your Euromillions numbers. The algorithm is based on the output probabilities of the numbers. These numbers are updated automatically with each result twice a week. Good luck ! Please play reasonably.",
+    skills: [
+      "View the optimal layout for the site depending on their device's screen size",
+      "Use Webscraping to get the results of the Euromillions",
+      "Display the suggestions in a table",
+    ],
+    imgSrc: "euromillion.png",
+    imgAlt: "projet 21",
+    backgroundImg: "image_20220225phf9327.jpg",
+  },
+  {
     projectTitle: "E-COMMERCE PRODUCT PAGE",
     demoLink: "https://loquacious-pothos-f79409.netlify.app/",
     repoGitLink: "https://github.com/Webnume/ecommerce-product-page-React",
-    technos: ["html", "js", "react", "typeScript", "styledComponents", "useContext"],
+    technos: [
+      "html",
+      "js",
+      "react",
+      "typeScript",
+      "styledComponents",
+      "useContext",
+    ],
     mission:
       "The challenge is to build a product page with a lightbox product gallery and cart functionality!",
     skills: [
@@ -104,7 +133,8 @@ export const portfolioData = [
     demoLink: "https://webnumerik.fr",
     repoGitLink: "https://github.com/Webnume/webnumerik",
     technos: ["html", "css", "js", "react", "nextjs"],
-    mission: "Mon portfolio Webnumerik qui regroupe mon travail et mes compétences",
+    mission:
+      "Mon portfolio Webnumerik qui regroupe mon travail et mes compétences",
     skills: [
       "Application développée from scratch avec NextJS",
       "Utilisation de GSAP",
@@ -131,8 +161,7 @@ export const portfolioData = [
     backgroundImg: "pexels-picjumbocom-196645.jpg",
   },
   {
-    projectTitle:
-      "[POC] ARGENTBANK",
+    projectTitle: "[POC] ARGENTBANK",
     demoLink: "https://gifted-noether-9500a4.netlify.app/",
     repoGitLink: "https://github.com/Webnume/Y.GABA_13_18032021",
     technos: ["html", "css", "js", "react", "API REST"],
@@ -218,8 +247,7 @@ export const portfolioData = [
     backgroundImg: "pexels-jakson-martins-3503098.jpg",
   },
   {
-    projectTitle:
-      "[POC] FISHEYE",
+    projectTitle: "[POC] FISHEYE",
     demoLink: "https://webnume.github.io/Y.GABA_6_18032021/index.html",
     repoGitLink: "https://github.com/Webnume/Y.GABA_6_18032021",
     technos: ["html", "css", "js"],
@@ -273,7 +301,8 @@ export const portfolioData = [
     demoLink: "https://webnume.github.io/Y.GABA_2_18032021/",
     repoGitLink: "https://github.com/Webnume/Y.GABA_2_18032021",
     technos: ["html", "css", "js", "sass"],
-    mission: "Transformer une maquette Figma en site web pour un hébergeur de vacances.",
+    mission:
+      "Transformer une maquette Figma en site web pour un hébergeur de vacances.",
     skills: [
       "Utiliser un système de gestion de versions pour le suivi du projet",
       "Implémenter une interface responsive",
