@@ -1,6 +1,6 @@
 export const portfolioData = [
   {
-    projectTitle: "Euromillion suggests numbers.",
+    projectTitle: "Euromillions suggests numbers.",
     demoLink: "https://curious-palmier-d08c6b.netlify.app/",
     repoGitLink: "https://github.com/Webnume/euromillion-suggestions",
     technos: [
