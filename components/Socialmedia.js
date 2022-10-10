@@ -11,7 +11,7 @@ import Image from "next/image";
 function Socialmedia() {
   return (
     <div className={styles.socialmedia}>
-    <Link href="/CV- Developper Web FrontEnd ReactJs - Yves GABA.pdf">
+    <Link href="/CV Developper Web FrontEnd ReactJs - Yves GABA.pdf">
       <a target="_blank">
         <Image src="/cv.png" alt="cv" className="" width={40} height={40} />
       </a>
