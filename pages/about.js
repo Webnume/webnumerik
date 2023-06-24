@@ -11,7 +11,7 @@ export default function About() {
       title: "Développeur Frontend ReactJS - Freelance",
       description:
         "Développement d'application web à partir de ReactJS et de son environnement.",
-      date: "2021 - 2022",
+      date: "2021 - aujourd'hui",
     },
     {
       title: "Formation de Développeur d'application - JavaScript React",
