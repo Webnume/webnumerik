@@ -6,12 +6,12 @@
   overflow-x: hidden;
   overflow-y: hidden;
   & .welcome1 {
-    min-height: 100vh;
+    min-height: 98vh;
     width: 100vw;
-    padding: 4rem 0;
+    padding-top:10rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     & .video video {
       position: absolute;
@@ -29,11 +29,12 @@
       color: #248984;
     }
     & .description {
-      margin-top: 9rem;
+      // margin-top: 9rem;
       left: 0;
       line-height: 1.5;
       font-size: calc(1.5rem + 1vw);
       z-index: 1;
+      margin: 0;
       @media screen and (max-width: 600px) {
         font-size: 1.3rem;
         margin-top: 4rem 0;
@@ -46,56 +47,50 @@
         border: 1px solid white;
       }
     }
-    & .title {
-      margin: 0;
-      line-height: 1.15;
-      font-size: calc(4rem + 1.5vw);
+    & .animation {
       animation: floating 5s linear 2s infinite;
-      text-shadow: #000 1px 1px 10px;
-      @media screen and (max-width: 600px) {
-        font-size: 2.5rem;
-      }
-      & .reactText {
+      & .title {
+        margin: 0;
+        line-height: 1.15;
+        font-size: calc(4rem + 1.5vw);
         text-shadow: #000 1px 1px 10px;
-        color: #61dafb;
+        @media screen and (max-width: 600px) {
+          font-size: 2.5rem;
+        }
+        & .reactText {
+          text-shadow: #000 1px 1px 10px;
+        }
       }
     }
     & .icons {
       display: flex;
-      color: #e8573b;
-      justify-content: center;
-      align-items: center;
-      padding-top: 3rem;
       filter: drop-shadow(2px 4px 6px black);
-      & :not(.operators, .logoReact) :nth-child(n) {
-        margin: 0.2rem;
+      & .logoJs {
+        color: #efd81d;
         width: 4rem;
+        margin-left: 1rem;
         @media screen and (max-width: 600px) {
-          margin: 0.2rem;
           width: 2rem;
         }
       }
-      & .logoHtml5 {
-        color: #e8573b;
-      }
-      & .logoCss3 {
-        color: #007cc5;
-      }
-      & .logoJs {
-        color: #efd81d;
-      }
       & .logoReact {
         color: #61dafb;
-        width: 7rem;
+        width: 4rem;
         @media screen and (max-width: 600px) {
-          color: #61dafb;
+          width: 3rem;
+        }
+      }
+      & .logoNodeJs {
+        color: #5fa04e;
+        width: 3.5rem;
+        @media screen and (max-width: 600px) {
           width: 3rem;
         }
       }
       & .operators {
         color: #fff;
         width: 2rem;
-        margin: 0 1rem;
+        margin: 0 2rem;
         @media screen and (max-width: 600px) {
           color: #fff;
           width: 1rem;
@@ -103,11 +98,12 @@
         }
       }
     }
-    & .question{
+    & .question {
       color: white;
       background-color: #41572a;
       font-weight: bold;
       letter-spacing: 0.2rem;
+      margin-top: 7rem;
     }
     & .buttonContact {
       cursor: pointer;
@@ -135,6 +131,7 @@
       }
       @media screen and (max-width: 600px) {
         padding: 0.5rem 0.75rem;
+        font-size: 1.2rem;
       }
     }
   }

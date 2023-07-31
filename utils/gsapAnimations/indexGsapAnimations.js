@@ -35,7 +35,7 @@ function indexGsapAnimations() {
  * It changes the text of the div with the id of "reactText" to "ReactJS!" after a delay of 1 second.
  */
   const typingEffect = () => {
-    tl.to("#reactText", { duration: 2, text: "ReactJS!", delay:1 });
+    tl.to("#reactText", { duration: 1, text: "REACT - NODE", delay:.5 });
   };
 
   const button = (buttonRef) => {
@@ -43,7 +43,7 @@ function indexGsapAnimations() {
       bottom: "-3rem",
       // duration:.5,
       ease: "power4.out(1.7)",
-      opacity: 0,
+      opacity: 0
     });
   };
 

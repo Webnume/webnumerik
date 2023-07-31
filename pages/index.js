@@ -1,15 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Header from "../components/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHtml5,
-  faCss3Alt,
   faJsSquare,
   faReact,
+  faNodeJs,
 } from "@fortawesome/free-brands-svg-icons";
-import { faPlus, faEquals } from "@fortawesome/free-solid-svg-icons";
 import indexGsapAnimations from "../utils/gsapAnimations/indexGsapAnimations";
 import Link from "next/link";
 
@@ -17,7 +15,7 @@ export default function Home() {
   const logosRef = useRef();
   const welcome1Ref = useRef();
   const buttonRef = useRef();
-  indexGsapAnimations().button(buttonRef.current)
+  indexGsapAnimations().button(buttonRef.current);
   useEffect(() => {
     //Icons Timelines
     indexGsapAnimations().welcome1(welcome1Ref.current);
@@ -25,6 +23,7 @@ export default function Home() {
     indexGsapAnimations().button(buttonRef.current);
     indexGsapAnimations().typingEffect();
   }, []);
+
   return (
     <div className="container">
       <Head>
@@ -36,45 +35,54 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.welcome1} ref={welcome1Ref}>
           <section className={styles.video}>
-            <video loop autoPlay muted>
+          <video loop autoPlay muted>
               <source src="./Thunderstorm.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </section>
           <h2 className={styles.description}>
-            Je suis <span className={styles.myName}>Yves</span>{" "}
+            Je suis <span className={styles.myName}>Yves</span>
           </h2>
-          <h1 className={styles.title}>
-            Développeur Web{" "}
-            <span id="reactText" className={styles.reactText}>
-              !RJeSact
+          <div className={styles.animation}>
+            <div style={{ display: "flex", alignItems: "flex-end" }}>
+              <h1 className={styles.title}>Développeur</h1>
+              <div className={styles.icons}>
+                <span className={styles.logoJs}>
+                  <FontAwesomeIcon icon={faJsSquare} />
+                </span>
+              </div>
+              <h2
+                className={styles.title}
+                style={{ position: "absolute", top: "95%", right: "0" }}
+              >
+                FullStack
+              </h2>
+            </div>
+            <span
+              id="reactText"
+              className={`${styles.reactText} ${styles.title}`}
+              style={{ color: "floralwhite" }}
+            >
+              RTCAE-ENDO
             </span>
-          </h1>
-          <div className={styles.icons} ref={logosRef}>
-            <span className={styles.logoHtml5}>
-              <FontAwesomeIcon icon={faHtml5} />
-            </span>
-            <span className={styles.operators}>
-              <FontAwesomeIcon icon={faPlus} />
-            </span>
-            <span className={styles.logoCss3}>
-              <FontAwesomeIcon icon={faCss3Alt} />
-            </span>
-            <span className={styles.operators}>
-              <FontAwesomeIcon icon={faPlus} />
-            </span>
-            <span className={styles.logoJs}>
-              <FontAwesomeIcon icon={faJsSquare} />
-            </span>
-            <span className={styles.operators}>
-              <FontAwesomeIcon icon={faEquals} />
-            </span>
-            <span className={styles.logoReact}>
-              <FontAwesomeIcon icon={faReact} />
-            </span>
+            <div
+              className={styles.icons}
+              ref={logosRef}
+              style={{ position: "absolute" }}
+            >
+              <span className={styles.logoReact}>
+                <FontAwesomeIcon icon={faReact} />
+              </span>
+              <span className={styles.logoNodeJs} style={{marginLeft:"1rem"}}>
+                <FontAwesomeIcon icon={faNodeJs} />
+              </span>
+            </div>
           </div>
+
           <span className={styles.question}>UNE QUESTION ? UN BESOIN ?</span>
-          <Link href="/contact">
+          <Link
+            href="/contact"
+          >
             <a>
               <button className={styles.buttonContact} ref={buttonRef}>
                 CONTACTEZ-MOI

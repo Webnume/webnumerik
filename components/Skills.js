@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from 'next/image'
 import styles from "../styles/Portofolio.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -127,7 +128,7 @@ const Skills = ({ technos }) => {
               {logo.fontAwesome ? (
                 <FontAwesomeIcon icon={logo.fontAwesome} />
               ) : (
-                <img src={`/${logo.image}`} alt="" />
+                <Image  src={`/${logo.image}`} alt="" width={35} height={35} />
               )}
             </span>
         </div>

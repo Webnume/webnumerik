@@ -17,7 +17,7 @@ const Modal = (props) => {
     return function cleanup() {
       document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
     };
-  });
+  }, []);
 
   if (!props.show && typeof window !== "undefined") {
     document.body.style.overflow = "scroll";
