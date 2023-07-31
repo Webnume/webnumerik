@@ -5,7 +5,7 @@ export const useMousePosition = () => {
 
   useEffect(() => {
     const setFromEvent = (e) =>
-      setPosition({ x: e.clientX > 200 ? e.clientX - 150 : e.clientX, y: 15 });
+      setPosition({ x: e.clientX, y: e.clientY });
     window.addEventListener("mousemove", setFromEvent);
 
     return () => {

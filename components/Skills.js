@@ -37,9 +37,8 @@ const Skills = ({ technos }) => {
   return (
     <>
       
-      <span className={styles.infos}  style={{left: position.x, top: position.y }}> {inHover}</span>
+      <span className={styles.infos}  style={{left: position.x > 200 ? position.x - 150 : position.x, top: 15 }}> {inHover}</span>
     <div className={styles.skills}>
-      {/* <span className={styles.skilltitle}>Stack </span> */}
       {technos.map((techno) => {
         switch (techno) {
           case "html":

@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Head from "next/head";
 import styles from "../styles/Portofolio.module.scss";
 import Header from "../components/Header";
-import portofolioGsapAnimations from "../utils/gsapAnimations/portofolioGsapAnimations";
 import PortofolioCard from "../components/PortofolioCard";
 
 import { gsap } from "gsap";
