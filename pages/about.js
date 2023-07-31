@@ -8,9 +8,9 @@ import { gsap } from "gsap";
 export default function About() {
   const timelineArray = [
     {
-      title: "Développeur Frontend ReactJS - Freelance",
+      title: "Développeur FullStack JavaScript React/ NodeJS (Freelance)",
       description:
-        "Développement d'application web à partir de ReactJS et de son environnement.",
+        "Développement FullStack JavaScript React - NodeJS. Création de sites internet et d'applications web.",
       date: "2021 - aujourd'hui",
     },
     {
@@ -19,17 +19,17 @@ export default function About() {
         "Diplôme et titre RNCP de niveau 6 (BAC +3/4). Formation à plein temps de 12 mois.",
       date: "2020 - 2021",
     },
+    // {
+    //   title: "Technicien informatique (Indépendant)",
+    //   description:
+    //     "Réalisation, sécurisation et installation des nouveaux équipements ou logiciels de parc informatique d’entreprise ou de particuliers, ensuite l’entretien et la réparation des différents matériels.",
+    //   date: "2013 - 2020",
+    // },
     {
-      title: "Technicien informatique indépendant",
-      description:
-        "Réalisation, sécurisation et installation des nouveaux équipements ou logiciels de parc informatique d’entreprise ou de particuliers, ensuite l’entretien et la réparation des différents matériels.",
-      date: "2013 - 2020",
-    },
-    {
-      title: "Webmaster freelance",
+      title: "Webmaster (Freelance)",
       description:
         "Conception, développement et entretien de sites internets. Mise en forme et en ligne des contenus, maintien de plateforme technique et référencement.",
-      date: "1999 - 2013",
+      date: "1999 - 2020",
     },
     {
       title: "Licence SNV",
@@ -70,49 +70,46 @@ export default function About() {
         </h1>
         <section className={styles.section1}>
           <p>
-            Issu d'un cursus scientifique, je me suis d'abord lancé, par passion
-            et en autodidacte, dans la création et la maintenance de sites internet
-            dès 1999. <br />
-            Pour valider mes compétences, j'ai obtenu un diplôme reconnu par
-            l'État de développeur d'applications front-end ReactJS chez
-            OpenClassRooms. <br />
+            Je me suis lancé dès 1999, en autodidacte, dans la création et la
+            maintenance de sites internet puis me suis spécialisé dans le
+            développement front-end depuis 2019. Pour valider mes acquis, j'ai
+            obtenu un diplôme d'État de développeur d'applications front-end
+            ReactJS en 2021. En parallèle, je m'intéresse aussi au backend avec
+            NodeJS.
             <br />
-            Un petit résumé  de mes compétences :
+            <br />
+            Dans mon quotidien, je crée des applications web frontend avec
+            Javascript et ReactJS que j'alimente par le back-end grâce à une
+            API. Je mets en œuvre des tests unitaires et d’intégration et je
+            débugge le code au besoin. Je refactorise le code pour qu’il soit
+            plus moderne et optimisé ou encore documente le code, si nécessaire,
+            pour qu’il soit maintenable. Je code selon les standards du web :
+            Sonar/ Responsive Design/ W3C/ Accessibilité.
+            <br />
+            <br />
+            Voici une liste non exhaustive de mes compétences :
           </p>
 
           <ul className={styles.customlist}>
-            <li>Je code en HTML/ CSS (SASS)/ JavaScript/ ReactJS/ Redux.</li>
-            <li>Je teste mon code avec : Jest/ Testing library/ Cypress. </li>
+            <li> Coding : HTML/ CSS/ JavaScript </li>
+            <li>Frontend : React/ NextJS/ TypeScript/ Redux</li>
+            <li>Backend : NodeJS / Express</li>
+            <li>API : REST/ GraphQL, React-Query, Swagger…</li>
+            <li>Tests : Jest, React Testing Library, Cypress…</li>
             <li>
-              Je choisis la solution technique la plus adaptée et je
-              travaille en mode Agile.
+              Outils : VSCode, ESLint, Prettier, Git/Github, Figma, Suite Adobe,
+              Agile…
             </li>
             <li>
-              Je crée des applications web dynamiques avec Javascript et ReactJS.
+              Librairies : SASS, TailwindCSS, Styled-components, JWT, Redux,
+              GSAP, Webpack, Recharts, D3.js, MaterialUI, BootStrap...
             </li>
-            <li>
-              J'alimente le front-end par le back-end grâce à une API.
-            </li>
-            <li>
-              Je mets en œuvre des tests unitaires et d’intégration et je débugge le
-              code.
-            </li>
-            <li>
-              Je résous des problèmes techniques avec un langage de programmation
-              et des algorithmes.
-            </li>
-            <li>
-              Je refactorise le code pour qu’il soit plus moderne et optimisé.
-            </li>
-            <li>
-              Je documente le code pour qu’il soit maintenable.
-            </li>
-            <li>Je produis un code de qualité : Sonar/ Responsive Design/ W3C/ Accessibilité. </li>
+            <li>Data : MongoDB, MySQL…</li>
           </ul>
           <p>
-            Aujourd'hui, je souhaite collaborer, en toute confiance, sur des projets web. <br />Sérieux et
-            autonome, je suis à l'écoute de vos besoins et je serais heureux de
-            vous aider.
+            Curieux, motivé et autonome, je suis à l'écoute de vos besoins et je
+            serai très heureux de contribuer à leur réussite. Aujourd'hui, je
+            souhaite collaborer, en toute confiance, sur des projets ambitieux.
           </p>
         </section>
         <h2 className={styles.title2}>

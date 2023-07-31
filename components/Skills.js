@@ -3,117 +3,15 @@ import Image from 'next/image'
 import styles from "../styles/Portofolio.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHtml5,
-  faCss3Alt,
-  faSass,
-  faJsSquare,
-  faReact,
-  faGitSquare,
-} from "@fortawesome/free-brands-svg-icons";
+  skillsLogosData as logos
+} from "../utils/data/skillsLogosData";
+import {useMousePosition} from "../hooks/useMousePosition";
 
-const logos = [
-  {
-    id: "html",
-    fontAwesome: faHtml5,
-    image: "",
-    classname: styles.logoHtml5,
-    hoverDescription: "Html",
-  },
-  {
-    id: "css",
-    fontAwesome: faCss3Alt,
-    image: "",
-    classname: styles.logoCss3,
-    hoverDescription: "Css",
-  },
-  {
-    id: "sass",
-    fontAwesome: faSass,
-    image: "",
-    classname: styles.logoSass,
-    hoverDescription: "Préprocesseur Sass",
-  },
-  {
-    id: "js",
-    fontAwesome: faJsSquare,
-    image: "",
-    classname: styles.logoJs,
-    hoverDescription: "Javascript",
-  },
-  {
-    id: "react",
-    fontAwesome: faReact,
-    image: "",
-    classname: styles.logoReact,
-    hoverDescription: "React",
-  },
-  {
-    id: "git",
-    fontAwesome: faGitSquare,
-    image: "",
-    classname: styles.logoGit,
-    hoverDescription: "Git versionning",
-  },
-  {
-    id: "jest",
-    fontAwesome: null,
-    image: "jest-icon.svg",
-    classname: styles.logoJest,
-    hoverDescription: "Jest/ React Testing Library",
-  },
-  {
-    id: "cypress",
-    fontAwesome: null,
-    image: "cypress.io.svg",
-    classname: styles.logoJest,
-    hoverDescription: "E2E tests with Cypress",
-  },
-  {
-    id: "typeScript",
-    fontAwesome: null,
-    image: "typescript-original.svg",
-    classname: styles.logoJest,
-    hoverDescription: "TypeScript",
-  },
-  {
-    id: "styledComponents",
-    fontAwesome: null,
-    image: "styled-components.svg",
-    classname: styles.styledcomponents,
-    hoverDescription: "Styled Components",
-  },
-  {
-    id: "redux",
-    fontAwesome: null,
-    image: "redux-logo-vector.svg",
-    classname: styles.logoJest,
-    hoverDescription: "Redux",
-  },
-  {
-    id: "nextjs",
-    fontAwesome: null,
-    image: "nextjs-logo.svg",
-    classname: styles.logoJest,
-    hoverDescription: "NextJs",
-  },
-  {
-    id: "react-query",
-    fontAwesome: null,
-    image: "react-query.svg",
-    classname: styles.logoJest,
-    hoverDescription: "React Query",
-  },
-  {
-    id: "nodejs",
-    fontAwesome: null,
-    image: "node.js_logo.svg",
-    classname: styles.logoJest,
-    hoverDescription: "NodeJS",
-  },
-];
+
 
 const Skills = ({ technos }) => {
   const [inHover, setHover] = useState("");
+  const position = useMousePosition();
 
   const skillSelector = (tech) => {
     const logo = logos.find((logo) => logo.id === tech);
@@ -139,7 +37,7 @@ const Skills = ({ technos }) => {
   return (
     <>
       
-      <span className={styles.infos}> {inHover}</span>
+      <span className={styles.infos}  style={{left: position.x, top: position.y }}> {inHover}</span>
     <div className={styles.skills}>
       {/* <span className={styles.skilltitle}>Stack </span> */}
       {technos.map((techno) => {
