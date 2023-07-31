@@ -137,8 +137,10 @@ const Skills = ({ technos }) => {
   };
 
   return (
-    <div className={styles.skills}>
+    <>
+      
       <span className={styles.infos}> {inHover}</span>
+    <div className={styles.skills}>
       {/* <span className={styles.skilltitle}>Stack </span> */}
       {technos.map((techno) => {
         switch (techno) {
@@ -175,6 +177,7 @@ const Skills = ({ technos }) => {
         }
       })}
     </div>
+    </>
   );
 };
 

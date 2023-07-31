@@ -34,7 +34,7 @@
       font-size: 1.5em;
       text-align: center;
       position: relative;
-      width: 100vw;
+      width: 98vw;
       box-sizing: border-box;
       &:nth-child(1n) {
         background-image: radial-gradient(
@@ -379,7 +379,7 @@
   /* margin-bottom: 2rem; */
   background-color: #248984;
   padding: 0.3rem 0.7rem;
-  border-radius:0 1rem ;
+  border-radius: 0 1rem;
 }
 .skills {
   position: relative;
@@ -391,6 +391,9 @@
   margin-top: 43px;
   background-color: white;
   border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: rgb(116 116 116) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   & :not(.logoReact) :nth-child(n) {
     margin: 0.2rem;
     width: 2rem;
@@ -425,13 +428,13 @@
   width: 2.4rem;
   top: 2px;
 }
-.styledcomponents{
+.styledcomponents {
   color: #61dafb;
   width: 2.4rem;
 }
 .infos {
   position: absolute;
-  top: -1.3rem;
+  top: .7rem;
   right: 50%;
   padding: 0 0.6rem;
   background-color: #91ad1c;
@@ -463,9 +466,9 @@
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
   }
-  .skills{
+  .skills {
     transform: scale(1);
-    padding: 0 1rem;	
+    padding: 0 1rem;
   }
   .skilltitle {
     display: none;
