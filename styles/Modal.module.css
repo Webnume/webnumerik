@@ -10,6 +10,7 @@
   justify-content: center;
   transition: all 0.3s ease-in-out;
   z-index: 10;
+  overflow-y: auto;
 }
 
 .modal.enter-done {
@@ -66,6 +67,10 @@
 }
 
 @media screen and (max-width: 700px) {
+  .modalHeader {
+    top: 20%;
+  }
+  
   .modal {
     z-index: 2;
   }
