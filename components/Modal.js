@@ -27,13 +27,14 @@ const Modal = (props) => {
     ? ReactDOM.createPortal(
         <div onClick={(e) => e.stopPropagation()}>
           {(document.body.style.overflow = "hidden")}
-          <div className={styles.modal} onClick={props.onClose}>
+          <div className={styles.modal} onClick={(e) => props.onClose}>
             <div
               className={styles.modalContent}
               onClick={(e) => e.stopPropagation()}
               style={{
                 backgroundImage: "url(" + props.backgroundImg + ")",
               }}
+              onTouchEnd={props.onTouchEnd}
             >
               <div className={styles.modalHeader} onClick={props.onClose}>
                 <Image
@@ -41,7 +42,6 @@ const Modal = (props) => {
                   // src={closeModal}
                   src="/close_modal.png"
                   alt={styles.closeModal}
-                  
                   width="40"
                   height="40"
                 />

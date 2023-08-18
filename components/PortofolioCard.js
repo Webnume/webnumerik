@@ -48,6 +48,10 @@ function PortofolioCard({
           </div>
           <Modal
             onClose={() => setShowModal(false)}
+            onTouchEnd={(e) => {
+              setShowModal(false);
+              e.preventDefault();
+            }}
             show={showModal}
             backgroundImg={backgroundImg}
           >
@@ -56,9 +60,9 @@ function PortofolioCard({
               <div className={styles.container} ref={container}>
                 <div className={styles.content}>
                   <div className={`${styles.left}`} data-left>
-                <h1 className={styles.projecttitle} data-title>
-                  {projectTitle}
-                </h1>
+                    <h1 className={styles.projecttitle} data-title>
+                      {projectTitle}
+                    </h1>
                     <span className={styles.siteImg}>
                       <a
                         href={demoLink}
