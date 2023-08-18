@@ -35,7 +35,7 @@ const Modal = (props) => {
                 backgroundImage: "url(" + props.backgroundImg + ")",
               }}
             >
-              <div className={styles.modalHeader} onClick={props.onClose}>
+              <div className={styles.modalHeader} onClick={props.onClose} onTouchEnd={props.onClose}>
                 <Image
                   className={styles.closeModal}
                   // src={closeModal}
