@@ -5,15 +5,10 @@ import Image from "next/image";
 
 const Modal = (props) => {
   const [mount, setMount] = useState(false);
-
   const closeOnEscapeKeyDown = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
       props.onClose();
     }
-  };
-
-  const closeOnTouchEnd = () => {
-    props.onClose();
   };
 
   useEffect(() => {
@@ -21,14 +16,6 @@ const Modal = (props) => {
     document.body.addEventListener("keydown", closeOnEscapeKeyDown);
     return function cleanup() {
       document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
-    };
-  }, []);
-
-  useEffect(() => {
-    setMount(true);
-    document.body.addEventListener("touchend", closeOnTouchEnd);
-    return function cleanup() {
-      document.body.removeEventListener("touchend", closeOnTouchEnd);
     };
   }, []);
 
@@ -53,7 +40,7 @@ const Modal = (props) => {
                   className={styles.closeModal}
                   // src={closeModal}
                   src="/close_modal.png"
-                  alt={styles.closeModal}
+                  alt={styles.closeModal}                  
                   width="40"
                   height="40"
                 />
