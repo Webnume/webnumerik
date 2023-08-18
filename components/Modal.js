@@ -35,13 +35,12 @@ const Modal = (props) => {
                 backgroundImage: "url(" + props.backgroundImg + ")",
               }}
             >
-              <div className={styles.modalHeader}>
+              <div className={styles.modalHeader} onClick={props.onClose}>
                 <Image
                   className={styles.closeModal}
                   // src={closeModal}
                   src="/close_modal.png"
                   alt={styles.closeModal}
-                  onClick={props.onClose}
                   width="40"
                   height="40"
                 />
