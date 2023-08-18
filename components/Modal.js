@@ -42,8 +42,8 @@ const Modal = (props) => {
                   src="/close_modal.png"
                   alt={styles.closeModal}
                   onClick={props.onClose}
-                  width="25"
-                  height="25"
+                  width="40"
+                  height="40"
                 />
               </div>
               <div className={styles.modalBody}>{props.children}</div>
