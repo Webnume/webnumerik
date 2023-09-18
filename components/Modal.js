@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 import styles from "../styles/Modal.module.css";
 import Image from "next/image";
 
-const Modal = (props) => {
+const Modal = ({onClose,show,backgroundImg,onTouchEnd, children}) => {
   const [mount, setMount] = useState(false);
   const closeOnEscapeKeyDown = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
-      props.onClose();
+      onClose();
     }
   };
 
@@ -19,7 +19,7 @@ const Modal = (props) => {
     };
   }, []);
 
-  if (!props.show && typeof window !== "undefined") {
+  if (!show && typeof window !== "undefined") {
     document.body.style.overflow = "scroll";
     return null;
   }
@@ -27,16 +27,15 @@ const Modal = (props) => {
     ? ReactDOM.createPortal(
         <div onClick={(e) => e.stopPropagation()}>
           {(document.body.style.overflow = "hidden")}
-          <div className={styles.modal} onClick={props.onClose}>
+          <div className={styles.modal} onClick={onClose}>
             <div
               className={styles.modalContent}
               onClick={(e) => e.stopPropagation()}
               style={{
-                backgroundImage: "url(" + props.backgroundImg + ")",
+                backgroundImage: "url(" + backgroundImg + ")",
               }}
-              onTouchEnd={props.onTouchEnd}
             >
-              <div className={styles.modalHeader} onClick={props.onClose}>
+              <div className={styles.modalHeader} onClick={onClose}>
                 <Image
                   className={styles.closeModal}
                   // src={closeModal}
@@ -44,9 +43,11 @@ const Modal = (props) => {
                   alt={styles.closeModal}
                   width="40"
                   height="40"
+              onTouchEnd={onTouchEnd}
+              style={{zIndex: 1000}}
                 />
               </div>
-              <div className={styles.modalBody}>{props.children}</div>
+              <div className={styles.modalBody}>{children}</div>
             </div>
           </div>
         </div>,
