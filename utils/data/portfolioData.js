@@ -14,11 +14,11 @@ export const portfolioData = [
       "circleCI",
     ],
     mission:
-      "This app is made for you if you need inspiration to choose your Euromillions numbers. The algorithm is based on the output probabilities of the numbers. These numbers are updated automatically with each result twice a week. Good luck ! Please play reasonably.",
+      "This app is made to list events. When user clicked on an event then the detail page of the event is displayed. The user can also filter the events by upcoming or past events. It also allows him to register and unsubscribe. By default when the user registers for an event, they will reserve a place.",
     skills: [
       "View the optimal layout for the site depending on their device's screen size",
-      "Use Webscraping to get the results of the Euromillions",
-      "Display the suggestions in a table",
+      "Use Vitest to test the app",
+      "continious integration with CircleCI",
     ],
     imgSrc: "Events1.png",
     imgAlt: "projet 22",
