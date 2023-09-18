@@ -1,5 +1,30 @@
 export const portfolioData = [
   {
+    projectTitle: "Events Front",
+    demoLink: "https://fabulous-maamoul-c33429.netlify.app/",
+    repoGitLink: "https://github.com/Webnume/Event-Front",
+    technos: [
+      "html",
+      "js",
+      "react",
+      "typeScript",
+      "vitest",
+      "styledComponents",
+      "axios",
+      "circleCI",
+    ],
+    mission:
+      "This app is made for you if you need inspiration to choose your Euromillions numbers. The algorithm is based on the output probabilities of the numbers. These numbers are updated automatically with each result twice a week. Good luck ! Please play reasonably.",
+    skills: [
+      "View the optimal layout for the site depending on their device's screen size",
+      "Use Webscraping to get the results of the Euromillions",
+      "Display the suggestions in a table",
+    ],
+    imgSrc: "Events1.png",
+    imgAlt: "projet 22",
+    backgroundImg: "events.jpg",
+  },
+  {
     projectTitle: "Euromillions suggests numbers.",
     demoLink: "https://curious-palmier-d08c6b.netlify.app/",
     repoGitLink: "https://github.com/Webnume/euromillion-suggestions",

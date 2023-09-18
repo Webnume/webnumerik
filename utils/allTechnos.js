@@ -1,4 +1,3 @@
-import Skills from "../components/Skills";
 import { portfolioData } from "./data/portfolioData";
 
 export const allTechnos = () => {
