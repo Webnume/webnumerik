@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import styles from "../styles/Modal.module.css";
 import Image from "next/image";
 
-const Modal = ({onClose,show,backgroundImg,onTouchEnd, children}) => {
+const Modal = ({ onClose, show, backgroundImg, onTouchEnd, children }) => {
   const [mount, setMount] = useState(false);
   const closeOnEscapeKeyDown = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
@@ -43,8 +43,8 @@ const Modal = ({onClose,show,backgroundImg,onTouchEnd, children}) => {
                   alt={styles.closeModal}
                   width="40"
                   height="40"
-              onTouchEnd={onTouchEnd}
-              style={{zIndex: 1000}}
+                  onTouchEnd={onTouchEnd}
+                  style={{ zIndex: 1000 }}
                 />
               </div>
               <div className={styles.modalBody}>{children}</div>
