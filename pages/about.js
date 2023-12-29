@@ -8,9 +8,9 @@ import { gsap } from "gsap";
 export default function About() {
   const timelineArray = [
     {
-      title: "Développeur FullStack JavaScript React/ NodeJS (Freelance)",
+      title: "Développeur Frontend JavaScript React/ NodeJS (Freelance)",
       description:
-        "Développement FullStack JavaScript React - NodeJS. Création de sites internet et d'applications web.",
+        "Développement Frontend JavaScript React - NodeJS. Création de sites internet et d'applications web.",
       date: "2021 - aujourd'hui",
     },
     {
