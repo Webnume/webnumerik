@@ -17,21 +17,37 @@ export default function Contact() {
   const leftRef = useRef();
   const form = useRef();
   const [replyTo, setReplyTo] = useState({});
-  const onSubmit = () => {
-    sendForm(
-      "service_61kxv15",
-      "template_f5slp2g",
-      form.current,
-      "EYm3Yz_oxNRXuNCCY"
-    ).then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
+  // const onSubmit = () => {
+  //   sendForm(
+  //     "service_61kxv15",
+  //     "template_f5slp2g",
+  //     form.current,
+  //     "EYm3Yz_oxNRXuNCCY"
+  //   ).then(
+  //     (result) => {
+  //       console.log(result.text);
+  //     },
+  //     (error) => {
+  //       console.log(error.text);
+  //     }
+  //   );
+  //   reset();
+  // };
+  const onSubmit = async (data) => {
+    console.log(data);
+    const formatedData = new FormData(formRef.current);
+    console.log(formatedData);
+
+    // https://www.pcnumerik.fr/form-recaptcha/contact.php
+    const response = await fetch(
+      "https://www.pcnumerik.fr/form-recaptcha/contact-sans-recaptcha.php",
+      {
+        method: "POST",
+        body: formatedData,
       }
     );
-    reset();
+    const formData = await response.text();
+    console.log(formData);
   };
 
   useEffect(() => {
