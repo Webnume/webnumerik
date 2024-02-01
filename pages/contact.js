@@ -47,6 +47,7 @@ export default function Contact() {
     );
     const formData = await response.text();
     console.log(formData);
+      reset();
   };
 
   useEffect(() => {
