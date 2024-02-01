@@ -38,9 +38,8 @@ export default function Contact() {
     const formatedData = new FormData(formRef.current);
     console.log(formatedData);
 
-    // https://www.pcnumerik.fr/form-recaptcha/contact.php
     const response = await fetch(
-      "https://www.webnumerik.fr/form-recaptcha/contact-sans-recaptcha.php",
+      "https://www.pcnumerik.fr/form-recaptcha-webnumerik/contact-sans-recaptcha.php",
       {
         method: "POST",
         body: formatedData,
