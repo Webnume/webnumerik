@@ -15,7 +15,7 @@ export default function Contact() {
   } = useForm();
   const rightRef = useRef();
   const leftRef = useRef();
-  const form = useRef();
+  const formRef = useRef();
   const [replyTo, setReplyTo] = useState({});
   // const onSubmit = () => {
   //   sendForm(
@@ -107,7 +107,7 @@ export default function Contact() {
           <form
             onSubmit={handleSubmit(onSubmit)}
             className={styles.form}
-            ref={form}
+            ref={formRef}
           >
             {/* register your input into the hook by invoking the "register" function */}
             <label htmlFor="nom">Nom *</label>
