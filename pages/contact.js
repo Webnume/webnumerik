@@ -40,7 +40,7 @@ export default function Contact() {
 
     // https://www.pcnumerik.fr/form-recaptcha/contact.php
     const response = await fetch(
-      "https://www.pcnumerik.fr/form-recaptcha/contact-sans-recaptcha.php",
+      "https://www.webnumerik.fr/form-recaptcha/contact-sans-recaptcha.php",
       {
         method: "POST",
         body: formatedData,
