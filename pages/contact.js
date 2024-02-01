@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { sendForm } from "@emailjs/browser";
 
 export default function Contact() {
+  const [message, setMessage] = useState("");
   const {
     register,
     handleSubmit,
@@ -46,8 +47,9 @@ export default function Contact() {
       }
     );
     const formData = await response.text();
-    console.log(formData);
-      reset();
+    // console.log(formData);
+    reset();
+    setMessage(formData);
   };
 
   useEffect(() => {
@@ -141,7 +143,8 @@ export default function Contact() {
             )}
 
             <label htmlFor="message">Message *</label>
-            <textarea rows={4} 
+            <textarea
+              rows={4}
               placeholder="Message..."
               {...register("message", { required: true })}
               id="message"
@@ -173,6 +176,7 @@ export default function Contact() {
               className={styles.buttonContact}
             />
           </form>
+          {message}
         </div>
       </main>
     </div>
