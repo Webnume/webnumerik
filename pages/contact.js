@@ -175,7 +175,7 @@ export default function Contact() {
               value="Envoyer le message"
               className={styles.buttonContact}
             />
-         <label>{message}</label> 
+         <label style={{padding:"1rem"}}>{message}</label> 
           </form>
         </div>
       </main>
