@@ -40,7 +40,7 @@ export default function Contact() {
     console.log(formatedData);
 
     const response = await fetch(
-      "https://www.pcnumerik.fr/form-recaptcha-webnumerik/contact-sans-recaptcha.php",
+      "https://www.linguasphere.fr/TraitementsEmailSitesKopetoPHP/WEBnumerik/form-recaptcha-webnumerik/contact-sans-recaptcha.php",
       {
         method: "POST",
         body: formatedData,
