@@ -35,9 +35,7 @@ export default function Contact() {
   //   reset();
   // };
   const onSubmit = async (data) => {
-    console.log(data);
     const formatedData = new FormData(formRef.current);
-    console.log(formatedData);
 
     const response = await fetch(
       "https://www.linguasphere.fr/TraitementsEmailSitesKopetoPHP/WEBnumerik/form-recaptcha-webnumerik/contact-sans-recaptcha.php",
@@ -47,7 +45,6 @@ export default function Contact() {
       }
     );
     const formData = await response.text();
-    // console.log(formData);
     reset();
     setMessage(formData);
   };
@@ -175,7 +172,7 @@ export default function Contact() {
               value="Envoyer le message"
               className={styles.buttonContact}
             />
-         <label style={{padding:"1rem"}}>{message}</label> 
+            <label style={{ padding: "1rem" }}>{message}</label>
           </form>
         </div>
       </main>
