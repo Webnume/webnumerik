@@ -24,9 +24,19 @@ export default async function POST(req) {
     // Send email
     await transporter.sendMail(mailOptions);
 
-    return Response.json({ success: true, message: "Email sent successfully" });
+    return new Response(JSON.stringify({ success: true, message: "Email sent successfully" }), {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   } catch (error) {
     console.error("Error sending email:", error);
-    return Response.json({ success: false, message: "Failed to send email" }, { status: 500 });
+    return new Response(JSON.stringify({ success: false, message: "Failed to send email" }), {
+      status: 500,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   }
 }
