@@ -14,9 +14,6 @@ export default async function POST(req) {
         user: process.env.EMAIL_USER, // Your email
         pass: process.env.EMAIL_PASS, // Your email password or app password
       },
-      tls: {
-        rejectUnauthorized: false,
-      },
     });
 
     // Email content
