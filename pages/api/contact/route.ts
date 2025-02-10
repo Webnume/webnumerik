@@ -8,8 +8,8 @@ export default async function POST(req) {
     const transporter = nodemailer.createTransport({
       // service: "webnumerik", // Change to your email provider
       host: "smtp.hostinger.fr", // Change this to match your email provider
-      port: 587,
-      secure: false, // `true` for port 465, `false` for 587
+      port: 465,
+      secure: true, // `true` for port 465, `false` for 587
       auth: {
         user: process.env.EMAIL_USER, // Your email
         pass: process.env.EMAIL_PASS, // Your email password or app password
@@ -22,7 +22,6 @@ export default async function POST(req) {
       to: process.env.EMAIL_USER, // Your email
       subject: `New Contact Form Submission from ${name}`,
       text: message,
-      
     };
 
     // Send email
