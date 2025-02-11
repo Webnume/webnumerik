@@ -29,10 +29,10 @@ export default async function POST(req, res) {
   const mailData = {
     from: {
       name: `${firstName} ${lastName}`,
-      address: "myEmail@gmail.com",
+      address: process.env.EMAIL_USER,
     },
     replyTo: email,
-    to: "recipient@gmail.com",
+    to: email,
     subject: `form message`,
     text: message,
     html: `${message}`,
