@@ -24,6 +24,8 @@ export default function ContactForm() {
     });
 
     const result = await response.json();
+    console.log(result);
+    
     if (result.success) {
       setStatus("Email sent successfully!");
       setFormData({ name: "", email: "", message: "" });
