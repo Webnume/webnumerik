@@ -27,7 +27,7 @@ export default async function POST(req, res) {
   });
 
   const mailData = {
-    from: email,
+    from: process.env.EMAIL_USER,
     replyTo: email,
     to: process.env.EMAIL_USER,
     subject: `New Contact Form Submission from ${name}`,
