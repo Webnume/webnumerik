@@ -1,14 +1,14 @@
 const nodemailer = require("nodemailer");
 
-export default async function POST (req, res) {
+export default async function POST(req, res) {
   const { firstName, lastName, email, message } = JSON.parse(req.body);
 
   const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.hostinger.fr",
     auth: {
-      user: "myEmail@gmail.com",
-      pass: "password",
+      user: process.env.EMAIL_USER, // Your email
+      pass: process.env.EMAIL_PASS, // Your email password or app password
     },
     secure: true,
   });
@@ -52,7 +52,7 @@ export default async function POST (req, res) {
   });
 
   res.status(200).json({ status: "OK" });
-};
+}
 
 // import nodemailer from "nodemailer";
 
