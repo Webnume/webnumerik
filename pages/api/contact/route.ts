@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 export default async function POST(req, res) {
-  const { firstName, lastName, email, message } = req.body;
+  const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
     port: 587,
@@ -28,7 +28,7 @@ export default async function POST(req, res) {
 
   const mailData = {
     from: {
-      name: `${firstName} ${lastName}`,
+      name: `${name}`,
       address: process.env.EMAIL_USER,
     },
     replyTo: email,
