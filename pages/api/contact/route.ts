@@ -14,6 +14,8 @@ export default async function POST(req) {
         user: process.env.EMAIL_USER, // Your email
         pass: process.env.EMAIL_PASS, // Your email password or app password
       },
+      socketTimeout: 10000, // Timeout after 10 seconds
+      connectionTimeout: 10000, // Limit connection time
     });
 
     // Email content
