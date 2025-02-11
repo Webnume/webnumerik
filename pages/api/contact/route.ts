@@ -4,13 +4,13 @@ export default async function POST(req, res) {
   const { firstName, lastName, email, message } = JSON.parse(req.body);
 
   const transporter = nodemailer.createTransport({
-    port: 465,
+    port: 587,
     host: "smtp.hostinger.fr",
     auth: {
       user: process.env.EMAIL_USER, // Your email
       pass: process.env.EMAIL_PASS, // Your email password or app password
     },
-    secure: true,
+    secure: false,
   });
 
   await new Promise((resolve, reject) => {
