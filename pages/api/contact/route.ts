@@ -2,23 +2,23 @@ import nodemailer from "nodemailer";
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function POST(req: NextApiRequest, res: NextApiResponse) {
-  const { name, email, message } = req.body;
-
-  if (!name || !email || !message) {
-    return res.status(400).json({ status: "Bad Request", message: "Missing required fields" });
-  }
-
-  const transporter = nodemailer.createTransport({
-    port: 465,
-    host: "smtp.hostinger.fr",
-    auth: {
-      user: process.env.EMAIL_USER, // Your email
-      pass: process.env.EMAIL_PASS, // Your email password or app password
-    },
-    secure: true,
-  });
-
   try {
+    const { name, email, message } = req.body;
+
+    if (!name || !email || !message) {
+      return res.status(400).json({ status: "Bad Request", message: "Missing required fields" });
+    }
+
+    const transporter = nodemailer.createTransport({
+      port: 465,
+      host: "smtp.hostinger.fr",
+      auth: {
+        user: process.env.EMAIL_USER, // Your email
+        pass: process.env.EMAIL_PASS, // Your email password or app password
+      },
+      secure: true,
+    });
+
     await transporter.verify();
     console.log("Server is ready to take our messages");
 
