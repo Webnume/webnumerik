@@ -1,6 +1,8 @@
-const nodemailer = require("nodemailer");
+import nodemailer from "nodemailer";
 
-export default async function POST(req, res) {
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function POST(req: NextApiRequest, res: NextApiResponse) {
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
@@ -14,8 +16,7 @@ export default async function POST(req, res) {
   });
 
   await new Promise((resolve, reject) => {
-    // verify connection configuration
-    transporter.verify(function (error, success) {
+    transporter.verify(function (error: Error | null, success: any) {
       if (error) {
         console.log(error);
         reject(error);
@@ -48,7 +49,7 @@ export default async function POST(req, res) {
     });
   });
 
- return res.status(200).json({ status: "OK" });
+  return res.status(200).json({ status: "OK" });
 }
 
 // import nodemailer from "nodemailer";
