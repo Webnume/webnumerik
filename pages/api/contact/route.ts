@@ -1,9 +1,12 @@
 import nodemailer from "nodemailer";
-
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function POST(req: NextApiRequest, res: NextApiResponse) {
   const { name, email, message } = req.body;
+
+  if (!name || !email || !message) {
+    return res.status(400).json({ status: "Bad Request", message: "Missing required fields" });
+  }
 
   const transporter = nodemailer.createTransport({
     port: 465,
@@ -15,41 +18,27 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse) {
     secure: true,
   });
 
-  await new Promise((resolve, reject) => {
-    transporter.verify(function (error: Error | null, success: any) {
-      if (error) {
-        console.log(error);
-        reject(error);
-      } else {
-        console.log("Server is ready to take our messages");
-        resolve(success);
-      }
-    });
-  });
+  try {
+    await transporter.verify();
+    console.log("Server is ready to take our messages");
 
-  const mailData = {
-    from: process.env.EMAIL_USER,
-    replyTo: email,
-    to: process.env.EMAIL_USER,
-    subject: `New Contact Form Submission from ${name}`,
-    text: message,
-    html: `${message}`,
-  };
+    const mailData = {
+      from: process.env.EMAIL_USER,
+      replyTo: email,
+      to: process.env.EMAIL_USER,
+      subject: `New Contact Form Submission from ${name}`,
+      text: message,
+      html: `${message}`,
+    };
 
-  await new Promise((resolve, reject) => {
-    // send mail
-    transporter.sendMail(mailData, (err, info) => {
-      if (err) {
-        console.error(err);
-        reject(err);
-      } else {
-        console.log(info);
-        resolve(info);
-      }
-    });
-  });
+    const info = await transporter.sendMail(mailData);
+    console.log(info);
 
-  return res.status(200).json({ status: "OK" });
+    return res.status(200).json({ status: "OK" });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ status: "Error", message: "Failed to send email" });
+  }
 }
 
 // import nodemailer from "nodemailer";
