@@ -119,7 +119,7 @@ export default function Contact() {
               value={formData.name}
             />
             {/* errors will return when field validation fails  */}
-            {errors.nom && (
+            {errors.name && (
               <span className={styles.error}>* Champs requis</span>
             )}
 
