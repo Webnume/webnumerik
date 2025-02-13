@@ -33,7 +33,7 @@ export default function Contact() {
 
   const onSubmit = async (e) => {
     // e.preventDefault();
-    setStatus("Sending...");
+    setStatus("Envoi en cours ...");
 
     const response = await fetch("/api/contact/route", {
       method: "POST",
@@ -46,10 +46,10 @@ export default function Contact() {
     
 
     if (result.status === "OK") {
-      setStatus("Email sent successfully!");
+      setStatus("Email envoyé avec succès!");
       setFormData({ name: "", email: "", message: "" });
     } else {
-      setStatus("Failed to send email.");
+      setStatus("Echec de l'envoi de l'email");
     }
   };
 
