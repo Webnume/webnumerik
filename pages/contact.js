@@ -49,7 +49,7 @@ export default function Contact() {
       setStatus("Email envoyé avec succès!");
       setFormData({ name: "", email: "", message: "" });
     } else {
-      setStatus("Echec de l'envoi de l'email");
+      setStatus("Echec d'envoi de l'email");
     }
   };
 
