@@ -5,7 +5,6 @@ import Header from "../components/Header";
 import { useForm } from "react-hook-form";
 import { gsap } from "gsap";
 
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -24,7 +23,6 @@ export default function Contact() {
   const leftRef = useRef(null);
   const formRef = useRef(null);
 
-
   const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
@@ -42,8 +40,6 @@ export default function Contact() {
     });
 
     const result = await response.json();
-    console.log(result);
-    
 
     if (result.status === "OK") {
       setStatus("Email envoyé avec succès!");
