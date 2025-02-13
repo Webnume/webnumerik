@@ -4,50 +4,49 @@ import styles from "../styles/Contact.module.scss";
 import Header from "../components/Header";
 import { useForm } from "react-hook-form";
 import { gsap } from "gsap";
+import { sendForm } from "@emailjs/browser";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
+  const [message, setMessage] = useState("");
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm();
+  const rightRef = useRef();
+  const leftRef = useRef();
+  const formRef = useRef();
+  const [replyTo, setReplyTo] = useState({});
+  // const onSubmit = () => {
+  //   sendForm(
+  //     "service_61kxv15",
+  //     "template_f5slp2g",
+  //     form.current,
+  //     "EYm3Yz_oxNRXuNCCY"
+  //   ).then(
+  //     (result) => {
+  //       console.log(result.text);
+  //     },
+  //     (error) => {
+  //       console.log(error.text);
+  //     }
+  //   );
+  //   reset();
+  // };
+  const onSubmit = async (data) => {
+    const formatedData = new FormData(formRef.current);
 
-  const rightRef = useRef(null);
-  const leftRef = useRef(null);
-  const formRef = useRef(null);
-
-
-  const [status, setStatus] = useState("");
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const onSubmit = async (e) => {
-    // e.preventDefault();
-    setStatus("Sending...");
-
-    const response = await fetch("/api/contact/route", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    const result = await response.json();
-
-    if (result.status === "OK") {
-      setStatus("Email sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      setStatus("Failed to send email.");
-    }
+    const response = await fetch(
+      "https://www.linguasphere.fr/TraitementsEmailSitesKopetoPHP/WEBnumerik/form-recaptcha-webnumerik/contact-sans-recaptcha.php",
+      {
+        method: "POST",
+        body: formatedData,
+      }
+    );
+    const formData = await response.text();
+    reset();
+    setMessage(formData);
   };
 
   useEffect(() => {
@@ -77,6 +76,12 @@ export default function Contact() {
     );
   }, []);
 
+  const handleInputChange = (e) =>
+    setReplyTo({
+      ...replyTo,
+      reply_to: e.currentTarget.value,
+    });
+
   return (
     <div className="container">
       <Head>
@@ -104,20 +109,18 @@ export default function Contact() {
             ref={formRef}
           >
             {/* register your input into the hook by invoking the "register" function */}
-            <label htmlFor="name">Nom *</label>
+            <label htmlFor="nom">Nom *</label>
             <input
               type="text"
               placeholder="Nom"
-              {...register("name", { required: true })}
-              id="name"
-              name="name"
+              {...register("nom", { required: true })}
+              id="nom"
+              name="nom"
               className={styles.inputText}
-              onChange={handleChange}
-              value={formData.name}
             />
             {/* errors will return when field validation fails  */}
             {errors.nom && (
-              <span className={styles.error}>* Champs requis</span>
+              <span className={styles.error}>This field is required</span>
             )}
 
             {/* include validation with required or other standard HTML validation rules */}
@@ -129,12 +132,11 @@ export default function Contact() {
               id="email"
               name="email"
               className={styles.inputText}
-              onChange={handleChange}
-              value={formData.email}
+              onChange={handleInputChange}
             />
             {/* errors will return when field validation fails  */}
             {errors.email && (
-              <span className={styles.error}>* Champs requis</span>
+              <span className={styles.error}>This field is required</span>
             )}
 
             <label htmlFor="message">Message *</label>
@@ -145,21 +147,33 @@ export default function Contact() {
               id="message"
               name="message"
               className={styles.inputText}
-              onChange={handleChange}
-              value={formData.message}
             ></textarea>
             {/* errors will return when field validation fails  */}
             {errors.message && (
-              <span className={styles.error}>* Champs requis</span>
+              <span className={styles.error}>This field is required</span>
             )}
+            <input
+              {...register("from_name")}
+              id="from_name"
+              name="from_name"
+              type="hidden"
+              value="WebNumerik.fr"
+            />
+            <input
+              {...register("reply_to")}
+              id="reply_to"
+              name="reply_to"
+              type="hidden"
+              value={replyTo}
+            />
 
             <input
               type="submit"
               value="Envoyer le message"
               className={styles.buttonContact}
             />
+            <label style={{ padding: "1rem" }}>{message}</label>
           </form>
-          {status && <p>{status}</p>}
         </div>
       </main>
     </div>
