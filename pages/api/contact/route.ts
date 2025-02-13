@@ -18,7 +18,7 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse) {
 
   const transporter = nodemailer.createTransport({
     port: 465,
-    host: "smtp.hostinger.fr",
+    host: "smtp.mail.ovh.net",
     auth: {
       user: process.env.EMAIL_USER, // Your email
       pass: process.env.EMAIL_PASS, // Your email password or app password
