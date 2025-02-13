@@ -4,7 +4,6 @@ import styles from "../styles/Contact.module.scss";
 import Header from "../components/Header";
 import { useForm } from "react-hook-form";
 import { gsap } from "gsap";
-import { sendForm } from "@emailjs/browser";
 
 export default function Contact() {
   const [message, setMessage] = useState("");
