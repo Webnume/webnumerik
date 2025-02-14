@@ -33,7 +33,7 @@ export default function Contact() {
     // e.preventDefault();
     setStatus("Envoi en cours ...");
 
-    const response = await fetch("/api/contact/route", {
+    const response = await fetch("/api/contact/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
