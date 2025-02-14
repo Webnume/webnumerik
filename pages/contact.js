@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import { useForm } from "react-hook-form";
 import { gsap } from "gsap";
 
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,6 +24,7 @@ export default function Contact() {
   const leftRef = useRef(null);
   const formRef = useRef(null);
 
+
   const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
@@ -33,13 +35,14 @@ export default function Contact() {
     // e.preventDefault();
     setStatus("Envoi en cours ...");
 
-    const response = await fetch("/api/contact/", {
+    const response = await fetch("/api/contact/route", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
 
     const result = await response.json();
+    
 
     if (result.status === "OK") {
       setStatus("Email envoyé avec succès!");
