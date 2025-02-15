@@ -36,7 +36,11 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse) {
       to: process.env.EMAIL_USER,
       subject: `New Contact Form Submission from ${name}`,
       text: message,
-      html: `${message}`,
+      html: `
+      Nom : ${name} <br>
+      Email : <a href="mailto:${email}" >${email}</a> <br>
+      Message : ${message}
+      `,
     };
 
     const info = await transporter.sendMail(mailData);
