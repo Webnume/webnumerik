@@ -34,7 +34,7 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse) {
       from: process.env.EMAIL_USER,
       replyTo: email,
       to: process.env.EMAIL_USER,
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `Formulaire de contact WebNumerik`,
       text: message,
       html: `
       Nom : ${name} <br>
