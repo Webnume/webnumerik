@@ -12,14 +12,16 @@ import indexGsapAnimations from "../utils/gsapAnimations/indexGsapAnimations";
 import Link from "next/link";
 
 export default function Home() {
-  const logosRef = useRef();
-  const welcome1Ref = useRef();
-  const buttonRef = useRef();
+  const logosRef = useRef(null);
+  const welcome1Ref = useRef(null);
+  const buttonRef = useRef(null);
   indexGsapAnimations().button(buttonRef.current);
   useEffect(() => {
     //Icons Timelines
     indexGsapAnimations().welcome1(welcome1Ref.current);
-    indexGsapAnimations().logos(logosRef.current);
+    if (logosRef.current) {
+      indexGsapAnimations().logos(logosRef.current);
+    }
     indexGsapAnimations().button(buttonRef.current);
     indexGsapAnimations().typingEffect();
   }, []);
@@ -63,7 +65,7 @@ export default function Home() {
               className={`${styles.reactText} ${styles.title}`}
               style={{ color: "floralwhite" }}
             >
-              RTCAE-ENDO
+              RTCAE-ENTXSJ
             </span>
             <div
               className={styles.icons}

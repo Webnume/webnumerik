@@ -111,17 +111,17 @@ export default function Portfolio() {
           <div className={styles.Portofoliofirst}>
             {/* {allTechnos()} */}
             {portfolioData?.map((portfolio, i) => (
-              <div className="card" ref={addToCardsRef} key={portfolio.imgAlt}>
+              <div className="card" ref={addToCardsRef} key={portfolio?.imgAlt}>
                 <PortofolioCard
-                  projectTitle={portfolio.projectTitle}
-                  demoLink={portfolio.demoLink}
-                  repoGitLink={portfolio.repoGitLink}
-                  technos={portfolio.technos}
-                  mission={portfolio.mission}
-                  skills={portfolio.skills}
-                  imgSrc={portfolio.imgSrc}
-                  imgAlt={portfolio.imgAlt}
-                  backgroundImg={portfolio.backgroundImg}
+                  projectTitle={portfolio?.projectTitle}
+                  demoLink={portfolio?.demoLink}
+                  repoGitLink={portfolio?.repoGitLink}
+                  technos={portfolio?.technos}
+                  mission={portfolio?.mission}
+                  skills={portfolio?.skills}
+                  imgSrc={portfolio?.imgSrc}
+                  imgAlt={portfolio?.imgAlt}
+                  backgroundImg={portfolio?.backgroundImg}
                   flipvertical={i % 2 === 0 ? false : true}
                 />
               </div>

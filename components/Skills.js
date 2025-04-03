@@ -13,11 +13,11 @@ const Skills = ({ technos }) => {
     const logo = logos.find((logo) => logo.id === tech);
     return (
       logo && (
-        <div key={logo.id}>
+        <div key={logo.id}
+            onMouseEnter={() => setHover(logo.hoverDescription)}
+            onMouseLeave={() => setHover("")}>
           <span
             className={logo.classname}
-            onMouseEnter={() => setHover(logo.hoverDescription)}
-            onMouseLeave={() => setHover("")}
           >
             {logo.fontAwesome ? (
               <FontAwesomeIcon icon={logo.fontAwesome} />
