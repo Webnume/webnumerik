@@ -107,7 +107,7 @@ export default function Portfolio() {
           className={`${styles.panel} ${styles.panelBackground}`}
           ref={addToPanelsRef}
         >
-            <Skills technos={allTechnos()} />
+          <Skills technos={allTechnos()} />
           <div className={styles.Portofoliofirst}>
             {/* {allTechnos()} */}
             {portfolioData?.map((portfolio, i) => (
